@@ -2,18 +2,20 @@ class Api::EventsController < ApplicationController
 
     def index
         @event = Event.all
+        render :index
     end
 
     def show
         @event = Event.find_by(params[:id])
+        render :show
     end
 
     def create
         @event = Event.new(event_params)
         if @event.save
-            render :show
+            render 'api/events/show'
         else
-            render @event.errors.full_messages, status: 401
+            render json: @event.errors.full_messages, status: 401
         end
     end
 
@@ -23,7 +25,7 @@ class Api::EventsController < ApplicationController
             @event.destroy
             render :show
         else
-            render json: ['Event does not exist'], status: 401
+            render json: ['Event does not exist'], status: 400
         end
     end
     
@@ -31,7 +33,7 @@ class Api::EventsController < ApplicationController
         @event = Event.find_by(params[:id])
 
         if @event && @event.update_attributes(event_params)
-            render :show
+            render 'api/events/show'
         elsif !@event
             render json: ['Event does not exist'], status: 400
         else

@@ -28,7 +28,7 @@ class LoginForm extends React.Component {
         }
 
         return (
-            <div className='session-form'>
+            <div className='login-form'>
                 <h2>Welcome back</h2>
                 <p>Please enter your password to log in.</p>
                 <form onSubmit={this.handleSubmit}>

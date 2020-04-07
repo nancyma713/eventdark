@@ -539,3 +539,209 @@ Processing by RootController#root as HTML
 Completed 200 OK in 282ms (Views: 280.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-04-06 23:43:06 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 344ms (Views: 339.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2020-04-06 23:50:54 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"nana@nana.com", "password"=>"[FILTERED]", "firstName"=>"Nana", "lastName"=>"Banana"}}
+Unpermitted parameters: :firstName, :lastName
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (4.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nana@nana.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "_3DMFgLtVlhym3YHp43JQA"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (3.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 322ms (Views: 0.2ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-07 00:01:31 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-07 00:04:17 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/email" for ::1 at 2020-04-07 00:04:30 -0400
+Processing by Api::SessionsController#email as JSON
+  Parameters: {"email"=>{"email"=>"dog@dog.com", "checkEmail"=>"true"}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 4.2ms)
+
+
+
+TypeError - can't cast ActionController::Parameters:
+  app/controllers/api/sessions_controller.rb:23:in `email'
+
+Started POST "/api/email" for ::1 at 2020-04-07 00:04:33 -0400
+Processing by Api::SessionsController#email as JSON
+  Parameters: {"email"=>{"email"=>"dog@dog.com", "checkEmail"=>"true"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - can't cast ActionController::Parameters:
+  app/controllers/api/sessions_controller.rb:23:in `email'
+
+Started POST "/api/email" for ::1 at 2020-04-07 00:04:34 -0400
+Processing by Api::SessionsController#email as JSON
+  Parameters: {"email"=>{"email"=>"dog@dog.com", "checkEmail"=>"true"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - can't cast ActionController::Parameters:
+  app/controllers/api/sessions_controller.rb:23:in `email'
+
+Started GET "/" for ::1 at 2020-04-07 00:08:02 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 357ms (Views: 354.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/email" for ::1 at 2020-04-07 00:08:07 -0400
+Processing by Api::SessionsController#email as JSON
+  Parameters: {"email"=>{"email"=>"dogs@dogs.com", "checkEmail"=>"true"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - can't cast ActionController::Parameters:
+  app/controllers/api/sessions_controller.rb:23:in `email'
+
+Started GET "/" for ::1 at 2020-04-07 00:13:36 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 339ms (Views: 337.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/email" for ::1 at 2020-04-07 00:13:43 -0400
+Processing by Api::SessionsController#email as JSON
+  Parameters: {"email"=>{"email"=>"dog@dogs.com", "checkEmail"=>"true"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+
+TypeError - can't cast ActionController::Parameters:
+  app/controllers/api/sessions_controller.rb:23:in `email'
+
+Started GET "/" for ::1 at 2020-04-07 00:17:07 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 322ms (Views: 319.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/email" for ::1 at 2020-04-07 00:17:09 -0400
+Processing by Api::SessionsController#email as JSON
+  Parameters: {"email"=>"dog@dogs.com", "checkEmail"=>"true"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dog@dogs.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:23
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-07 00:17:30 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 315ms (Views: 312.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/email" for ::1 at 2020-04-07 00:17:50 -0400
+Processing by Api::SessionsController#email as JSON
+  Parameters: {"email"=>"dog@dogs.com", "checkEmail"=>"true"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dog@dogs.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:23
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/users" for ::1 at 2020-04-07 00:18:08 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"dog@dogs.com", "password"=>"[FILTERED]", "firstName"=>"dog", "lastName"=>"dog"}}
+Unpermitted parameters: :firstName, :lastName
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dog@dogs.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Iw3guViPR1JD8A0nPNGDyQ"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 219ms (Views: 0.2ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-07 00:24:55 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 336ms (Views: 333.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-07 00:25:47 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/email" for ::1 at 2020-04-07 00:25:50 -0400
+Processing by Api::SessionsController#email as JSON
+  Parameters: {"email"=>"g", "checkEmail"=>"true"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "g"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:23
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-07 00:25:57 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-07 09:10:56 -0400
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nancyma/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1370ms (Views: 1367.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/email" for ::1 at 2020-04-07 09:11:02 -0400
+Processing by Api::SessionsController#email as JSON
+  Parameters: {"email"=>"asdfghjkl", "checkEmail"=>"true"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdfghjkl"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:23
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/api/users" for ::1 at 2020-04-07 09:11:24 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"anana", "password"=>"[FILTERED]", "firstName"=>"Nancy", "lastName"=>"Ma"}}
+Unpermitted parameters: :firstName, :lastName
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anana"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "HaBl-ngayf_7KrIw8M1Uww"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 234ms (Views: 0.2ms | ActiveRecord: 5.3ms)
+
+

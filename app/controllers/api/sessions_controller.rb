@@ -6,7 +6,7 @@ class Api::SessionsController < ApplicationController
             render json: ['Incorrect password'], status: 401
         else
             login!(@user)
-            render 'api/events'
+            render 'api/users/show'
         end
     end
 
@@ -16,6 +16,16 @@ class Api::SessionsController < ApplicationController
             render json: { message: 'Logged out!'}
         else 
             render json: ['Not logged in'],  status: 404
+        end
+    end
+
+    def email
+        @user = User.find_by(email: params[:email])
+        if @user.nil?
+            render json: { email: params[:email], match: false }
+        else
+            email = @user.email
+            render json: { email: email, match: true }
         end
     end
     

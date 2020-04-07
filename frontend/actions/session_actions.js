@@ -14,9 +14,10 @@ export const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER
 });
 
-export const receiveEmail = (email) => ({
+export const receiveEmail = ({ email, match }) => ({
     type: RECEIVE_EMAIL,
-    email
+    email,
+    match
 });
 
 export const receiveErrors = (errors) => ({
@@ -26,7 +27,7 @@ export const receiveErrors = (errors) => ({
 
 export const signin = (email) => dispatch => (
     APIUtil.signin(email)
-        .then(emailObject => dispatch(receiveEmail(emailObject.email)))
+        .then(email => dispatch(receiveEmail(email)))
 );
 
 export const signup = (user) => dispatch => (

@@ -20,11 +20,11 @@ class SigninForm extends React.Component {
     }
 
     render() {
-        if (!this.state.checkEmail) {
+        if (this.state.checkEmail === false) {
             if (this.props.match) {
                 return <Redirect to="signin/login" />
             } else {
-                return <Redirect to="sigin/signup" />
+                return <Redirect to="signin/signup" />
             }
         }
 
