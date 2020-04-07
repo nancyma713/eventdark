@@ -20,3 +20,11 @@ export const logout = () => (
         url: '/api/session'
     })
 );
+
+export const signin = (email) => (
+    $.ajax({
+        method: "POST",
+        url: '/api/email',
+        data: { email }
+    })
+);
