@@ -4,7 +4,11 @@ import { Link, Redirect } from 'react-router-dom';
 class SigninForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { email: "", checkEmail: true };
+        this.state = {
+            email: "",
+            checkEmail: true,
+            errors: this.props.errors
+        };
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -21,7 +25,7 @@ class SigninForm extends React.Component {
 
     render() {
         if (this.state.checkEmail === false) {
-            if (this.props.match) {
+            if (this.props.exist) {
                 return <Redirect to="signin/login" />
             } else {
                 return <Redirect to="signin/signup" />

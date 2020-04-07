@@ -11,7 +11,7 @@ const sessionReducer = (state = _nullSession, action) => {
         case RECEIVE_CURRENT_USER:
             return Object.assign({}, state, { id: action.user.id })
         case RECEIVE_EMAIL:
-            return Object.assign({}, state, { email: action.email, match: action.match })
+            return Object.assign({}, state, { email: action.email, exist: action.exist })
         case LOGOUT_CURRENT_USER:
             return _nullSession;
         default:

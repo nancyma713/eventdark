@@ -14,15 +14,15 @@ export const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER
 });
 
-export const receiveEmail = ({ email, match }) => ({
+export const receiveEmail = ({ email, exist }) => ({
     type: RECEIVE_EMAIL,
     email,
-    match
+    exist
 });
 
 export const receiveErrors = (errors) => ({
     type: RECEIVE_ERRORS,
-    errors: errors.responseJSON
+    errors
 });
 
 export const signin = (email) => dispatch => (
@@ -32,15 +32,15 @@ export const signin = (email) => dispatch => (
 
 export const signup = (user) => dispatch => (
     APIUtil.signup(user)
-        .then(user => dispatch(receiveCurrentUser(user)), e => dispatch(receiveErrors(e)))
+        .then(user => dispatch(receiveCurrentUser(user)), e => dispatch(receiveErrors(e.responseJSON)))
 );
 
 export const login = (user) => dispatch => (
     APIUtil.login(user)
-    .then( user => dispatch(receiveCurrentUser(user)), e => dispatch(receiveErrors(e)))
+        .then(user => dispatch(receiveCurrentUser(user)), e => dispatch(receiveErrors(e.responseJSON)))
 );
 
 export const logout = () => dispatch => (
     APIUtil.logout()
-        .then(() => dispatch(logoutCurrentUser()), e => dispatch(receiveErrors(e)))
+        .then(() => dispatch(logoutCurrentUser()), e => dispatch(receiveErrors(e.responseJSON)))
 );

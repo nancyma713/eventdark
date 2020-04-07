@@ -6,8 +6,7 @@ class LoginForm extends React.Component {
         super(props);
         this.state = {
             email: this.props.email,
-            password: '',
-            errors: this.props.errors
+            password: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -22,6 +21,18 @@ class LoginForm extends React.Component {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
     render() {
         if (this.props.user) {
             return <Redirect to='/' />
@@ -32,6 +43,7 @@ class LoginForm extends React.Component {
                 <h2>Welcome back</h2>
                 <p>Please enter your password to log in.</p>
                 <form onSubmit={this.handleSubmit}>
+                    {this.renderErrors()}
                     <label>Email address
                         <input type="text"
                             value={this.state.email}
@@ -45,7 +57,6 @@ class LoginForm extends React.Component {
                             onChange={this.update('password')}
                         />
                     </label>
-                    <p>{this.props.errors}</p>
                     <button>Log In</button>
                     <p>Forgot password</p>
                 </form>

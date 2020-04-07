@@ -4,8 +4,8 @@ import { signin, login } from '../../actions/session_actions';
 
 const msp = (state) => ({
     email: state.session.email,
-    match: state.session.match,
-    errors: Object.values(state.errors)
+    exist: state.session.exist,
+    errors: state.errors.session
 });
 
 const mdp = (dispatch) => ({
