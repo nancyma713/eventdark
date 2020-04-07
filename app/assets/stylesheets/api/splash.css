@@ -1,0 +1,9 @@
+.header-titles {
+    font-family: 'Barlow', sans-serif;
+    font-size: 26px;
+    margin: 20px;
+}
+
+.header-titles h1 {
+    padding: 20px;
+}

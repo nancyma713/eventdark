@@ -40,10 +40,10 @@ class LoginForm extends React.Component {
 
         return (
             <div className='login-form'>
+                <h1 className="e-logo">e</h1>
                 <h2>Welcome back</h2>
                 <p>Please enter your password to log in.</p>
-                <form onSubmit={this.handleSubmit}>
-                    {this.renderErrors()}
+                <form onSubmit={this.handleSubmit} className="form-content">
                     <label>Email address
                         <input type="text"
                             value={this.state.email}
@@ -57,6 +57,7 @@ class LoginForm extends React.Component {
                             onChange={this.update('password')}
                         />
                     </label>
+                    {this.renderErrors()}
                     <button>Log In</button>
                     <p>Forgot password</p>
                 </form>

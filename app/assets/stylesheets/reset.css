@@ -3,7 +3,10 @@ label, form, caption, footer, ul, ol, li, section {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    outline: 0;
+    box-sizing: inherit;
     font: inherit;
+    text-decoration: inherit;
     vertical-align: baseline;
+    background: transparent;
 }

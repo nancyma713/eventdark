@@ -33,18 +33,20 @@ class SigninForm extends React.Component {
         }
 
         return (
-            <div>
-                <h1>e</h1>
+            <div className="signin-form">
+                <h1 className="e-logo">e</h1>
                 <h2>Sign up or log in</h2>
                 <p>Enter your email to get started.</p>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Email address
-                        <input type="text"
-                            value={this.state.email}
-                            onChange={this.update()}
-                        />
-                    </label>
-                    <button>Get Started</button>
+                    <div className="form-content">
+                        <label>Email address
+                            <input type="text"
+                                value={this.state.email}
+                                onChange={this.update()}
+                            />
+                        </label>
+                        <button>Get Started</button>
+                    </div>
                 </form>
             </div>
         )

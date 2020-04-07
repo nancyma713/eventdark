@@ -1,0 +1,76 @@
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Barlow', sans-serif;
+}
+
+.e-logo {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 69px;
+    color: navy;
+}
+
+.signin-form h2 {
+    font-size: 25px;
+    margin: 20px;
+    font-weight: bolder;
+}
+
+.signin-form p {
+    font-size: 14px;
+    color: lightslategray;
+    margin: 20px;
+}
+
+.signin-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-content {
+    margin: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-content label {
+    font-size: 12px;
+    box-sizing: border-box;
+    width: inherit;
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+}
+
+.form-content label:hover {
+    border: 1px solid gray;
+}
+
+.form-content label:focus {
+    border: 1px solid navy;
+}
+
+.form-content input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+}
+
+.form-content input:focus {
+    outline: none;
+}
+
+.signin-form button {
+    margin: 15px 0px;
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+    background-color: navy;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

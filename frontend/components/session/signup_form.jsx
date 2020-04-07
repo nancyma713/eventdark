@@ -39,10 +39,10 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div className='signup-form'>
+                <h1 className="e-logo">e</h1>
                 <h2>Welcome</h2>
                 <p>Create an account.</p>
-                <form onSubmit={this.handleSubmit}>
-                    {this.renderErrors()}
+                <form onSubmit={this.handleSubmit} className="form-content">
                     <label>Email address
                         <input type="text"
                             value={this.state.email}
@@ -50,18 +50,20 @@ class SignupForm extends React.Component {
                         />
                     </label>
                     <br />
-                    <label>First Name
-                        <input type="text"
-                            value={this.state.first_name}
-                            onChange={this.update('first_name')}
-                        />
-                    </label>
-                    <label>Last Name
-                        <input type="text"
-                            value={this.state.last_name}
-                            onChange={this.update('last_name')}
-                        />
-                    </label>
+                    <div className="name-signup">
+                        <label className="fname-inputs">First Name
+                            <input type="text"
+                                value={this.state.first_name}
+                                onChange={this.update('first_name')}
+                            />
+                        </label>
+                        <label className="lname-inputs">Last Name
+                            <input type="text"
+                                value={this.state.last_name}
+                                onChange={this.update('last_name')}
+                            />
+                        </label>
+                    </div>
                     <br/>
                     <label>Password
                         <input type="password"
@@ -69,7 +71,7 @@ class SignupForm extends React.Component {
                             onChange={this.update('password')}
                         />
                     </label>
-                    <p>{this.props.errors}</p>
+                    {this.renderErrors()}
                     <button>Sign Up</button>
                 </form>
             </div>

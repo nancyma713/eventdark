@@ -1,0 +1,37 @@
+.navbar {
+    display: flex;
+    margin: 0px 15px;
+    padding: 20px 0px;
+    justify-content: space-between;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    align-content: center;
+}
+
+.logo a {
+    font-family: 'Luckiest Guy', cursive;
+    padding: 20px;
+    font-size: 22px;
+    color: navy;
+    text-decoration: none;
+}
+
+.navbar-right span {
+    padding: 20px;
+    color: lightslategray;
+}
+
+#help:hover {
+    background-color: whitesmoke;
+}
+
+.navbar-right a {
+    padding: 20px 0px;
+    text-decoration: none;
+    color: lightslategray;
+}
+
+.navbar-right a:hover {
+    text-decoration: none;
+    color: black;
+}

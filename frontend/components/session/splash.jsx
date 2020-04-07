@@ -4,19 +4,18 @@ const Splash = ({ currentUser, logout }) => {
     if (currentUser) {
         return (
             <div>
-                <h4>Welcome, {currentUser.first_name}</h4>
-                <button onClick={logout}>Logout</button>
+                <h4>Welcome, {currentUser.email}</h4>
+                {/* <button onClick={logout}>Logout</button> */}
             </div>
         );
     } else {
         return (
-            <div>
-                Popular Events
+            <div className="header-titles">
+                <h1>Popular Events</h1>
+                <h1>Find Events</h1>
             </div>
         );
     }
-
-
 
 
 }
