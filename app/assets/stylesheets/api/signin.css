@@ -75,6 +75,10 @@
     cursor: pointer;
 }
 
+.signin-form button:hover {
+    background-color: rgb(12, 12, 194);
+}
+
 .form-errors {
     margin-top: 3px;
     list-style: none;

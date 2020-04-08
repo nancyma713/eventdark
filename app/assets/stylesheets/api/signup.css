@@ -75,6 +75,10 @@
     cursor: pointer;
 }
 
+.signup-form button:hover {
+    background-color: rgb(12, 12, 194);
+}
+
 .name-signup {
     display: flex;
     justify-content: space-between;

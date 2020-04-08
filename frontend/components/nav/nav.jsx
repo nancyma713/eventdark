@@ -15,9 +15,15 @@ class Nav extends React.Component {
                     <div className="logo">
                         <Link to='/'>eventdark</Link>
                     </div>
+                    <div className="nav-content">
+                        <span id="event"><Link to="#">Create Event</Link></span>
+                        <span><Link to="#">My Bookmarks</Link></span>
+                        <span><Link to="#">My Registrations</Link></span>
+                    </div>
                     <div className="profile-dropdown">Profile
                         <ul className="dropdown-content">
-                            <li id="user-info"><Link to="#">{this.props.currentUser.first_name}
+                            <li id="user-info"><Link to="#">
+                                {this.props.currentUser.first_name}
                                 {this.props.currentUser.email}
                             </Link></li>
                             <li><Link to="#">Create Event</Link></li>
