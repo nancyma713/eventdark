@@ -1,11 +1,13 @@
 .navbar {
     display: flex;
-    margin: 0px 15px;
-    padding: 20px 0px;
     justify-content: space-between;
     font-family: 'Barlow', sans-serif;
     font-size: 14px;
     align-content: center;
+}
+
+.logo {
+    padding: 20px;
 }
 
 .logo a {
@@ -17,6 +19,10 @@
 }
 
 /* when logged out */
+
+.navbar-right {
+    padding: 20px 0px;
+}
 
 .navbar-right span {
     padding: 20px;
@@ -41,7 +47,8 @@
 /* when logged in */
 
 .profile-dropdown {
-    padding-right: 30px;
+    /* padding-right: 30px; */
+    padding: 20px 30px;
     position: relative;
 }
 
@@ -121,6 +128,7 @@
 /* logged in nav */
 
 .nav-content {
+    padding: 20px 0px;
     width: 75%;
     display: flex;
     justify-content: flex-end;
