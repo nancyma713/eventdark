@@ -6,7 +6,8 @@ class SigninForm extends React.Component {
         super(props);
         this.state = {
             email: "",
-            checkEmail: true
+            checkEmail: true,
+            errors: []
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,10 +18,32 @@ class SigninForm extends React.Component {
         this.props.clearErrors();
     }
 
+    isValidEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
     handleSubmit(e) {
         e.preventDefault();
+        // debugger
+        // if (!this.isValidEmail(this.state.email)) {
+        //     return;
+        // }
+
         this.props.signin(this.state)
-            .then( () => this.setState({ checkEmail: false }));
+            .then(() => this.setState({ checkEmail: false }));
+
+        // if (this.state.email === "" || !(this.state.email.includes("@"))) {
+        //     let newErrors = this.state.errors
+        //     if (!newErrors.includes("Invalid email")) {
+        //         newErrors.push("Invalid email")
+        //     }
+        //     this.setState({ errors: newErrors })
+        //     this.renderErrors();
+        // } else {
+        //     this.props.signin(this.state)
+        //         .then( () => this.setState({ checkEmail: false }));
+        // }
     }
 
     handleDemo(e) {
@@ -33,6 +56,7 @@ class SigninForm extends React.Component {
     }
     
     renderErrors() {
+        // debugger
         return (
             <ul className="form-errors">
             {this.props.errors.map((error, i) => (
@@ -45,6 +69,7 @@ class SigninForm extends React.Component {
     }
     
     render() {
+        // debugger
         if (this.state.checkEmail === false) {
             if (this.props.exist) {
                 return <Redirect to="signin/login" />
@@ -52,7 +77,7 @@ class SigninForm extends React.Component {
                 return <Redirect to="signin/signup" />
             }
         }
-        debugger
+        // debugger
         return (
             <div className="signin-form">
                 <h1 className="e-logo">e</h1>
@@ -61,7 +86,7 @@ class SigninForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-content">
                         <label>Email address
-                            <input type="email"
+                            <input type="text"
                                 value={this.state.email}
                                 onChange={this.update()}
                             />
