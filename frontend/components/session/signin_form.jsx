@@ -52,7 +52,7 @@ class SigninForm extends React.Component {
                 return <Redirect to="signin/signup" />
             }
         }
-
+        debugger
         return (
             <div className="signin-form">
                 <h1 className="e-logo">e</h1>
@@ -61,7 +61,7 @@ class SigninForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-content">
                         <label>Email address
-                            <input type="text"
+                            <input type="email"
                                 value={this.state.email}
                                 onChange={this.update()}
                             />

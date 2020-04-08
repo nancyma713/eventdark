@@ -47,8 +47,7 @@
 /* when logged in */
 
 .profile-dropdown {
-    /* padding-right: 30px; */
-    padding: 20px 30px;
+    padding: 20px 40px 20px 20px;
     position: relative;
 }
 
@@ -67,16 +66,14 @@
 }
 
 .dropdown-content {
-    /* align-items: center; */
     position: absolute;
     justify-content: flex-start;
     width: 200px;
     right: 0;
     left: auto;
+    top: 60px;
     list-style: none;
     box-shadow: 0px 1px 8px #adacaa;
-    -webkit-transition: .25s ease;
-    transition: .25s ease;
 }
 
 .dropdown-content li {
@@ -146,4 +143,12 @@
 
 .nav-content a:hover {
     background-color: whitesmoke;
+}
+
+#user-icon {
+    font-size: medium;
+}
+
+#registrations {
+    border-bottom: 1px solid lightgray;
 }
