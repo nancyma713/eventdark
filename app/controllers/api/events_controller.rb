@@ -1,7 +1,7 @@
 class Api::EventsController < ApplicationController
 
     def index
-        @event = Event.all
+        @events = Event.all
         render :index
     end
 

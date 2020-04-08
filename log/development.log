@@ -9022,3 +9022,243 @@ Processing by RootController#root as HTML
 Completed 200 OK in 328ms (Views: 325.2ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mBookmark Destroy (4.5ms)[0m  [1m[31mDELETE FROM "bookmarks"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mRegistration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "registrations"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mEvent Destroy (0.8ms)[0m  [1m[31mDELETE FROM "events"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (3.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dog@dogs.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "bJcZ9rSko0udQhGJNOZUsw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (3.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "dog@dogs.com"], ["first_name", "Dog"], ["last_name", "McDogster"], ["password_digest", "$2a$12$pIpJGtLQI.aMh4S27aYPguETWKIWniUprw9LiHlLx2K2dMJfyhMbC"], ["session_token", "bJcZ9rSko0udQhGJNOZUsw"], ["created_at", "2020-04-08 19:56:50.796383"], ["updated_at", "2020-04-08 19:56:50.796383"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cat@cats.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rNcWqyIgsldunzKI1SqVwQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cat@cats.com"], ["first_name", "Cat"], ["last_name", "McCatster"], ["password_digest", "$2a$12$kDsKmHhybnwZILiuHQ7J3O/zCrH0/ibUwq4D6uI2QuzC9RxhDuJcW"], ["session_token", "rNcWqyIgsldunzKI1SqVwQ"], ["created_at", "2020-04-08 19:56:51.011114"], ["updated_at", "2020-04-08 19:56:51.011114"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hamster@hamsters.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dAXibmKacy87FDM9jblBHw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "hamster@hamsters.com"], ["first_name", "Hammy"], ["last_name", "McHammer"], ["password_digest", "$2a$12$YzV9M5fcVA11pU1KU8QEHu3CsVpVEGFkmLoSrCnru3Ah0IVil7rs."], ["session_token", "dAXibmKacy87FDM9jblBHw"], ["created_at", "2020-04-08 19:56:51.224438"], ["updated_at", "2020-04-08 19:56:51.224438"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@demo.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mryWGYiK47Kvb6UHf7xcsQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "user@demo.com"], ["first_name", "Demo"], ["last_name", "User"], ["password_digest", "$2a$12$gBmUkGe7Y3JAsSk552Frwe23ratrhad64A.TE10YGKcPbyDhQ52Wy"], ["session_token", "mryWGYiK47Kvb6UHf7xcsQ"], ["created_at", "2020-04-08 19:56:51.435755"], ["updated_at", "2020-04-08 19:56:51.435755"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "karaliu@chefs.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CYupGcwLGTIk_fxRLNbtIw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "karaliu@chefs.com"], ["first_name", "Kara"], ["last_name", "Liu"], ["password_digest", "$2a$12$CgTGaqBPNxR4xHmHumr2fO12SHk80aq26i1xA/bJEyao6Y0aMGu4."], ["session_token", "CYupGcwLGTIk_fxRLNbtIw"], ["created_at", "2020-04-08 19:56:51.646268"], ["updated_at", "2020-04-08 19:56:51.646268"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mEvent Create (2.5ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 17], ["category", "Entertainment"], ["title", "The Magicians"], ["description", "Nothing around us is as it seems...and neither is the magic you think you know."], ["start_date", "2021-12-02 11:11:11"], ["end_date", "2021-12-03 01:11:11"], ["created_at", "2020-04-08 19:56:51.679924"], ["updated_at", "2020-04-08 19:56:51.679924"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 18], ["category", "Music"], ["title", "Excision feat. The Evolution"], ["description", "Are you ready to break your necks?"], ["start_date", "2021-03-08 23:00:00"], ["end_date", "2021-03-09 04:00:00"], ["created_at", "2020-04-08 19:56:51.686114"], ["updated_at", "2020-04-08 19:56:51.686114"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 19], ["category", "Activities"], ["title", "A Night of Terror: Pandemic"], ["description", "Escape a dark, eerie mansion as the world is overrun by zombies"], ["start_date", "2021-10-31 21:00:00"], ["end_date", "2021-10-31 23:00:00"], ["created_at", "2020-04-08 19:56:51.689391"], ["updated_at", "2020-04-08 19:56:51.689391"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 19], ["category", "Food and Drink"], ["title", "Dinner in the Dark"], ["description", "You may not be able to see what you are eating, but it will be delicious"], ["start_date", "2021-01-31 19:00:00"], ["end_date", "2021-01-31 21:00:00"], ["created_at", "2020-04-08 19:56:51.692613"], ["updated_at", "2020-04-08 19:56:51.692613"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 18], ["category", "Other"], ["title", "Independence Day Fireworks"], ["description", "Join us for a glamourous viewing of the fireworks in an open air rooftop!"], ["start_date", "2021-07-04 18:00:00"], ["end_date", "2021-07-04 21:00:00"], ["created_at", "2020-04-08 19:56:51.696136"], ["updated_at", "2020-04-08 19:56:51.696136"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 21], ["category", "Nightlife"], ["title", "New Year New You"], ["description", "The BIGGEST party in New York, complete with open bar and music all night!"], ["start_date", "2021-12-31 22:00:00"], ["end_date", "2022-01-01 04:00:00"], ["created_at", "2020-04-08 19:56:51.699492"], ["updated_at", "2020-04-08 19:56:51.699492"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 21], ["category", "Free"], ["title", "Zoom Movie Night: Harry Potter Marathon"], ["description", "Social distancing movie nights streamed every week!"], ["start_date", "2020-04-20 19:00:00"], ["end_date", "2020-04-20 22:00:00"], ["created_at", "2020-04-08 19:56:51.702874"], ["updated_at", "2020-04-08 19:56:51.702874"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mBookmark Destroy (0.5ms)[0m  [1m[31mDELETE FROM "bookmarks"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mRegistration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "registrations"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mEvent Destroy (1.2ms)[0m  [1m[31mDELETE FROM "events"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dog@dogs.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "c-5qHDn9FoaYZf4nqQls_A"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "dog@dogs.com"], ["first_name", "Dog"], ["last_name", "McDogster"], ["password_digest", "$2a$12$j8e6qtgwiv68BcGUEQbeHOoDqp7NNhRwS4nbtY7ruLOyz2A6h7g3u"], ["session_token", "c-5qHDn9FoaYZf4nqQls_A"], ["created_at", "2020-04-08 19:57:08.545531"], ["updated_at", "2020-04-08 19:57:08.545531"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cat@cats.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "irrcvTkVDTQmOC65qJepXg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cat@cats.com"], ["first_name", "Cat"], ["last_name", "McCatster"], ["password_digest", "$2a$12$UiXckGT/9YrI16oCeDBj1eniOfEe8CQ4ocv3Vtm.3re3QcE5L8ap2"], ["session_token", "irrcvTkVDTQmOC65qJepXg"], ["created_at", "2020-04-08 19:57:08.758276"], ["updated_at", "2020-04-08 19:57:08.758276"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hamster@hamsters.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qHUhCdm-0cGnRPyiK1041g"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "hamster@hamsters.com"], ["first_name", "Hammy"], ["last_name", "McHammer"], ["password_digest", "$2a$12$.lvPuwFrdrLgH0yg2yYgDOhlaDOFL/bReHzCSkZfcnOy3HIJwuGcq"], ["session_token", "qHUhCdm-0cGnRPyiK1041g"], ["created_at", "2020-04-08 19:57:08.966273"], ["updated_at", "2020-04-08 19:57:08.966273"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@demo.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8g3eRO7V7wi38zX_xMqRXA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "user@demo.com"], ["first_name", "Demo"], ["last_name", "User"], ["password_digest", "$2a$12$RLuz1hn.b3shmNYSC7epEeI5STLXv8GEKAJM96JQOuWkl8P3/QF8."], ["session_token", "8g3eRO7V7wi38zX_xMqRXA"], ["created_at", "2020-04-08 19:57:09.174341"], ["updated_at", "2020-04-08 19:57:09.174341"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "karaliu@chefs.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "xJWofi-jF2T8SaCeszM4Iw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "karaliu@chefs.com"], ["first_name", "Kara"], ["last_name", "Liu"], ["password_digest", "$2a$12$bkgV4hOMGNPdzpcgACDYUOh1IpTqGWI2DiPYDFUBTKvmkLw1nmUpG"], ["session_token", "xJWofi-jF2T8SaCeszM4Iw"], ["created_at", "2020-04-08 19:57:09.379636"], ["updated_at", "2020-04-08 19:57:09.379636"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 22], ["category", "Entertainment"], ["title", "The Magicians"], ["description", "Nothing around us is as it seems...and neither is the magic you think you know."], ["start_date", "2021-12-02 11:11:11"], ["end_date", "2021-12-03 01:11:11"], ["created_at", "2020-04-08 19:57:09.400122"], ["updated_at", "2020-04-08 19:57:09.400122"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mEvent Create (1.4ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 23], ["category", "Music"], ["title", "Excision feat. The Evolution"], ["description", "Are you ready to break your necks?"], ["start_date", "2021-03-08 23:00:00"], ["end_date", "2021-03-09 04:00:00"], ["created_at", "2020-04-08 19:57:09.403220"], ["updated_at", "2020-04-08 19:57:09.403220"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 24], ["category", "Activities"], ["title", "A Night of Terror: Pandemic"], ["description", "Escape a dark, eerie mansion as the world is overrun by zombies"], ["start_date", "2021-10-31 21:00:00"], ["end_date", "2021-10-31 23:00:00"], ["created_at", "2020-04-08 19:57:09.407777"], ["updated_at", "2020-04-08 19:57:09.407777"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 24], ["category", "Food and Drink"], ["title", "Dinner in the Dark"], ["description", "You may not be able to see what you are eating, but it will be delicious"], ["start_date", "2021-01-31 19:00:00"], ["end_date", "2021-01-31 21:00:00"], ["created_at", "2020-04-08 19:57:09.410680"], ["updated_at", "2020-04-08 19:57:09.410680"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 23], ["category", "Other"], ["title", "Independence Day Fireworks"], ["description", "Join us for a glamourous viewing of the fireworks in an open air rooftop!"], ["start_date", "2021-07-04 18:00:00"], ["end_date", "2021-07-04 21:00:00"], ["created_at", "2020-04-08 19:57:09.413680"], ["updated_at", "2020-04-08 19:57:09.413680"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 25], ["category", "Nightlife"], ["title", "New Year New You"], ["description", "The BIGGEST party in New York, complete with open bar and music all night!"], ["start_date", "2021-12-31 22:00:00"], ["end_date", "2022-01-01 04:00:00"], ["created_at", "2020-04-08 19:57:09.417052"], ["updated_at", "2020-04-08 19:57:09.417052"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 25], ["category", "Free"], ["title", "Zoom Movie Night: Harry Potter Marathon"], ["description", "Social distancing movie nights streamed every week!"], ["start_date", "2020-04-20 19:00:00"], ["end_date", "2020-04-20 22:00:00"], ["created_at", "2020-04-08 19:57:09.420177"], ["updated_at", "2020-04-08 19:57:09.420177"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 26], ["category", "Food and Drink"], ["title", "Candlelit Cooking with Kara"], ["description", "Learn how to cook a perfect sweet potato with Chef Kara under candlelight"], ["start_date", "2020-06-25 16:00:00"], ["end_date", "2021-06-25 17:00:00"], ["created_at", "2020-04-08 19:57:09.423435"], ["updated_at", "2020-04-08 19:57:09.423435"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
