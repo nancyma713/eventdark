@@ -6,11 +6,15 @@ class SigninForm extends React.Component {
         super(props);
         this.state = {
             email: "",
-            checkEmail: true,
-            errors: this.props.errors
+            checkEmail: true
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
+    }
+
+    componentWillUnmount() {
+        this.props.clearErrors();
     }
 
     handleSubmit(e) {
@@ -19,10 +23,27 @@ class SigninForm extends React.Component {
             .then( () => this.setState({ checkEmail: false }));
     }
 
+    handleDemo(e) {
+        e.preventDefault();
+        this.props.login({ email: 'user@demo.com', password: 'demopw'})
+    }
+    
     update() {
         return e => this.setState({ email: e.currentTarget.value })
     }
-
+    
+    renderErrors() {
+        return (
+            <ul className="form-errors">
+            {this.props.errors.map((error, i) => (
+                <li key={`error-${i}`}>
+                    {error}
+                </li>
+            ))}
+            </ul>
+        );
+    }
+    
     render() {
         if (this.state.checkEmail === false) {
             if (this.props.exist) {
@@ -45,7 +66,10 @@ class SigninForm extends React.Component {
                                 onChange={this.update()}
                             />
                         </label>
+                        {this.renderErrors()}
                         <button>Get Started</button>
+                        <p>OR</p>
+                        <button onClick={this.handleDemo}>Demo User</button>
                     </div>
                 </form>
             </div>

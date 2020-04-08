@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SigninForm from './signin_form';
-import { signin, login } from '../../actions/session_actions';
+import { signin, login, clearErrors } from '../../actions/session_actions';
 
 const msp = (state) => ({
     email: state.session.email,
@@ -10,7 +10,8 @@ const msp = (state) => ({
 
 const mdp = (dispatch) => ({
     signin: (email) => dispatch(signin(email)),
-    login: (user) => dispatch(login(user))
+    login: (user) => dispatch(login(user)),
+    clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(msp, mdp)(SigninForm);
