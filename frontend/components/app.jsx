@@ -8,6 +8,7 @@ import LoginFormContainer from './session/login_form_container';
 import CreateEventContainer from './events/create_event_container';
 import EditEventContainer from './events/edit_event_container';
 import EventShowContainer from './events/event_show_container';
+import Footer from './footer/footer';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 
@@ -26,7 +27,7 @@ const App = () => (
         </Switch>
         <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventContainer} />
         <footer>
-
+            <Footer />
         </footer>
     </div>
 );

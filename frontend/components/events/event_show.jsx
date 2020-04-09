@@ -32,7 +32,6 @@ class EventShow extends React.Component {
     handleEdit(e) {
         e.preventDefault();
         this.props.history.push(`/events/${e.currentTarget.value}/edit`);
-        // <Redirect to={`/events/${e.currentTarget.value}/edit`} />
     }
         
     editButton() {
