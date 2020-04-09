@@ -1,9 +1,44 @@
-.header-titles {
+.index-body {
     font-family: 'Barlow', sans-serif;
     font-size: 26px;
-    margin: 20px;
+    background-color: rgb(252, 252, 252);
 }
 
-.header-titles h1 {
-    padding: 20px;
+.index-body h1 {
+    padding: 30px;
+}
+
+.event-list {
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.event-item {
+    flex: 1;
+    min-width: 250px;
+    min-height: 200px;
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
+}
+
+.event-item:hover {
+    box-shadow: 0px 30px 70px -30px #adacaa;
+}
+
+.event-info time {
+    font-size: 16px;
+    color: navy;
+    padding: 2px;
+}
+
+.event-info a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 2px;
 }

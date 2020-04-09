@@ -4,7 +4,7 @@ import EventIndexContainer from '../events/event_index_container';
 const Splash = ({ currentUser, logout }) => {
 
     return (
-        <div className="header-titles">
+        <div className="index-body">
             <h1>Popular Events</h1>
                 <EventIndexContainer />
         </div>

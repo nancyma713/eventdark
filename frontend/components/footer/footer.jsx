@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Footer = () => {
     return (
-        <div>
+        <div className="footer">
             <div className="social-links">
                 <a href='https://github.com/nancyma713'><i className="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/nancy-ma-68357275/"><i className="fab fa-linkedin"></i></a>

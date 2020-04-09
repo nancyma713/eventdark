@@ -14,7 +14,7 @@ class EventIndexItem extends React.Component {
         //     "Sat"];
 
         return (
-            <li>
+            <li className="event-item">
                 <div>
                     {/* image */}
                     {/* bookmark icon */}
