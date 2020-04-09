@@ -15,9 +15,9 @@ class EventIndexItem extends React.Component {
 
         return (
             <li className="event-item">
-                <div>
+                <div className="images">
                     {/* image */}
-                    {/* bookmark icon */}
+                    <button><i className="far fa-bookmark"></i></button>
                 </div>
                 <div className="event-info">
                     <time>{this.props.event.start_date}</time>

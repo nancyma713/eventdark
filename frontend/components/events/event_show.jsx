@@ -53,8 +53,20 @@ class EventShow extends React.Component {
         const { event } = this.props;
 
         return (
-            <div>
-                <h1>{event.title}</h1>
+            <div className="event-show">
+                <header className="event-header">
+                    <img src="#" alt="TEST"/>
+                    <div className="event-details">
+                        <h1>{event.title}</h1>
+                        <p>{event.category}</p>
+                    </div>
+                </header>
+                <div className="buttons">
+                    <button id="bookmark"><i className="far fa-bookmark"></i></button>
+                    {this.editButton()}
+                    {this.deleteButton()}
+                    <button id="register">REGISTER</button>
+                </div>
                 <div>Date and Time: 
                     <br />
                     <time>Event Start: {event.start_date}</time>
@@ -62,14 +74,6 @@ class EventShow extends React.Component {
                     <time>Event End: {event.end_date}</time>
                 </div>
                 <p>{event.description}</p>
-
-                <div className="buttons">
-                    {this.deleteButton()}
-                    {this.editButton()}
-                </div>
-                <div>
-                    <button>REGISTER</button>
-                </div>
             </div>
         )
     }
