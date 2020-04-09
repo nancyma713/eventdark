@@ -22,7 +22,7 @@ export const createEvent = (event) => (
 
 export const updateEvent = (event) => (
     $.ajax({
-        method: '   patch',
+        method: 'PATCH',
         url: `api/events/${event.id}`,
         data: { event }
     })

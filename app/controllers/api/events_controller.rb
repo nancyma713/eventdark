@@ -23,7 +23,7 @@ class Api::EventsController < ApplicationController
         @event = Event.find(params[:id])
         if @event
             @event.destroy
-            render :show
+            render json: { id: @event.id }
         else
             render json: ['Event does not exist'], status: 400
         end

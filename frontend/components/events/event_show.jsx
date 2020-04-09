@@ -3,23 +3,52 @@ import React from 'react';
 class EventShow extends React.Component {
     constructor(props) {
         super(props);
+
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchEvent(this.props.match.params.eventId);
     }
 
-    handleDelete() {
+    handleDelete(e) {
         e.preventDefault();
-        this.props.deleteEvent();
+        this.props.deleteEvent(e.currentTarget.value)
+        .then(() => this.props.history.push('/'));
     }
 
-    // handleRegister() {
+    deleteButton() {
+        let userId = this.props.currentUser.id;
+        let ownerId = this.props.event.owner_id;
+        if (userId === ownerId) {
+            return (
+                <button value={this.props.event.id} onClick={this.handleDelete}>DELETE</button>
+            )
+        }
+    }
+
+    
+    // handleEdit(e) {
+    //     e.preventDefault();
+    // }
+        
+    // editButton() {
+    //     let userId = this.props.currentUser.id;
+    //     let ownerId = this.props.event.owner_id;
+    //     if (userId === ownerId) {
+    //         return (
+    //             <button value={this.props.event.id} onClick={this.handleEdit}>EDIT</button>
+    //         )
+    //     }
+    // }
+                
+    // handleRegister(e) {
     //     e.preventDefault();
     // }
 
+
     render() {
-        const { event, deleteEvent } = this.props;
+        const { event } = this.props;
 
         return (
             <div>
@@ -32,9 +61,12 @@ class EventShow extends React.Component {
                 </div>
                 <p>{event.description}</p>
 
+                <div className="buttons">
+                    {this.deleteButton()}
+                    {/* {this.editButton()} */}
+                </div>
                 <div>
                     <button>REGISTER</button>
-
                 </div>
             </div>
         )
