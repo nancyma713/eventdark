@@ -5,7 +5,7 @@
 }
 
 .index-body h1 {
-    padding: 30px;
+    padding: 20px 30px 10px 30px;
 }
 
 /* .index-body h4 {
@@ -89,4 +89,9 @@
     cursor: pointer;
     border-bottom: 3px solid black;
     padding: 10px 0px 7px 0px;
+}
+
+#banner {
+    width: 100%;
+    height: 100%;
 }
