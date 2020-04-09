@@ -7,7 +7,6 @@ const Splash = ({ currentUser, logout }) => {
         <div className="header-titles">
             <h1>Popular Events</h1>
                 <EventIndexContainer />
-            <h1>Find Events</h1>
         </div>
     );
 

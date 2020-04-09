@@ -17,7 +17,7 @@ class Nav extends React.Component {
                     </div>
                     <div className="nav-content">
                         <span id="event">
-                            <Link to="/create"><i className="fas fa-plus"></i> Create Event</Link>
+                            <Link to="/events/create"><i className="fas fa-plus"></i> Create Event</Link>
                         </span>
                         <span>
                             <Link to={`/users/${this.props.currentUser.id}/bookmarks/events`}>
@@ -44,7 +44,7 @@ class Nav extends React.Component {
                             <li id="registrations">
                                 <Link to={`/users/${this.props.currentUser.id}`}>My Registrations</Link>
                             </li>
-                            <li><Link to="/create">Create Event</Link></li>
+                            <li><Link to="/events/create">Create Event</Link></li>
                             <li><button onClick={this.props.logout}>Logout</button></li>
                         </ul>
                     </div>

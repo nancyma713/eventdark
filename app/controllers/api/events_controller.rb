@@ -6,7 +6,7 @@ class Api::EventsController < ApplicationController
     end
 
     def show
-        @event = Event.find_by(params[:id])
+        @event = Event.find(params[:id])
         render :show
     end
 
@@ -20,7 +20,7 @@ class Api::EventsController < ApplicationController
     end
 
     def destroy
-        @event = Event.find_by(params[:id])
+        @event = Event.find(params[:id])
         if @event
             @event.destroy
             render :show
@@ -30,7 +30,7 @@ class Api::EventsController < ApplicationController
     end
     
     def update
-        @event = Event.find_by(params[:id])
+        @event = Event.find(params[:id])
 
         if @event && @event.update_attributes(event_params)
             render 'api/events/show'

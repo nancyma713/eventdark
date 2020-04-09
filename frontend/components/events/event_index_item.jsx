@@ -8,13 +8,13 @@ class EventIndexItem extends React.Component {
 
     render() {
         // format start and end dates
-        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-            "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
-        const dayOfWeek = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri",
-            "Sat"];
+        // const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        //     "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+        // const dayOfWeek = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri",
+        //     "Sat"];
 
         return (
-            <div>
+            <li>
                 <div>
                     {/* image */}
                     {/* bookmark icon */}
@@ -23,7 +23,7 @@ class EventIndexItem extends React.Component {
                     <time>{this.props.event.start_date}</time>
                     <h3><Link to={`events/${this.props.event.id}`}>{this.props.event.title}</Link></h3>
                 </div>
-            </div>
+            </li>
         )
     }
 
