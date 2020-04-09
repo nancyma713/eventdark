@@ -6,6 +6,7 @@ import SigninFormContainer from './session/signin_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import CreateEventContainer from './events/create_event_container';
+import EditEventContainer from './events/edit_event_container';
 import EventShowContainer from './events/event_show_container';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
@@ -23,7 +24,7 @@ const App = () => (
             <ProtectedRoute exact path="/events/create" component={CreateEventContainer} />
             <Route exact path="/events/:eventId" component={EventShowContainer} />
         </Switch>
-
+        <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventContainer} />
         <footer>
 
         </footer>

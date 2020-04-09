@@ -33,7 +33,7 @@ class Api::EventsController < ApplicationController
         @event = Event.find(params[:id])
 
         if @event && @event.update_attributes(event_params)
-            render 'api/events/show'
+            render :show
         elsif !@event
             render json: ['Event does not exist'], status: 400
         else

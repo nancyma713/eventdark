@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import EventShow from './event_show';
-import { fetchEvent, deleteEvent } from '../../actions/event_actions';
+import { fetchEvent, deleteEvent, updateEvent } from '../../actions/event_actions';
 
 const msp = (state, ownProps) => ({
     event: state.entities.events[ownProps.match.params.eventId],
@@ -9,7 +9,8 @@ const msp = (state, ownProps) => ({
 
 const mdp = (dispatch) => ({
     fetchEvent: eventId => dispatch(fetchEvent(eventId)),
-    deleteEvent: eventId => dispatch(deleteEvent(eventId))
+    deleteEvent: eventId => dispatch(deleteEvent(eventId)),
+    // updateEvent: event => dispatch(updateEvent(event))
 });
 
 export default connect(msp, mdp)(EventShow);

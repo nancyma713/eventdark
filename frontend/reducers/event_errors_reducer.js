@@ -1,6 +1,6 @@
 import { RECEIVE_EVENT_ERRORS, CLEAR_EVENT_ERRORS } from '../actions/event_actions';
 
-const sessionErrorsReducer = (state = [], action) => {
+const eventErrorsReducer = (state = [], action) => {
     Object.freeze(state);
 
     switch (action.type) {
@@ -12,4 +12,4 @@ const sessionErrorsReducer = (state = [], action) => {
             return state;
     }
 }
-export default sessionErrorsReducer;
+export default eventErrorsReducer;

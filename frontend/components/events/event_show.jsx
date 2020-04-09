@@ -1,10 +1,12 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 class EventShow extends React.Component {
     constructor(props) {
         super(props);
 
         this.handleDelete = this.handleDelete.bind(this);
+        this.handleEdit = this.handleEdit.bind(this);
     }
 
     componentDidMount() {
@@ -14,7 +16,7 @@ class EventShow extends React.Component {
     handleDelete(e) {
         e.preventDefault();
         this.props.deleteEvent(e.currentTarget.value)
-        .then(() => this.props.history.push('/'));
+            .then(() => this.props.history.push('/'));
     }
 
     deleteButton() {
@@ -27,20 +29,21 @@ class EventShow extends React.Component {
         }
     }
 
-    
-    // handleEdit(e) {
-    //     e.preventDefault();
-    // }
+    handleEdit(e) {
+        e.preventDefault();
+        this.props.history.push(`/events/${e.currentTarget.value}/edit`);
+        // <Redirect to={`/events/${e.currentTarget.value}/edit`} />
+    }
         
-    // editButton() {
-    //     let userId = this.props.currentUser.id;
-    //     let ownerId = this.props.event.owner_id;
-    //     if (userId === ownerId) {
-    //         return (
-    //             <button value={this.props.event.id} onClick={this.handleEdit}>EDIT</button>
-    //         )
-    //     }
-    // }
+    editButton() {
+        let userId = this.props.currentUser.id;
+        let ownerId = this.props.event.owner_id;
+        if (userId === ownerId) {
+            return (
+                <button value={this.props.event.id} onClick={this.handleEdit}>EDIT</button>
+            )
+        }
+    }
                 
     // handleRegister(e) {
     //     e.preventDefault();
@@ -63,7 +66,7 @@ class EventShow extends React.Component {
 
                 <div className="buttons">
                     {this.deleteButton()}
-                    {/* {this.editButton()} */}
+                    {this.editButton()}
                 </div>
                 <div>
                     <button>REGISTER</button>

@@ -9,9 +9,9 @@ class CreateEventForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    // componentWillUnmount() {
-    //     this.props.clearEventErrors();
-    // }
+    componentWillUnmount() {
+        this.props.clearEventErrors();
+    }
     
     handleSubmit(e) {
         e.preventDefault();
@@ -21,6 +21,18 @@ class CreateEventForm extends React.Component {
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value });
+    }
+
+    renderErrors() {
+        return (
+            <ul className="form-errors">
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
     }
 
     render() {
@@ -36,12 +48,12 @@ class CreateEventForm extends React.Component {
                         />
                     </label>
                     <label>Starts
-                        <input type="date"
+                        <input type="datetime-local"
                         value={this.state.start_date}
                         onChange={this.update('start_date')}/>
                     </label>
                     <label>Ends
-                        <input type="date"
+                        <input type="datetime-local"
                             value={this.state.end_date}
                             onChange={this.update('end_date')} />
                     </label>
@@ -68,6 +80,7 @@ class CreateEventForm extends React.Component {
                             <option value="Travel and Outdoor">Travel and Outdoor</option>
                         </select>
                     </label>
+                    {this.renderErrors()}
                     <button>Save</button>
                 </form>
             </div>
