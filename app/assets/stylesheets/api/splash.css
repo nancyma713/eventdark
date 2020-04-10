@@ -1,9 +1,97 @@
-.header-titles {
+.index-body {
     font-family: 'Barlow', sans-serif;
     font-size: 26px;
-    margin: 20px;
+    background-color: rgb(252, 252, 252);
 }
 
-.header-titles h1 {
-    padding: 20px;
+.index-body h1 {
+    padding: 20px 30px 10px 30px;
+}
+
+/* .index-body h4 {
+    padding: 30px;
+} */
+
+.event-list {
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.event-item {
+    flex: 1;
+    min-width: 250px;
+    min-height: 200px;
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
+}
+
+.event-item:hover {
+    box-shadow: 0px 30px 70px -30px #adacaa;
+}
+
+.event-info time {
+    font-size: 16px;
+    color: navy;
+    padding: 2px;
+}
+
+.event-info a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 2px;
+}
+
+.images {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.images button {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 13px;
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.images button:focus {
+    outline-style: none;
+    background-color: whitesmoke;
+}
+
+.category-browse {
+    padding: 30px;
+}
+
+.category-list {
+    display: flex;
+    list-style: none;
+    margin: 0px 10px;
+}
+
+.category-list li {
+    margin: 10px;
+    padding: 10px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+}
+
+.category-list li:hover {
+    color: black;
+    cursor: pointer;
+    border-bottom: 3px solid black;
+    padding: 10px 0px 7px 0px;
+}
+
+#banner {
+    width: 100%;
+    height: 100%;
 }

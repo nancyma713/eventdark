@@ -4,7 +4,7 @@ import { signup, clearErrors } from '../../actions/session_actions';
 
 const msp = (state) => ({
     email: state.session.email,
-    errors: state.errors.session // check on this
+    errors: state.errors.session
 });
 
 const mdp = (dispatch) => ({

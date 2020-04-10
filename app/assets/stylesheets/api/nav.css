@@ -4,6 +4,7 @@
     font-family: 'Barlow', sans-serif;
     font-size: 14px;
     align-content: center;
+    border-bottom: 1px solid lightgray;
 }
 
 .logo {

@@ -6,6 +6,7 @@
 }
 
 .e-logo {
+    margin-top: 50px;
     font-family: 'Luckiest Guy', cursive;
     font-size: 69px;
     color: navy;
@@ -18,16 +19,16 @@
 }
 
 .signup-form p {
-    font-size: 14px;
+    font-size: 16px;
     color: lightslategray;
     margin: 20px;
 }
 
-.signup-form form {
+/* .signup-form form {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
 .form-content {
     margin: 10px;
@@ -49,9 +50,9 @@
     border: 1px solid gray;
 }
 
-.form-content label:focus {
+/* .form-content label:focus {
     border: 1px solid navy;
-}
+} */
 
 .form-content input {
     width: 100%;
@@ -67,7 +68,7 @@
 .signup-form button {
     margin: 15px 0px;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 12px;
     background-color: navy;
     color: white;

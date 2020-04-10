@@ -1,0 +1,151 @@
+.event-form-container {
+    font-family: 'Barlow', sans-serif;
+}
+
+.event-form-container h2 {
+    padding: 35px 27px;
+    border-bottom: 1px solid whitesmoke;
+    font-weight: 400;
+    color: midnightblue;
+    font-size: 24px;
+}
+
+.event-form {
+    margin: 20px 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    color: midnightblue;
+}
+
+.event-form-content {
+    margin: 10px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#event-title {
+    box-sizing: border-box;
+    width: inherit;
+    padding: 5px 10px;
+    margin: 5px 0px;
+}
+
+#event-title input {
+    margin-top: 5px;
+    width: 100%;
+    border: 2px solid whitesmoke;
+    border-radius: 3px;
+    outline: 0;
+    font-size: 16px;
+    padding: 12px 10px;
+}
+
+#event-title input:focus {
+    border: 2px solid royalblue;
+}
+
+#event-start {
+    box-sizing: border-box;
+    width: inherit;
+    padding: 5px 10px;
+    margin: 5px 0px;
+}
+
+#event-start input {
+    margin-top: 5px;
+    width: 100%;
+    border: 2px solid whitesmoke;
+    border-radius: 3px;
+    outline: 0;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#event-start input:focus {
+    border: 2px solid royalblue;
+}
+
+#event-end {
+    box-sizing: border-box;
+    width: inherit;
+    padding: 5px 10px;
+    margin: 5px 0px;
+}
+
+#event-end input {
+    margin-top: 5px;
+    width: 100%;
+    border: 2px solid whitesmoke;
+    border-radius: 3px;
+    outline: 0;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#event-end input:focus {
+    border: 2px solid royalblue;
+}
+
+#event-desc {
+    box-sizing: border-box;
+    width: inherit;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    outline: 0;
+}
+
+#event-desc textarea {
+    margin-top: 5px;
+    width: 620px;
+    height: 200px;
+    font-size: 14px;
+}
+
+#event-category {
+    box-sizing: border-box;
+    width: inherit;
+    padding: 5px 10px;
+    margin: 5px 0px;
+}
+
+#event-category select {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Barlow', sans-serif;
+}
+
+#event-category select:focus {
+   border: 2px solid royalblue; 
+}
+
+.event-form p {
+    align-self: center;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.event-form button {
+    margin: 5px;
+    align-self: center;
+    width: 100px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bolder;
+    background-color: white;
+    color: rgb(37, 37, 37);
+    border: 2px solid #A9A8B3;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.event-form button:hover {
+    background-color: whitesmoke;
+    border-color: gray;
+}

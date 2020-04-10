@@ -93,7 +93,7 @@ class SigninForm extends React.Component {
                         </label>
                         {this.renderErrors()}
                         <button>Get Started</button>
-                        <p>or</p>
+                        <p id="or">or</p>
                         <button onClick={this.handleDemo}>Demo User</button>
                     </div>
                 </form>

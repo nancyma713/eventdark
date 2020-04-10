@@ -1,22 +1,36 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import SplashContainer from './session/splash_container';
 import NavContainer from './nav/nav_container';
 import SigninFormContainer from './session/signin_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
-import { AuthRoute } from '../utils/route_util';
+import CreateEventContainer from './events/create_event_container';
+import EditEventContainer from './events/edit_event_container';
+import EventShowContainer from './events/event_show_container';
+import Footer from './footer/footer';
+import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 
 const App = () => (
-    <div>
+    <div className="all-containers">
         <header>
             <NavContainer />
         </header>
-        <AuthRoute exact path="/signin" component={SigninFormContainer} />
-        <AuthRoute exact path="/signin/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signin/signup" component={SignupFormContainer} />
-        <Route exact path="/" component={SplashContainer} />
+        <main className="main">
+            <AuthRoute exact path="/signin" component={SigninFormContainer} />
+            <AuthRoute exact path="/signin/login" component={LoginFormContainer} />
+            <AuthRoute exact path="/signin/signup" component={SignupFormContainer} />
+            <Route exact path="/" component={SplashContainer} />
+            <Switch>
+                <ProtectedRoute exact path="/events/create" component={CreateEventContainer} />
+                <Route exact path="/events/:eventId" component={EventShowContainer} />
+            </Switch>
+            <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventContainer} />
+        </main>
+        <footer>
+            <Footer />
+        </footer>
     </div>
 );
 
