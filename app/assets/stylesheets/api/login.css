@@ -6,6 +6,7 @@
 }
 
 .e-logo {
+    margin-top: 50px;
     font-family: 'Luckiest Guy', cursive;
     font-size: 69px;
     color: navy;
@@ -49,9 +50,9 @@
     border: 1px solid gray;
 }
 
-.form-content label:focus {
+/* .form-content label:focus {
     border: 1px solid navy;
-}
+} */
 
 .form-content input {
     width: 100%;
@@ -67,7 +68,7 @@
 .login-form button {
     margin: 15px 0px;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 12px;
     background-color: navy;
     color: white;
