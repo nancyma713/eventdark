@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     font-family: 'Barlow', sans-serif;
+    min-height: 200%;
 }
 
 .e-logo {
@@ -19,15 +20,15 @@
 }
 
 .signin-form p {
-    font-size: 14px;
+    font-size: 146x;
     color: lightslategray;
     margin: 20px;
 }
 
 #or {
-    font-size: 12px;
+    font-size: 14px;
     color: black;
-    margin: 5px;
+    margin: 0px;
 }
 
 .signin-form form {

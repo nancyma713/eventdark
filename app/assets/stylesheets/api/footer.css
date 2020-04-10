@@ -1,23 +1,22 @@
 .footer {
     margin-top: 10%;
-    border-top: 1px solid lightgray;
     background-color: navy;
     padding: 10px;
 }
 
 
-.social-links {
+.website-links {
     display: flex;
     justify-content: center;
 }
 
-.social-links a {
+.website-links a {
     font-size: 25px;
     text-decoration: none;
     color: white;
     padding: 10px;
 }
 
-.social-links a:hover {
+.website-links a:hover {
     color: lightgray;
 }

@@ -13,19 +13,21 @@ import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 
 const App = () => (
-    <div>
+    <div className="all-containers">
         <header>
             <NavContainer />
         </header>
-        <AuthRoute exact path="/signin" component={SigninFormContainer} />
-        <AuthRoute exact path="/signin/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signin/signup" component={SignupFormContainer} />
-        <Route exact path="/" component={SplashContainer} />
-        <Switch>
-            <ProtectedRoute exact path="/events/create" component={CreateEventContainer} />
-            <Route exact path="/events/:eventId" component={EventShowContainer} />
-        </Switch>
-        <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventContainer} />
+        <main className="main">
+            <AuthRoute exact path="/signin" component={SigninFormContainer} />
+            <AuthRoute exact path="/signin/login" component={LoginFormContainer} />
+            <AuthRoute exact path="/signin/signup" component={SignupFormContainer} />
+            <Route exact path="/" component={SplashContainer} />
+            <Switch>
+                <ProtectedRoute exact path="/events/create" component={CreateEventContainer} />
+                <Route exact path="/events/:eventId" component={EventShowContainer} />
+            </Switch>
+            <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventContainer} />
+        </main>
         <footer>
             <Footer />
         </footer>
