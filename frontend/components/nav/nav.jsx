@@ -21,7 +21,7 @@ class Nav extends React.Component {
                         </div>
                         <div className="nav-links">
                             <span id="event">
-                                <Link to="/create"><i className="fas fa-plus"></i> Create Event</Link>
+                                <Link to="/events/create"><i className="fas fa-plus"></i> Create Event</Link>
                             </span>
                             <span>
                                 <Link to={`/users/${this.props.currentUser.id}/bookmarks/events`}>
