@@ -144,6 +144,19 @@
     border-bottom: 1px solid lightgray;
 }
 
+#user-info a {
+    display: flex;
+    padding: 10px 15px;
+}
+
+#user-details {
+    padding: 0px 5px 10px 5px;
+}
+
+#fname-lname {
+    font-weight: bolder;
+}
+
 .dropdown-content button {
     font-family: 'Barlow', sans-serif;
     font-size: 14px;
@@ -168,7 +181,6 @@
 }
 
 .nav-content {
-    /* padding: 20px 0px; */
     width: 75%;
     display: flex;
     justify-content: space-between;
@@ -189,9 +201,12 @@
 }
 
 #user-icon {
+    padding-top: 5px;
+    padding-right: 5px;
     font-size: medium;
 }
 
 #registrations {
     border-bottom: 1px solid lightgray;
 }
+

@@ -39,8 +39,15 @@ class Nav extends React.Component {
                         <i className="far fa-user" id="user-icon"></i>
                         <ul className="dropdown-content">
                             <li id="user-info">
-                                <Link to="#">
-                                    <i className="far fa-user" id="user-icon"></i> {this.props.currentUser.email}
+                                <Link to={`/users/${this.props.currentUser.id}`}>
+                                    <i className="far fa-user" id="user-icon"></i>
+                                    <div id="user-details">
+                                        <span id="fname-lname">
+                                            {this.props.currentUser.first_name} {this.props.currentUser.last_name}
+                                        </span>
+                                        <br />
+                                        {this.props.currentUser.email}
+                                    </div>
                                 </Link>
                             </li>
                             <li>

@@ -1,0 +1,44 @@
+.user-show-page {
+    margin: 50px;
+    font-family: 'Barlow', sans-serif;
+    /* display: flex; */
+}
+
+.user-show-page #user-icon {
+    font-size: 50px;
+    text-decoration: none;
+    color: lightgray;
+    border: 1px solid lightgray;
+    padding: 25px 30px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px #adacaa;
+}
+
+.user-info {
+    padding-left: 10%;
+    display: flex;
+}
+
+#show-user-details {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#show-fname-lname {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.user-show-events {
+    padding-top: 20px;
+    padding-left: 35%;
+}
+
+.user-show-headers {
+    font-size: 18px;
+}
+
+.user-regs {
+    padding: 20px;
+}
