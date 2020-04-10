@@ -16,21 +16,6 @@ class Nav extends React.Component {
                         <Link to='/'>eventdark</Link>
                     </div>
                     <div className="nav-content">
-<<<<<<< HEAD
-                        <span id="event">
-                            <Link to="/events/create"><i className="fas fa-plus"></i> Create Event</Link>
-                        </span>
-                        <span>
-                            <Link to={`/users/${this.props.currentUser.id}/bookmarks/events`}>
-                                <i className="far fa-bookmark"></i> Bookmarks
-                            </Link>
-                        </span>
-                        <span>
-                            <Link to={`/users/${this.props.currentUser.id}`}>
-                                <i className="fas fa-ticket-alt"></i> Registrations
-                            </Link>
-                        </span>
-=======
                         <div className="searchbar-container">
                             <div className="searchbar">
                                 <i className="fas fa-search"></i> <input id="search-input" type="text" placeholder="Search events" />
@@ -51,7 +36,6 @@ class Nav extends React.Component {
                                 </Link>
                             </span>
                         </div>
->>>>>>> userAuth
                     </div>
                     <div className="profile-dropdown">
                         <i className="far fa-user" id="user-icon"></i>
