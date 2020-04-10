@@ -8,7 +8,7 @@
 }
 
 .logo {
-    padding: 20px;
+    display: flex;
 }
 
 .logo a {
@@ -17,6 +17,41 @@
     font-size: 22px;
     color: navy;
     text-decoration: none;
+    vertical-align: bottom;
+}
+
+.searchbar-container {
+    display: flex;
+}
+
+.searchbar {
+    background-color: whitesmoke;
+    margin: 10px;
+    padding: 5px 10px;
+    font-family: 'Barlow', sans-serif;
+    min-width: 50%;
+    color: lightgray;
+    vertical-align: bottom;
+    display: flex;
+}
+
+.searchbar i {
+    padding-top: 10px;
+}
+
+#search-input {
+    width: 95%;
+    border: 0;
+    outline: none;
+    font-size: 14px;
+    padding: 7px;
+    margin-left: 7px;
+    color: black;
+    background-color: whitesmoke;
+}
+
+#search-input:focus {
+    background-color: white;
 }
 
 /* when logged out */
@@ -26,16 +61,19 @@
 }
 
 .navbar-right span {
-    padding: 20px;
+    padding: 20px 0px;
     color: lightslategray;
 }
 
+#help {
+    padding: 20px;
+}
 #help:hover {
     background-color: whitesmoke;
 }
 
 .navbar-right a {
-    padding: 20px 0px;
+    padding: 20px;
     text-decoration: none;
     color: lightslategray;
 }
@@ -125,11 +163,15 @@
 
 /* logged in nav */
 
-.nav-content {
+.nav-links {
     padding: 20px 0px;
+}
+
+.nav-content {
+    /* padding: 20px 0px; */
     width: 75%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .nav-content a {
