@@ -16,19 +16,26 @@ class Nav extends React.Component {
                         <Link to='/'>eventdark</Link>
                     </div>
                     <div className="nav-content">
-                        <span id="event">
-                            <Link to="/create"><i className="fas fa-plus"></i> Create Event</Link>
-                        </span>
-                        <span>
-                            <Link to={`/users/${this.props.currentUser.id}/bookmarks/events`}>
-                                <i className="far fa-bookmark"></i> Bookmarks
-                            </Link>
-                        </span>
-                        <span>
-                            <Link to={`/users/${this.props.currentUser.id}`}>
-                                <i className="fas fa-ticket-alt"></i> Registrations
-                            </Link>
-                        </span>
+                        <div className="searchbar-container">
+                            <div className="searchbar">
+                                <i className="fas fa-search"></i> <input id="search-input" type="text" placeholder="Search events" />
+                            </div>
+                        </div>
+                        <div className="nav-links">
+                            <span id="event">
+                                <Link to="/create"><i className="fas fa-plus"></i> Create Event</Link>
+                            </span>
+                            <span>
+                                <Link to={`/users/${this.props.currentUser.id}/bookmarks/events`}>
+                                    <i className="far fa-bookmark"></i> Bookmarks
+                                </Link>
+                            </span>
+                            <span>
+                                <Link to={`/users/${this.props.currentUser.id}`}>
+                                    <i className="fas fa-ticket-alt"></i> Registrations
+                                </Link>
+                            </span>
+                        </div>
                     </div>
                     <div className="profile-dropdown">
                         <i className="far fa-user" id="user-icon"></i>
@@ -56,10 +63,15 @@ class Nav extends React.Component {
                     <div className="logo">
                         <Link to='/'>eventdark</Link>
                     </div>
-                    <div className="navbar-right">
-                        <span><Link to="/"><i className="fas fa-search"></i> Browse Events</Link></span>
-                        <span id="help"><i className="far fa-question-circle"></i> Help</span>
-                        <span><Link to="/signin">Sign In</Link></span>
+                    <div className="nav-content">
+                        <div className="searchbar">
+                            <i className="fas fa-search"></i> <input id="search-input" type="text" placeholder="Search events" />
+                        </div>
+                        <div className="navbar-right">
+                            <span><Link to="/"><i className="fas fa-search"></i> Browse Events</Link></span>
+                            <span id="help"><i className="far fa-question-circle"></i> Help</span>
+                            <span><Link to="/signin">Sign In</Link></span>
+                        </div>
                     </div>
                 </div>
             );
