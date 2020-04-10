@@ -91,3 +91,19 @@
 .lname-inputs {
     margin-left: 5px;
 }
+
+#terms {
+    font-size: 12px;
+    color: black;
+    text-align: center;
+}
+
+.login-instead {
+    text-decoration: none;
+    color: #3659e3;
+    font-size: 14px;;
+}
+
+.login-instead:hover {
+    text-decoration: underline;
+}

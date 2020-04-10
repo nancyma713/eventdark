@@ -78,3 +78,12 @@
 .login-form button:hover {
     background-color: rgb(12, 12, 194)
 }
+
+#forgot-pw {
+    color: #3659e3;
+}
+
+#forgot-pw:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
