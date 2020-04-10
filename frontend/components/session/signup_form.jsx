@@ -77,6 +77,8 @@ class SignupForm extends React.Component {
                     </label>
                     {this.renderErrors()}
                     <button>Sign Up</button>
+                    <p id="terms">By continuing, I agree to Eventdark's Terms Of Service, Privacy Policy, and Community Guidelines.</p>
+                    <Link to="login" className="login-instead">Log In Instead</Link>
                 </form>
             </div>
         );

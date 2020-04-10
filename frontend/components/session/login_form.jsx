@@ -63,7 +63,7 @@ class LoginForm extends React.Component {
                     </label>
                     {this.renderErrors()}
                     <button>Log In</button>
-                    <p>Forgot password</p>
+                    <p id="forgot-pw">Forgot password</p>
                 </form>
             </div>
         );
