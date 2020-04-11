@@ -56,10 +56,9 @@ class SigninForm extends React.Component {
     }
     
     renderErrors() {
-        // debugger
         return (
             <ul className="form-errors">
-            {this.props.errors.map((error, i) => (
+            {this.state.errors.map((error, i) => (
                 <li key={`error-${i}`}>
                     {error}
                 </li>
@@ -69,15 +68,18 @@ class SigninForm extends React.Component {
     }
     
     render() {
-        // debugger
         if (this.state.checkEmail === false) {
             if (this.props.exist) {
                 return <Redirect to="signin/login" />
-            } else {
+            } else if (this.isValidEmail(this.props.email)) {
                 return <Redirect to="signin/signup" />
+            } else {
+                if (!this.state.errors.includes('Please enter a valid email address')) {
+                    this.state.errors.push('Please enter a valid email address');
+                }
             }
         }
-        // debugger
+
         return (
             <div className="signin-form">
                 <h1 className="e-logo">e</h1>
