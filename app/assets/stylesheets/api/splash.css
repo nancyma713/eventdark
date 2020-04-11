@@ -78,8 +78,8 @@
 
 .images button {
     position: absolute;
-    bottom: -5px;
-    right: 5px;
+    bottom: 0px;
+    right: 10px;
     z-index: 10;
     text-decoration: none;
     font-size: 20px;
