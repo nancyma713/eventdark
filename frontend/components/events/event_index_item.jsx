@@ -7,11 +7,10 @@ class EventIndexItem extends React.Component {
     }
 
     render() {
-        // format start and end dates
-        // const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        //     "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
-        // const dayOfWeek = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri",
-        //     "Sat"];
+        const startDate = new Date(this.props.event.start_date);
+        const startDateString = startDate.toDateString();
+        const formatTime = new Date(startDate.getTime())
+            .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
 
         return (
             <li className="event-item">
@@ -20,7 +19,7 @@ class EventIndexItem extends React.Component {
                     <button><i className="far fa-bookmark"></i></button>
                 </div>
                 <div className="event-info">
-                    <time>{this.props.event.start_date}</time>
+                    <p>{startDateString}, {formatTime}</p>
                     <h3><Link to={`events/${this.props.event.id}`}>{this.props.event.title}</Link></h3>
                 </div>
             </li>

@@ -5,7 +5,6 @@
 .event-form-container h2 {
     padding: 35px 27px;
     border-bottom: 1px solid whitesmoke;
-    font-weight: 400;
     color: midnightblue;
     font-size: 24px;
 }
@@ -127,7 +126,7 @@
 .event-form p {
     align-self: center;
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 700;
     padding: 10px;
 }
 
@@ -137,7 +136,7 @@
     width: 100px;
     padding: 10px;
     font-size: 14px;
-    font-weight: bolder;
+    font-weight: 500;
     background-color: white;
     color: rgb(37, 37, 37);
     border: 2px solid #A9A8B3;

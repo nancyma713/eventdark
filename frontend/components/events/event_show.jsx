@@ -52,6 +52,16 @@ class EventShow extends React.Component {
     render() {
         const { event } = this.props;
 
+        const startDate = new Date(this.props.event.start_date);
+        const startDateString = startDate.toDateString();
+        const formatStartTime = new Date(startDate.getTime())
+            .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
+
+        const endDate = new Date(this.props.event.end_date);
+        const endDateString = endDate.toDateString();
+        const formatEndTime = new Date(endDate.getTime())
+            .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
+
         return (
             <div className="event-show">
                 <header className="event-header">
@@ -67,13 +77,16 @@ class EventShow extends React.Component {
                     {this.deleteButton()}
                     <button id="register">REGISTER</button>
                 </div>
-                <div>Date and Time: 
-                    <br />
-                    <time>Event Start: {event.start_date}</time>
-                    <br />
-                    <time>Event End: {event.end_date}</time>
+                <div className="event-body">
+                    <div>
+                        <p>{event.description}</p>
+                    </div>
+                    <div className="event-body-date">
+                        <p>Date and Time</p>
+                        <p>{startDateString}, {formatStartTime} -</p>
+                        <p>{endDateString}, {formatEndTime}</p>
+                    </div>
                 </div>
-                <p>{event.description}</p>
             </div>
         )
     }

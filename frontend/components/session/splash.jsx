@@ -1,7 +1,7 @@
 import React from 'react';
 import EventIndexContainer from '../events/event_index_container';
 
-const Splash = ({ currentUser, logout }) => {
+const Splash = () => {
 
     return (
         <div className="splash-body">
@@ -12,7 +12,7 @@ const Splash = ({ currentUser, logout }) => {
                 <h1>All Events</h1>
                 <EventIndexContainer />
                 <div className="category-browse">
-                    <h4>Browse by Category</h4>
+                    <h2>Browse by Category</h2>
                     <ul className="category-list">
                         <li>Entertainment</li>
                         <li>Food and Drink</li>

@@ -10,7 +10,7 @@ class EditEventForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchEvent(this.props.params.match.eventId)
+        this.props.fetchEvent(this.props.match.params.eventId)
     }
 
     componentWillUnmount() {
@@ -20,7 +20,7 @@ class EditEventForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.updateEvent(this.state)
-            .then(event => this.props.history.push(`${event.event.id}`));
+            .then(event => this.props.history.push(`/events/${event.event.id}`));
     }
 
     update(field) {

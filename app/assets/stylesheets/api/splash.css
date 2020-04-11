@@ -6,15 +6,18 @@
     font-family: 'Barlow', sans-serif;
     font-size: 26px;
     background-color: rgb(252, 252, 252);
+    margin: 0px 50px;
 }
 
 .index-body h1 {
-    padding: 20px 30px 10px 30px;
+    padding: 20px 30px 0px 30px;
+    font-weight: 700;
 }
 
-/* .index-body h4 {
-    padding: 30px;
-} */
+.index-body h2 {
+    padding: 20px 30px 0px 0px;
+    font-weight: 700;
+}
 
 .event-list {
     padding: 10px;
@@ -37,9 +40,10 @@
     box-shadow: 0px 30px 70px -30px #adacaa;
 }
 
-.event-info time {
-    font-size: 16px;
-    color: navy;
+.event-info p {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(8, 8, 216);
     padding: 2px;
 }
 
@@ -47,7 +51,7 @@
     text-decoration: none;
     color: black;
     font-size: 18px;
-    font-weight: bolder;
+    font-weight: 700;
     padding: 2px;
 }
 
@@ -84,7 +88,7 @@
     margin: 10px;
     padding: 10px 0px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     color: gray;
 }
 
