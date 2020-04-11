@@ -12,10 +12,17 @@ class EventIndexItem extends React.Component {
         const formatTime = new Date(startDate.getTime())
             .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
 
+            
+        let image = 'assets/banner.jpg';
+
+        if (this.props.event.id <= 15) {
+            image = `assets/${this.props.event.id}`;
+        }
+
         return (
             <li className="event-item">
                 <div className="images">
-                    {/* image */}
+                    <img src={image} alt={this.props.event.title} />
                     <button><i className="far fa-bookmark"></i></button>
                 </div>
                 <div className="event-info">
