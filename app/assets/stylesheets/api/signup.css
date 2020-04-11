@@ -93,6 +93,11 @@
     margin-left: 5px;
 }
 
+.signup-errors {
+    width: 100%;
+    display: flex;
+}
+
 #terms {
     font-size: 12px;
     color: black;

@@ -8,9 +8,11 @@ class SignupForm extends React.Component {
             email: this.props.email,
             password: '',
             first_name: '',
-            last_name: ''
+            last_name: '',
+            // errors: []
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.checkError = this.checkError.bind(this);
     }
 
     componentWillUnmount() {
@@ -28,16 +30,27 @@ class SignupForm extends React.Component {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
 
-    renderErrors() {
-        return (
-            <ul className="form-errors">
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
+    // renderErrors() {
+    //     return (
+    //         <ul className="form-errors">
+    //             {this.props.errors.map((error, i) => (
+    //                 <li key={`error-${i}`}>
+    //                     {error}
+    //                 </li>
+    //             ))}
+    //         </ul>
+    //     );
+    // }
+
+    checkError(msg) {
+        let allErrors = Object.values(this.props.errors);
+        if (allErrors.includes(msg)) {
+            return (
+                <div className="form-errors">
+                    {msg}
+                </div>
+            )
+        }
     }
 
     render() {
@@ -53,6 +66,7 @@ class SignupForm extends React.Component {
                             onChange={this.update('email')}
                         />
                     </label>
+                    {this.checkError("Email can't be blank")}
                     <br />
                     <div className="name-signup">
                         <label className="fname-inputs">First Name
@@ -65,8 +79,12 @@ class SignupForm extends React.Component {
                             <input type="text"
                                 value={this.state.last_name}
                                 onChange={this.update('last_name')}
-                            />
+                                />
                         </label>
+                    </div>
+                    <div className="signup-errors">
+                        {this.checkError("First name can't be blank")}
+                        {this.checkError("Last name can't be blank")}
                     </div>
                     <br/>
                     <label>Password
@@ -75,7 +93,7 @@ class SignupForm extends React.Component {
                             onChange={this.update('password')}
                         />
                     </label>
-                    {this.renderErrors()}
+                    {this.checkError("Password is too short (minimum is 6 characters)")}
                     <button>Sign Up</button>
                     <p id="terms">By continuing, I agree to Eventdark's Terms Of Service, Privacy Policy, and Community Guidelines.</p>
                     <Link to="login" className="login-instead">Log In Instead</Link>

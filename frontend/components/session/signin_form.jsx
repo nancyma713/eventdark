@@ -25,25 +25,9 @@ class SigninForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // debugger
-        // if (!this.isValidEmail(this.state.email)) {
-        //     return;
-        // }
 
         this.props.signin(this.state)
             .then(() => this.setState({ checkEmail: false }));
-
-        // if (this.state.email === "" || !(this.state.email.includes("@"))) {
-        //     let newErrors = this.state.errors
-        //     if (!newErrors.includes("Invalid email")) {
-        //         newErrors.push("Invalid email")
-        //     }
-        //     this.setState({ errors: newErrors })
-        //     this.renderErrors();
-        // } else {
-        //     this.props.signin(this.state)
-        //         .then( () => this.setState({ checkEmail: false }));
-        // }
     }
 
     handleDemo(e) {
