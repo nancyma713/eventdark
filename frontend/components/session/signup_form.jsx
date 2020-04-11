@@ -6,13 +6,15 @@ class SignupForm extends React.Component {
         super(props);
         this.state = {
             email: this.props.email,
+            inputEmail: '',
             password: '',
             first_name: '',
             last_name: '',
-            // errors: []
+            errors: []
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.checkError = this.checkError.bind(this);
+        // this.checkEmail = this.checkEmail.bind(this);
     }
 
     componentWillUnmount() {
@@ -50,8 +52,17 @@ class SignupForm extends React.Component {
                     {msg}
                 </div>
             )
-        }
+        } 
     }
+    
+    // checkEmail() {
+    //     debugger
+    //     if (this.state.email !== this.state.inputEmail) {
+    //         if (!this.props.errors.includes('Email does not match')) {
+    //             this.props.errors.push('Email does not match');
+    //         }
+    //     }
+    // }
 
     render() {
         return (
@@ -61,12 +72,18 @@ class SignupForm extends React.Component {
                 <p>Create an account.</p>
                 <form onSubmit={this.handleSubmit} className="form-content">
                     <label>Email address
-                        <input type="text"
+                        <input disabled type="text"
                             value={this.state.email}
                             onChange={this.update('email')}
                         />
                     </label>
-                    {this.checkError("Email can't be blank")}
+                    {/* <label>Confirm email
+                        <input type="text"
+                            value={this.state.inputEmail}
+                            onChange={this.update('inputEmail')}
+                        />
+                    </label>
+                    {this.checkError('Email does not match')} */}
                     <br />
                     <div className="name-signup">
                         <label className="fname-inputs">First Name

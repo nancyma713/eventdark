@@ -148,3 +148,13 @@
     background-color: whitesmoke;
     border-color: gray;
 }
+
+.form-field-error {
+    width: 100%;
+    padding-left: 17px;
+}
+
+#form-errors {
+    margin-top: 0px;
+    margin-bottom: 8px;
+}

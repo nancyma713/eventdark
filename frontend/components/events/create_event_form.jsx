@@ -23,16 +23,27 @@ class CreateEventForm extends React.Component {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
 
-    renderErrors() {
-        return (
-            <ul className="form-errors">
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
+    // renderErrors() {
+    //     return (
+    //         <ul className="form-errors">
+    //             {this.props.errors.map((error, i) => (
+    //                 <li key={`error-${i}`}>
+    //                     {error}
+    //                 </li>
+    //             ))}
+    //         </ul>
+    //     );
+    // }
+
+    checkError(msg) {
+        let allErrors = Object.values(this.props.errors);
+        if (allErrors.includes(msg)) {
+            return (
+                <div className="form-errors" id="form-errors">
+                    {msg}
+                </div>
+            )
+        }
     }
 
     render() {
@@ -48,21 +59,25 @@ class CreateEventForm extends React.Component {
                             onChange={this.update('title')}
                             />
                         </label>
+                        <span className="form-field-error">{this.checkError("Title can't be blank")}</span>
                         <label id="event-start">Starts
                             <input type="datetime-local"
                             value={this.state.start_date}
                             onChange={this.update('start_date')}/>
                         </label>
+                        <span className="form-field-error">{this.checkError("Start date can't be blank")}</span>
                         <label id="event-end">Ends
                             <input type="datetime-local"
                                 value={this.state.end_date}
                                 onChange={this.update('end_date')} />
                         </label>
+                        <span className="form-field-error">{this.checkError("End date can't be blank")}</span>
                         <label id="event-desc">Event Description
                             <textarea value={this.state.description} 
                             onChange={this.update('description')}
                             />
                         </label>
+                        <span className="form-field-error">{this.checkError("Description can't be blank")}</span>
                         <label id="event-category">Category
                             <select value={this.state.category} onChange={this.update('category')}>
                                 <option>Select Category</option>
@@ -81,7 +96,7 @@ class CreateEventForm extends React.Component {
                                 <option value="Travel and Outdoor">Travel and Outdoor</option>
                             </select>
                         </label>
-                        {this.renderErrors()}
+                        <span className="form-field-error">{this.checkError("Category can't be blank")}</span>
                     </div>
                     <p>Nice job! You're almost done.</p>
                     <button>Save</button>
