@@ -1,7 +1,7 @@
 class Api::RegistrationsController < ApplicationController
 
     def create
-        @registration = Registration.new
+        @registration = Registration.new(registration_params)
         @registration.user_id = current_user.id
         @registration.event_id = params[:id]
 
@@ -13,4 +13,18 @@ class Api::RegistrationsController < ApplicationController
         end
     end
 
+    def destroy
+        @registration = Registration.find(params[:id])
+        if @registration && @registration.destroy
+            render json: { id: @registration.id }
+        else
+            render json: ['Registration does not exist'], status: 401
+        end
+    end
+
+    private
+
+    def registration_params
+        params.require(:registrations).permit(:event_id, :user_id)
+    end
 end

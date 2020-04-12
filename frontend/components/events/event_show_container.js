@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import EventShow from './event_show';
-import { fetchEvent, deleteEvent, updateEvent } from '../../actions/event_actions';
+import { fetchEvent, deleteEvent } from '../../actions/event_actions';
+import { createRegistration, deleteRegistration } from '../../actions/registration_actions';
 
 const msp = (state, ownProps) => ({
     event: state.entities.events[ownProps.match.params.eventId],
@@ -10,7 +11,11 @@ const msp = (state, ownProps) => ({
 const mdp = (dispatch) => ({
     fetchEvent: eventId => dispatch(fetchEvent(eventId)),
     deleteEvent: eventId => dispatch(deleteEvent(eventId)),
-    // updateEvent: event => dispatch(updateEvent(event))
+    createRegistration: registration => dispatch(createRegistration(registration)),
+    deleteRegistration: registrationId => dispatch(deleteRegistration(registrationId)),
+    // createBookmark: bookmark => dispatch(createBookmark(bookmark)),
+    // deleteBookmark: bookmarkId => dispatch(deleteBookmark(bookmarkId))
+
 });
 
 export default connect(msp, mdp)(EventShow);

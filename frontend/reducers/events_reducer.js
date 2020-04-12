@@ -1,4 +1,5 @@
 import { RECEIVE_EVENTS, RECEIVE_EVENT, REMOVE_EVENT } from '../actions/event_actions';
+import { RECEIVE_REGISTRATION, REMOVE_REGISTRATION } from '../actions/registration_actions';
 
 const EventsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -13,6 +14,10 @@ const EventsReducer = (state = {}, action) => {
         case REMOVE_EVENT:
             delete nextState[action.eventId];
             return nextState;
+        case RECEIVE_REGISTRATION:
+            return state;
+        case REMOVE_REGISTRATION:
+            return state;
         default:
             return state;
     }

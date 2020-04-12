@@ -4,9 +4,13 @@ import { Redirect } from 'react-router-dom';
 class EventShow extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            registered: false
+        }
 
         this.handleDelete = this.handleDelete.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
+        this.handleRegister = this.handleRegister.bind(this);
     }
 
     componentDidMount() {
@@ -44,9 +48,32 @@ class EventShow extends React.Component {
         }
     }
                 
-    // handleRegister(e) {
-    //     e.preventDefault();
-    // }
+    handleRegister(e) {
+        e.preventDefault();
+        if (this.props.currentUser.id) {
+            if (this.state.registered) {
+                this.props.deleteRegistration(); // find reg id???
+                this.setState({ registered: false });
+            } else {
+                this.props.createRegistration({ registrations: {event_id: this.props.event.id } });
+                this.setState({ registered: true });
+            }
+        } else {
+            this.props.history.push('/signin/login');
+        }
+    }
+
+    registerButton() {
+        if (!this.state.registered) {
+            return (
+                <button onClick={this.handleRegister} id="register">REGISTER</button>
+            )
+        } else {
+            return (
+                <button onClick={this.handleRegister} id="register">UNREGISTER</button>
+            )
+        }
+    }
 
 
     render() {
@@ -75,7 +102,7 @@ class EventShow extends React.Component {
                     <button id="bookmark"><i className="far fa-bookmark"></i></button>
                     {this.editButton()}
                     {this.deleteButton()}
-                    <button id="register">REGISTER</button>
+                    {this.registerButton()}
                 </div>
                 <div className="event-body">
                     <div>
