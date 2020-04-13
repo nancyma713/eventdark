@@ -54,6 +54,10 @@
     background-color: white;
 }
 
+#logged-in-search {
+    min-width: 100%;
+}
+
 /* when logged out */
 
 .navbar-right {
@@ -66,7 +70,7 @@
 }
 
 #help {
-    padding: 20px;
+    padding: 20px 20px 25px 20px;
 }
 #help:hover {
     background-color: whitesmoke;
@@ -76,6 +80,10 @@
     padding: 20px;
     text-decoration: none;
     color: lightslategray;
+}
+
+#nav-right a {
+    padding: 20px 10px 25px 10px;
 }
 
 .navbar-right a:hover {
@@ -177,7 +185,8 @@
 /* logged in nav */
 
 .nav-links {
-    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
 }
 
 .nav-content {
@@ -188,8 +197,14 @@
 
 .nav-content a {
     text-decoration: none;
-    padding: 20px 10px;
+    padding: 15px 10px;
     color: black;
+}
+
+.nav-links a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 #event a {
