@@ -6,7 +6,7 @@ class Api::RegistrationsController < ApplicationController
         @registration.event_id = params[:id]
 
         if @registration.save
-            # @event = @registration.event
+            @event = @registration.event
             render 'api/events/show'
             # render json: @registration
         else
@@ -26,6 +26,6 @@ class Api::RegistrationsController < ApplicationController
     private
 
     def registration_params
-        params.require(:registration).permit(:event_id, :user_id)
+        params.require(:registration).permit(:event_id)
     end
 end

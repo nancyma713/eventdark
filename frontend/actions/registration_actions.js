@@ -10,7 +10,7 @@ const receiveRegistration = (event) => ({
     event
 });
 
-const removeRegistration = (registrationId, event) => ({
+const removeRegistration = ({ registrationId, event }) => ({
     type: REMOVE_REGISTRATION,
     registrationId,
     event
