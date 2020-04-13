@@ -6,8 +6,9 @@ class Api::RegistrationsController < ApplicationController
         @registration.event_id = params[:id]
 
         if @registration.save
-            @event = @registration.event
+            # @event = @registration.event
             render 'api/events/show'
+            # render json: @registration
         else
             render json: @registration.errors.full_messages, status: 401
         end
@@ -25,6 +26,6 @@ class Api::RegistrationsController < ApplicationController
     private
 
     def registration_params
-        params.require(:registrations).permit(:event_id, :user_id)
+        params.require(:registration).permit(:event_id, :user_id)
     end
 end

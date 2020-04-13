@@ -2,7 +2,7 @@ export const createRegistration = (registration) => (
     $.ajax({
         method: "POST",
         url: `api/registrations`,
-        data: { registration }
+        data: registration
     })
 )
 

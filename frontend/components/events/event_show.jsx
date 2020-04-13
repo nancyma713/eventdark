@@ -5,12 +5,14 @@ class EventShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            registered: false
+            registered: false,
+            regId: null
         }
 
         this.handleDelete = this.handleDelete.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
         this.handleRegister = this.handleRegister.bind(this);
+        this.setRegId = this.setRegId.bind(this);
     }
 
     componentDidMount() {
@@ -47,15 +49,25 @@ class EventShow extends React.Component {
             )
         }
     }
+
+    setRegId() {
+        let userId = this.props.currentUser.id;
+        let registrations = this.props.event.registrations || {};
+        if (registrations.hasOwnProperty(userId)) {
+            this.setState({ regId: registrations[userId]["id"]});
+            this.setState({ registered: true });
+        }
+    }
                 
     handleRegister(e) {
         e.preventDefault();
         if (this.props.currentUser.id) {
             if (this.state.registered) {
-                this.props.deleteRegistration(); // find reg id???
+                this.props.deleteRegistration(this.state.regId); // find reg id???
                 this.setState({ registered: false });
             } else {
-                this.props.createRegistration({ registrations: {event_id: this.props.event.id } });
+                this.props.createRegistration({ registration: {event_id: this.props.event.id } })
+                .then( ({ event }) => this.setState({ regId: event["id"] } ));
                 this.setState({ registered: true });
             }
         } else {
