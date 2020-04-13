@@ -35,6 +35,11 @@ class EventIndexItem extends React.Component {
         }
         //fix these later
 
+        let title = this.props.event.title;
+        if (title.length > 60) {
+            title = title.slice(0, 60) + '...';
+        }
+
         return (
             <li className="event-item">
                 <div className="images">
@@ -45,7 +50,7 @@ class EventIndexItem extends React.Component {
                 </div>
                 <div className="event-info">
                     <p>{startDateString}, {formatTime}</p>
-                    <h3><Link to={`events/${this.props.event.id}`}>{this.props.event.title}</Link></h3>
+                    <h3><Link to={`events/${this.props.event.id}`}>{title}</Link></h3>
                 </div>
             </li>
         )

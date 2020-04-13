@@ -35,7 +35,7 @@ class Event < ApplicationRecord
     private
 
     def end_date_after_start_date
-        if start_date >= end_date
+        if start_date && end_date && (start_date >= end_date)
             errors.add(:end_date, "End time must be after start time")
         end
     end

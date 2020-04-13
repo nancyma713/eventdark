@@ -92,8 +92,8 @@ class EditEventForm extends React.Component {
                         </label>
                         <span className="form-field-error">{this.checkError("Description can't be blank")}</span>
                         <label id="event-category">Category
-                            <select value={this.state.category} onChange={this.update('category')}>
-                                <option>Select Category</option>
+                            <select selected value={this.state.category} onChange={this.update('category')}>
+                                <option disabled>Select Category</option>
                                 <option value="Activities">Activities</option>
                                 <option value="Community and Culture">Community and Culture</option>
                                 <option value="Entertainment">Entertainment</option>
