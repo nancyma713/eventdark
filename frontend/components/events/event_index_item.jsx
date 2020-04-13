@@ -38,7 +38,9 @@ class EventIndexItem extends React.Component {
         return (
             <li className="event-item">
                 <div className="images">
-                    <img src={image} alt={this.props.event.title} />
+                    <Link to={`events/${this.props.event.id}`}>
+                        <img src={image} alt={this.props.event.title} />
+                    </Link>
                     <button><i className="far fa-bookmark"></i></button>
                 </div>
                 <div className="event-info">

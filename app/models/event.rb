@@ -15,6 +15,7 @@
 
 class Event < ApplicationRecord
     validates :owner_id, :category, :title, :description, :start_date, :end_date, presence: true
+    validate :end_date_after_start_date
 
     belongs_to :owner,
         primary_key: :id,
@@ -30,4 +31,12 @@ class Event < ApplicationRecord
         primary_key: :id,
         foreign_key: :event_id,
         class_name: :Bookmark
+
+    private
+
+    def end_date_after_start_date
+        if start_date >= end_date
+            errors.add(:end_date, "End time must be after start time")
+        end
+    end
 end

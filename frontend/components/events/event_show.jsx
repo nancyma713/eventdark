@@ -138,10 +138,11 @@ class EventShow extends React.Component {
                 </div>
                 <div className="event-body">
                     <div className="event-body-desc">
+                        <h5>About this Event</h5>
                         <p>{event.description}</p>
                     </div>
                     <div className="event-body-date">
-                        <p>Date and Time</p>
+                        <h6>Date and Time</h6>
                         <p>{startDateString}, {formatStartTime} -</p>
                         <p>{endDateString}, {formatEndTime}</p>
                     </div>

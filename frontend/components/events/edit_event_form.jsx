@@ -42,11 +42,19 @@ class EditEventForm extends React.Component {
     checkError(msg) {
         let allErrors = Object.values(this.props.errors);
         if (allErrors.includes(msg)) {
-            return (
-                <div className="form-errors" id="form-errors">
-                    {msg}
-                </div>
-            )
+            if (msg === "End date End time must be after start time") {
+                return (
+                    <div className="form-errors" id="form-errors">
+                        End time must be after start time
+                    </div>
+                );
+            } else {
+                return (
+                    <div className="form-errors" id="form-errors">
+                        {msg}
+                    </div>
+                );
+            }
         }
     }
 
@@ -76,6 +84,7 @@ class EditEventForm extends React.Component {
                                 onChange={this.update('end_date')} />
                         </label>
                         <span className="form-field-error">{this.checkError("End date can't be blank")}</span>
+                        <span className="form-field-error">{this.checkError("End date End time must be after start time")}</span>
                         <label id="event-desc">Event Description
                             <textarea value={this.state.description}
                                 onChange={this.update('description')}

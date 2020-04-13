@@ -42383,3 +42383,2202 @@ Processing by Api::EventsController#show as JSON
 Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/api/events" for ::1 at 2020-04-12 21:08:01 -0400
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nancyma/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Started GET "/" for ::1 at 2020-04-12 21:08:02 -0400
+Processing by Api::EventsController#index as JSON
+Processing by RootController#root as HTML
+  Rendering api/events/index.json.jbuilder
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mEvent Load (6.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/events/_event.json.jbuilder (8.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/users/_user.json.jbuilder (2.3ms)
+  Rendered root/root.html.erb within layouts/application (179.9ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.8ms)
+  Rendered api/events/index.json.jbuilder (229.7ms)
+Completed 200 OK in 372ms (Views: 217.9ms | ActiveRecord: 45.2ms)
+
+
+Completed 200 OK in 3038ms (Views: 3002.6ms | ActiveRecord: 31.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:08:06 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (13.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (30.4ms)
+Completed 200 OK in 41ms (Views: 26.6ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/api/events/46" for ::1 at 2020-04-12 21:08:09 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"46"}
+  [1m[36mEvent Load (2.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (1.2ms)
+  Rendered api/events/show.json.jbuilder (3.8ms)
+Completed 200 OK in 27ms (Views: 11.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:08:41 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered root/root.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 106ms (Views: 102.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:08:48 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:08:48 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (18.0ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events/45" for ::1 at 2020-04-12 21:08:52 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"45"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/show.json.jbuilder (1.9ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:10:49 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/index.json.jbuilder (22.4ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:10:51 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered root/root.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 97ms (Views: 93.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:10:52 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/index.json.jbuilder (18.6ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events/46" for ::1 at 2020-04-12 21:10:55 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"46"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/show.json.jbuilder (1.4ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:11:25 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (16.6ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:11:26 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered root/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:11:26 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (1.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/index.json.jbuilder (25.8ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/events/47" for ::1 at 2020-04-12 21:11:31 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"47"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/show.json.jbuilder (2.1ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:12:17 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (12.6ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:12:18 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 72ms (Views: 69.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:12:19 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (2.0ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (32.0ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/events/48" for ::1 at 2020-04-12 21:12:22 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"48"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (1.9ms)
+  Rendered api/events/show.json.jbuilder (5.2ms)
+Completed 200 OK in 20ms (Views: 13.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:13:15 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (21.7ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:13:16 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered root/root.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:13:16 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/index.json.jbuilder (21.7ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/events/45" for ::1 at 2020-04-12 21:13:19 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"45"}
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/show.json.jbuilder (2.0ms)
+Completed 200 OK in 18ms (Views: 12.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:13:24 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (11.8ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:13:25 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:13:25 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.8ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (22.6ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/events/50" for ::1 at 2020-04-12 21:13:28 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"50"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/show.json.jbuilder (2.7ms)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:13:34 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (14.7ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events/51" for ::1 at 2020-04-12 21:13:39 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"51"}
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/show.json.jbuilder (2.6ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:14:30 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (18.5ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:14:32 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.6ms)
+  Rendered root/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 180ms (Views: 176.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:14:32 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/index.json.jbuilder (25.2ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/events/52" for ::1 at 2020-04-12 21:14:37 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"52"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/show.json.jbuilder (1.7ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:15:10 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (2.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (4.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (1.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (35.5ms)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:15:12 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered root/root.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 134ms (Views: 129.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:15:13 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.9ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (23.0ms)
+Completed 200 OK in 31ms (Views: 30.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events/54" for ::1 at 2020-04-12 21:15:17 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"54"}
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (1.9ms)
+  Rendered api/events/show.json.jbuilder (4.8ms)
+Completed 200 OK in 22ms (Views: 13.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:15:30 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (13.5ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events/45" for ::1 at 2020-04-12 21:15:39 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"45"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (1.1ms)
+  Rendered api/events/show.json.jbuilder (2.2ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:17:21 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (2.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (18.1ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:17:22 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered root/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 423ms (Views: 420.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:17:23 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.8ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/index.json.jbuilder (31.0ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/events/45" for ::1 at 2020-04-12 21:17:25 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"45"}
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.9ms)
+  Rendered api/events/show.json.jbuilder (2.1ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:18:18 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (1.0ms)
+  Rendered api/events/_event.json.jbuilder (4.4ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/index.json.jbuilder (26.3ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:18:20 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered root/root.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 112ms (Views: 109.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:18:20 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (24.4ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events/47" for ::1 at 2020-04-12 21:18:23 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"47"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/show.json.jbuilder (1.7ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:18:32 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (11.9ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events/55" for ::1 at 2020-04-12 21:18:37 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"55"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/show.json.jbuilder (1.8ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:26:14 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"A Bedtime Story", "description"=>"Once upon a time, there was a young boy who dreamed of becoming the best Pokemon master in the world. But on the day he was to receive his first Pokemon, he overslept and was unable to choose his first choice - instead, he was given a Pokemon that just would not obey him.\n\nRead along with us nightly on this journey and see if a young boy with a big dream will one day accomplish everything he's hoped for!", "category"=>"Family and Education", "start_date"=>"2020-06-01T00:12", "end_date"=>"2020-06-01T06:00", "owner_id"=>"36"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mEvent Create (6.1ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 36], ["category", "Family and Education"], ["title", "A Bedtime Story"], ["description", "Once upon a time, there was a young boy who dreamed of becoming the best Pokemon master in the world. But on the day he was to receive his first Pokemon, he overslept and was unable to choose his first choice - instead, he was given a Pokemon that just would not obey him.\n\nRead along with us nightly on this journey and see if a young boy with a big dream will one day accomplish everything he's hoped for!"], ["start_date", "2020-06-01 00:12:00"], ["end_date", "2020-06-01 06:00:00"], ["created_at", "2020-04-13 01:26:14.296023"], ["updated_at", "2020-04-13 01:26:14.296023"]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/show.json.jbuilder (3.2ms)
+Completed 200 OK in 63ms (Views: 16.0ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/api/events/56" for ::1 at 2020-04-12 21:26:14 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"56"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/show.json.jbuilder (2.4ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:27:09 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (24.2ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:27:10 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered root/root.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 131ms (Views: 126.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:27:11 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (1.1ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (25.9ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/events/45" for ::1 at 2020-04-12 21:27:14 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"45"}
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/show.json.jbuilder (2.0ms)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:27:21 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (15.0ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events/56" for ::1 at 2020-04-12 21:27:23 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"56"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/show.json.jbuilder (2.1ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:28:03 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (18.6ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:29:00 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered root/root.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 80ms (Views: 76.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:29:24 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"This is a test for testing a very very very very super duper long-ish title ", "description"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "category"=>"Other", "start_date"=>"2021-12-12T00:12", "end_date"=>"2021-12-12T00:12", "owner_id"=>"36"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mEvent Create (2.9ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 36], ["category", "Other"], ["title", "This is a test for testing a very very very very super duper long-ish title "], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["start_date", "2021-12-12 00:12:00"], ["end_date", "2021-12-12 00:12:00"], ["created_at", "2020-04-13 01:29:24.585605"], ["updated_at", "2020-04-13 01:29:24.585605"]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/show.json.jbuilder (1.9ms)
+Completed 200 OK in 20ms (Views: 9.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/events/57" for ::1 at 2020-04-12 21:29:24 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"57"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/show.json.jbuilder (1.7ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events/57" for ::1 at 2020-04-12 21:29:31 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"57"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/show.json.jbuilder (2.0ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/api/events/57" for ::1 at 2020-04-12 21:29:39 -0400
+Processing by Api::EventsController#update as JSON
+  Parameters: {"event"=>{"id"=>"57", "title"=>"This is a test for testing a very very very very super duper long-ish title This is a test for testing a very very very very super duper long-ish title This is a test for testing a very very very very super duper long-ish title This is a test for testing a very very very very super duper long-ish title ", "description"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "start_date"=>"2021-12-12T00:12:00.000Z", "end_date"=>"2021-12-12T00:12:00.000Z", "category"=>"Other", "owner_id"=>"36"}, "id"=>"57"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:33
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:35
+  [1m[36mEvent Update (0.5ms)[0m  [1m[33mUPDATE "events" SET "title" = $1, "updated_at" = $2 WHERE "events"."id" = $3[0m  [["title", "This is a test for testing a very very very very super duper long-ish title This is a test for testing a very very very very super duper long-ish title This is a test for testing a very very very very super duper long-ish title This is a test for testing a very very very very super duper long-ish title "], ["updated_at", "2020-04-13 01:29:39.725265"], ["id", 57]]
+  ↳ app/controllers/api/events_controller.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:35
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/show.json.jbuilder (1.7ms)
+Completed 200 OK in 19ms (Views: 8.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/events/57" for ::1 at 2020-04-12 21:29:39 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"57"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/show.json.jbuilder (2.1ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:30:35 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (1.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (30.3ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:38:19 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered root/root.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 524ms (Views: 510.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:38:20 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (40.4ms)
+Completed 200 OK in 52ms (Views: 42.7ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:38:47 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"test", "description"=>"test", "category"=>"Activities", "start_date"=>"2020-12-12T00:12", "end_date"=>"2020-12-12T00:00", "owner_id"=>"36"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (2.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:15
+Completed 401 Unauthorized in 22ms (Views: 0.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:39:39 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 72ms (Views: 61.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:39:43 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (25.0ms)
+Completed 200 OK in 34ms (Views: 26.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:39:44 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:39:45 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/index.json.jbuilder (25.2ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:40:04 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"test", "description"=>"test", "category"=>"Activities", "start_date"=>"2021-11-11T13:01", "end_date"=>"2021-11-11T12:00", "owner_id"=>"36"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:15
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `End time must be after start time' for #<Event:0x00007fde7b415698>:
+  app/models/event.rb:39:in `end_date_after_start_date'
+  app/controllers/api/events_controller.rb:15:in `create'
+
+Started GET "/" for ::1 at 2020-04-12 21:41:23 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered root/root.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 104ms (Views: 99.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:41:51 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"t", "description"=>"test", "category"=>"Activities", "start_date"=>"2021-01-12T12:12", "end_date"=>"2021-01-12T12:00", "owner_id"=>"36"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:15
+Completed 401 Unauthorized in 22ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:42:17 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/index.json.jbuilder (18.7ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:42:21 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.9ms)
+  Rendered root/root.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 641ms (Views: 636.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:42:38 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"test", "description"=>"test", "category"=>"Activities", "start_date"=>"2021-12-12T12:00", "end_date"=>"2021-12-12T12:00", "owner_id"=>"36"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:15
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:43:35 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"test", "description"=>"test", "category"=>"Activities", "start_date"=>"2021-12-12T12:00", "end_date"=>"0001-01-01T23:00", "owner_id"=>"36"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:15
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:49:09 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered root/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 347ms (Views: 343.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:49:27 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"tst", "description"=>"test", "category"=>"Activities", "start_date"=>"2222-12-12T12:12", "end_date"=>"2222-12-12T12:00", "owner_id"=>"36"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:15
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:49:47 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (16.1ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:49:48 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:49:49 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (21.1ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:50:08 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"test", "description"=>"test", "category"=>"Activities", "start_date"=>"2021-01-01T12:12", "end_date"=>"2021-01-01T12:00", "owner_id"=>"36"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:15
+Completed 401 Unauthorized in 13ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:50:35 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered root/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 711ms (Views: 707.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:50:58 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"test", "description"=>"test", "category"=>"Community and Culture", "start_date"=>"2021-01-01T12:12", "end_date"=>"2021-01-01T12:00", "owner_id"=>"36"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:15
+Completed 401 Unauthorized in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:51:08 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered root/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 337ms (Views: 334.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:51:30 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"t", "description"=>"test", "category"=>"Activities", "start_date"=>"2021-01-01T12:12", "end_date"=>"2021-01-01T12:00", "owner_id"=>"36"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:15
+Completed 401 Unauthorized in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:51:36 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"t", "description"=>"test", "category"=>"Activities", "start_date"=>"2021-01-01T12:12", "end_date"=>"2021-01-01T12:12", "owner_id"=>"36"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:15
+Completed 401 Unauthorized in 6ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/events" for ::1 at 2020-04-12 21:51:40 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"t", "description"=>"test", "category"=>"Activities", "start_date"=>"2021-01-01T12:12", "end_date"=>"2021-01-01T12:13", "owner_id"=>"36"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[36mEvent Create (1.0ms)[0m  [1m[32mINSERT INTO "events" ("owner_id", "category", "title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["owner_id", 36], ["category", "Activities"], ["title", "t"], ["description", "test"], ["start_date", "2021-01-01 12:12:00"], ["end_date", "2021-01-01 12:13:00"], ["created_at", "2020-04-13 01:51:40.917089"], ["updated_at", "2020-04-13 01:51:40.917089"]]
+  ↳ app/controllers/api/events_controller.rb:15
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:15
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/show.json.jbuilder (1.9ms)
+Completed 200 OK in 17ms (Views: 8.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/events/58" for ::1 at 2020-04-12 21:51:40 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"58"}
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.9ms)
+  Rendered api/events/show.json.jbuilder (2.8ms)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/events/58" for ::1 at 2020-04-12 21:51:44 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"58"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/show.json.jbuilder (1.6ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/api/events/58" for ::1 at 2020-04-12 21:51:59 -0400
+Processing by Api::EventsController#update as JSON
+  Parameters: {"event"=>{"id"=>"58", "title"=>"t", "description"=>"test", "start_date"=>"0012-12-12T12:12", "end_date"=>"0012-12-12T12:12", "category"=>"Activities", "owner_id"=>"36"}, "id"=>"58"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:33
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:35
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:35
+Completed 401 Unauthorized in 6ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:52:14 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (16.6ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events/58" for ::1 at 2020-04-12 21:52:23 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"58"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (2.5ms)
+  Rendered api/events/show.json.jbuilder (6.7ms)
+Completed 200 OK in 26ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/api/events/58" for ::1 at 2020-04-12 21:52:24 -0400
+Processing by Api::EventsController#destroy as JSON
+  Parameters: {"id"=>"58"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:25
+  [1m[36mEvent Destroy (3.1ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 58]]
+  ↳ app/controllers/api/events_controller.rb:25
+  [1m[35m (36.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:25
+Completed 200 OK in 52ms (Views: 0.5ms | ActiveRecord: 40.1ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:52:24 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (16.5ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:54:17 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered root/root.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 393ms (Views: 389.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:54:18 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (2.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (33.0ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events/45" for ::1 at 2020-04-12 21:54:59 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"45"}
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/show.json.jbuilder (2.2ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:57:03 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.9ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (22.8ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:58:46 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered root/root.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 459ms (Views: 454.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:58:47 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (1.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (25.0ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events/45" for ::1 at 2020-04-12 21:58:49 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"45"}
+  [1m[36mEvent Load (2.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/show.json.jbuilder (1.9ms)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:58:52 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered root/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 72ms (Views: 68.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 21:58:57 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 70ms (Views: 67.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:58:57 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (35.5ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/events/45" for ::1 at 2020-04-12 21:59:06 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"45"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.9ms)
+  Rendered api/events/show.json.jbuilder (2.9ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 21:59:09 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (15.4ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:03:03 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.3ms)
+  Rendered root/root.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 627ms (Views: 621.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:03:04 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (1.2ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (28.4ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:04:15 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:04:16 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.9ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (29.5ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:04:29 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:04:30 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (27.1ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:05:00 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:05:00 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (27.1ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:05:08 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 74ms (Views: 71.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:05:08 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.8ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (33.5ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:05:41 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:05:41 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (24.7ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:08:57 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered root/root.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 97ms (Views: 94.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:08:58 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (24.3ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:12:20 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered root/root.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 545ms (Views: 540.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:12:21 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.9ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (34.3ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:12:47 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered root/root.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 114ms (Views: 110.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:12:48 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (23.1ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:13:20 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered root/root.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 101ms (Views: 98.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:13:20 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (31.1ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:13:47 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 111ms (Views: 108.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:13:47 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (31.3ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:14:04 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered root/root.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 99ms (Views: 96.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:14:04 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (1.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (34.5ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:14:58 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered root/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 105ms (Views: 102.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:14:58 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.8ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (28.2ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/events/45" for ::1 at 2020-04-12 22:15:05 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"45"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:9
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/show.json.jbuilder (2.4ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:15:07 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (13.0ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:15:38 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered root/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 108ms (Views: 105.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:15:38 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (31.6ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:16:21 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 92ms (Views: 90.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:16:22 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (2.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (25.6ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-12 22:16:40 -0400
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hEPD1rAkhQgFitNNR2_18g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered root/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 113ms (Views: 110.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/events" for ::1 at 2020-04-12 22:16:40 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (1.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (34.6ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 1.4ms)
+
+

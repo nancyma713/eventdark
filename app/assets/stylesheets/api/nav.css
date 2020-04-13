@@ -210,7 +210,7 @@
     border-bottom: 1px solid lightgray;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 795px) {
     .nav-links {
         display: none;
     }

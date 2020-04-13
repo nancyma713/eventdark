@@ -107,5 +107,27 @@
 
 .event-body {
     display: flex;
-    justify-content: space-around;
+    padding: 30px;
+    margin-bottom: 50px;
+    /* justify-content: space-around; */
+}
+
+.event-body-desc {
+    flex: 2;
+    margin-right: 30px;
+}
+
+.event-body-desc h5 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.event-body-date {
+    flex: 1;
+}
+
+.event-body-date h6 {
+    font-weight: 500;
+    margin: 10px 0px;
 }
