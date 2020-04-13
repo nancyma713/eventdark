@@ -8,20 +8,19 @@
     align-content: center; */
 }
 
-.event-show header {
-    align-content: flex-end;
-    /* width: 300px; */
-    height: 300px;
-    border: 1px solid whitesmoke;
-}
-
 .event-header {
+    border: 1px solid whitesmoke;
     display: flex;
     justify-content: space-between;
+    background-color: rgba(255,255,255,0.9);
 }
 
-.event-header img {
+.show-image-container {
     flex: 2;
+}
+
+#show-image {
+    width: 100%;
 }
 
 .event-details {
@@ -29,7 +28,26 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    justify-content: space-between;
+}
+
+.start-date-header {
+    display: block;
+    position: absolute;
+}
+
+.start-date-header #start-date {
+    font-size: 22px;
+    text-align: center;
+}
+
+.event-details h1 {
+    font-size: 24px;
+    padding-top: 70px;
+}
+
+.event-details > p {
+    color: gray;
 }
 
 .buttons {
@@ -85,4 +103,31 @@
 
 #register {
     margin-right: 20px;
+}
+
+.event-body {
+    display: flex;
+    padding: 30px;
+    margin-bottom: 50px;
+    /* justify-content: space-around; */
+}
+
+.event-body-desc {
+    flex: 2;
+    margin-right: 30px;
+}
+
+.event-body-desc h5 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.event-body-date {
+    flex: 1;
+}
+
+.event-body-date h6 {
+    font-weight: 500;
+    margin: 10px 0px;
 }

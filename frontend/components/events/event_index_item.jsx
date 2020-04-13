@@ -13,16 +13,34 @@ class EventIndexItem extends React.Component {
             .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
 
             
-        let image = 'assets/banner.jpg';
+        let image = window.defaultURL;
 
-        if (this.props.event.id <= 15) {
-            image = `assets/${this.props.event.id}`;
+        // fix these later
+        if (this.props.event.id === 45) {
+            image = window.magiciansURL;
+        } else if (this.props.event.id === 46) {
+            image = window.excisionURL;
+        } else if (this.props.event.id === 47) {
+            image = window.hauntedhouseURL;
+        } else if (this.props.event.id === 48) {
+            image = window.dinnerdateURL;
+        } else if (this.props.event.id === 49) {
+            image = window.fireworksURL;
+        } else if (this.props.event.id === 50) {
+            image = window.newyearURL;
+        } else if (this.props.event.id === 51) {
+            image = window.harrypotterURL;
+        } else if (this.props.event.id === 52) {
+            image = window.candlelitURL;
         }
+        //fix these later
 
         return (
             <li className="event-item">
                 <div className="images">
-                    <img src={image} alt={this.props.event.title} />
+                    <Link to={`events/${this.props.event.id}`}>
+                        <img src={image} alt={this.props.event.title} />
+                    </Link>
                     <button><i className="far fa-bookmark"></i></button>
                 </div>
                 <div className="event-info">

@@ -8,6 +8,10 @@ const Splash = () => {
             <div className="banner-section">
                 <img id="banner" src={window.bannerURL} alt="Find events near you" />
             </div>
+            <div className="banner-headers">
+                <p id="darkness-text">When darkness is your comfort zone...</p>
+                <p>Connect through DARK events!</p>
+            </div>
             <div className="index-body">
                 <h1>All Events</h1>
                 <EventIndexContainer />

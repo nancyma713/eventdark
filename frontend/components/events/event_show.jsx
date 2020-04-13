@@ -83,17 +83,76 @@ class EventShow extends React.Component {
         const startDateString = startDate.toDateString();
         const formatStartTime = new Date(startDate.getTime())
             .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
+        let startMonth = startDate.getUTCMonth();
+        if (startMonth === 0) {
+            startMonth = 'JAN';
+        } else if (startMonth === 1) {
+            startMonth = 'FEB';
+        } else if (startMonth === 2) {
+            startMonth = 'MAR';
+        } else if (startMonth === 3) {
+            startMonth = 'APR';
+        } else if (startMonth === 4) {
+            startMonth = 'MAY';
+        } else if (startMonth === 5) {
+            startMonth = 'JUN';
+        } else if (startMonth === 6) {
+            startMonth = 'JUL';
+        } else if (startMonth === 7) {
+            startMonth = 'AUG';
+        } else if (startMonth === 8) {
+            startMonth = 'SEP';
+        } else if (startMonth === 9) {
+            startMonth = 'OCT';
+        } else if (startMonth === 10) {
+            startMonth = 'NOV';
+        } else if (startMonth === 11) {
+            startMonth = 'DEC';
+        }
+
+        let startDateOnly = startDate.getUTCDate();
+        if (startDateOnly < 10) {
+            startDateOnly = `0${startDateOnly}`
+        }
 
         const endDate = new Date(this.props.event.end_date);
         const endDateString = endDate.toDateString();
         const formatEndTime = new Date(endDate.getTime())
             .toLocaleTimeString().replace(/(.*)\D\d+/, '$1');
 
+        let image = window.defaultURL;
+
+        // fix these later
+        if (this.props.event.id === 45) {
+            image = window.magiciansURL;
+        } else if (this.props.event.id === 46) {
+            image = window.excisionURL;
+        } else if (this.props.event.id === 47) {
+            image = window.hauntedhouseURL;
+        } else if (this.props.event.id === 48) {
+            image = window.dinnerdateURL;
+        } else if (this.props.event.id === 49) {
+            image = window.fireworksURL;
+        } else if (this.props.event.id === 50) {
+            image = window.newyearURL;
+        } else if (this.props.event.id === 51) {
+            image = window.harrypotterURL;
+        } else if (this.props.event.id === 52) {
+            image = window.candlelitURL;
+        }
+        // fix these later
+
         return (
             <div className="event-show">
                 <header className="event-header">
-                    <img src="#" alt="TEST"/>
+                    <div className="show-image-container">
+                        <img id="show-image" src={image} alt={event.title} />
+                    </div>
                     <div className="event-details">
+                        <div className="start-date-header">
+                            <p>{startMonth}</p>
+                            <p id="start-date">{startDateOnly}</p>
+                        </div>
                         <h1>{event.title}</h1>
                         <p>{event.category}</p>
                     </div>
@@ -105,11 +164,12 @@ class EventShow extends React.Component {
                     {this.registerButton()}
                 </div>
                 <div className="event-body">
-                    <div>
+                    <div className="event-body-desc">
+                        <h5>About this Event</h5>
                         <p>{event.description}</p>
                     </div>
                     <div className="event-body-date">
-                        <p>Date and Time</p>
+                        <h6>Date and Time</h6>
                         <p>{startDateString}, {formatStartTime} -</p>
                         <p>{endDateString}, {formatEndTime}</p>
                     </div>
