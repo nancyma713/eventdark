@@ -210,3 +210,12 @@
     border-bottom: 1px solid lightgray;
 }
 
+@media (max-width: 769px) {
+    .nav-links {
+        display: none;
+    }
+
+    #browse-events, #help {
+        display: none;
+    }
+}
