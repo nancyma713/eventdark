@@ -96,7 +96,6 @@ class CreateEventForm extends React.Component {
                                 <option value="Family and Education">Family and Education</option>
                                 <option value="Food and Drink">Food and Drink</option>
                                 <option value="Free">Free</option>
-                                <option value="Home and Lifestyle">Home and Lifestyle</option>
                                 <option value="Music">Music</option>
                                 <option value="Nightlife">Nightlife</option>
                                 <option value="Other">Other</option>

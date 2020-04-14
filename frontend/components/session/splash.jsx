@@ -1,5 +1,6 @@
 import React from 'react';
 import EventIndexContainer from '../events/event_index_container';
+import Category from '../events/category';
 
 const Splash = () => {
 
@@ -13,17 +14,9 @@ const Splash = () => {
                 <p>Connect through DARK events!</p>
             </div>
             <div className="index-body">
-                <h1>All Events</h1>
-                <EventIndexContainer />
                 <div className="category-browse">
-                    <h2>Browse by Category</h2>
-                    <ul className="category-list">
-                        <li>Entertainment</li>
-                        <li>Food and Drink</li>
-                        <li>Free</li>
-                        <li>Music</li>
-                        <li>Other</li>
-                    </ul>
+                    <h1>Browse by Top Categories</h1>
+                    <Category />
                 </div>
             </div>
         </div>

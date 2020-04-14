@@ -1,5 +1,5 @@
 .main {
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 
 .index-body {
@@ -11,11 +11,6 @@
 
 .index-body h1 {
     padding: 20px 30px 0px 30px;
-    font-weight: 700;
-}
-
-.index-body h2 {
-    padding: 20px 30px 0px 0px;
     font-weight: 700;
 }
 
@@ -101,11 +96,12 @@
 .category-list {
     display: flex;
     list-style: none;
-    margin: 0px 10px;
+    margin: 10px 40px;
+    flex-wrap: wrap;
 }
 
 .category-list li {
-    margin: 10px;
+    margin: 0px 10px;
     padding: 10px 0px;
     font-size: 14px;
     font-weight: 500;
@@ -116,6 +112,12 @@
     color: black;
     cursor: pointer;
     border-bottom: 3px solid black;
+    padding: 10px 0px 7px 0px;
+}
+
+li.active {
+    color: rgb(0, 0, 211);
+    border-bottom: 3px solid rgb(0, 0, 211);
     padding: 10px 0px 7px 0px;
 }
 
