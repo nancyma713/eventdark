@@ -22,6 +22,10 @@
     justify-content: space-around;
 }
 
+.event-list p {
+    padding: 100px 0px;
+}
+
 .event-item {
     flex: 1;
     min-width: 300px;
