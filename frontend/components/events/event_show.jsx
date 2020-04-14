@@ -1,5 +1,4 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
 
 class EventShow extends React.Component {
     constructor(props) {
@@ -63,13 +62,42 @@ class EventShow extends React.Component {
             this.setState({ registered: true });
         }
     }
+
+    // setRegId() {
+    //     let eventId = this.props.event.id;
+    //     let registrations = this.props.currentUser.registrations || {};
+    //     // debugger
+    //     if (registrations.hasOwnProperty(eventId)) {
+    //         this.setState({ regId: registrations[eventId]["id"] });
+    //         this.setState({ registered: true });
+    //     }
+    // }
+
+    // handleRegister(e) {
+    //     e.preventDefault();
+    //     // debugger
+    //     if (this.props.currentUser.id) {
+    //         if (this.state.registered) {
+    //             this.deleteRegistration(this.state.regId);
+    //             // debugger
+    //             this.setState({ registered: false });
+    //         } else {
+    //             this.createRegistration({ registration: { event_id: this.props.event.id } })
+    //                 .then(({ user }) => this.setState({ regId: user["id"] }));
+    //             // debugger
+    //             this.setState({ registered: true });
+    //         }
+    //     } else {
+    //         this.props.history.push('/signin/login');
+    //     }
+    // }
                 
     handleRegister(e) {
         e.preventDefault();
         // debugger
         if (this.props.currentUser.id) {
             if (this.state.registered) {
-                this.deleteRegistration(this.state.regId); // find reg id???
+                this.deleteRegistration(this.state.regId);
                 // debugger
                 this.setState({ registered: false });
             } else {
