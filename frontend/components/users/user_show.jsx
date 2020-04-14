@@ -1,4 +1,5 @@
 import React from 'react';
+import UserRegistrationItem from './user_registration_item'
 
 class UserShow extends React.Component {
     constructor(props) {
@@ -10,6 +11,19 @@ class UserShow extends React.Component {
     }
 
     render() {
+        let eventRegistrations = Object.values(this.props.events).filter(event => {
+            let registrations = event.registrations || {};
+            return registrations.hasOwnProperty(this.props.currentUser.id)
+        })
+
+        let eventRegistrationItems = eventRegistrations.map(event => {
+            return (
+                <div key={event.id}>
+                    <UserRegistrationItem event={event} userId={this.props.currentUser.id} />
+                </div>
+            )
+        })
+
         return (
             <div className="user-show-page">
                 <div className="user-info">
@@ -23,7 +37,7 @@ class UserShow extends React.Component {
                 <div className="user-show-events">
                     <div className="user-regs">
                         <h3 className="user-show-headers">Registrations</h3>
-                        {/* REGISTRATIONS GO HERE */}
+                        {eventRegistrationItems}
                     </div>
                 </div>
 

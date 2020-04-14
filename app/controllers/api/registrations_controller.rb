@@ -3,7 +3,7 @@ class Api::RegistrationsController < ApplicationController
     def create
         @registration = Registration.new(registration_params)
         @registration.user_id = current_user.id
-        @registration.event_id = params[:id]
+        # @registration.event_id = params[:id]
 
         if @registration.save
             @event = @registration.event

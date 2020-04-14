@@ -57,7 +57,7 @@ class EventShow extends React.Component {
     setRegId() {
         let userId = this.props.currentUser.id;
         let registrations = this.props.event.registrations || {};
-        debugger
+        // debugger
         if (registrations.hasOwnProperty(userId)) {
             this.setState({ regId: registrations[userId]["id"]});
             this.setState({ registered: true });
@@ -66,16 +66,16 @@ class EventShow extends React.Component {
                 
     handleRegister(e) {
         e.preventDefault();
-        debugger
+        // debugger
         if (this.props.currentUser.id) {
             if (this.state.registered) {
-                this.props.deleteRegistration(this.state.regId); // find reg id???
-                debugger
+                this.deleteRegistration(this.state.regId); // find reg id???
+                // debugger
                 this.setState({ registered: false });
             } else {
-                this.props.createRegistration({ registration: {event_id: this.props.event.id } })
-                .then( ( event ) => this.setState({ regId: event["id"] } ));
-                debugger
+                this.createRegistration({ registration: {event_id: this.props.event.id } })
+                .then(({ event }) => this.setState({ regId: event["id"] } ));
+                // debugger
                 this.setState({ registered: true });
             }
         } else {
