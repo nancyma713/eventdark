@@ -29,7 +29,7 @@ const removeRegistration = ({ registrationId, event }) => ({
 const receiveRegistrationErrors = (errors) => ({
     type: RECEIVE_REGISTRATION_ERRORS,
     errors
-})
+});
 
 
 export const createRegistration = (registration) => dispatch => (

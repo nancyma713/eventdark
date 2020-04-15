@@ -11,6 +11,7 @@ class EventShow extends React.Component {
         this.handleDelete = this.handleDelete.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
         this.handleRegister = this.handleRegister.bind(this);
+        this.handleBookmark = this.handleBookmark.bind(this);
         this.setRegId = this.setRegId.bind(this);
         this.createRegistration = this.props.createRegistration.bind(this);
         this.deleteRegistration = this.props.deleteRegistration.bind(this);
@@ -123,6 +124,44 @@ class EventShow extends React.Component {
         }
     }
 
+    handleBookmark(e) {
+        e.preventDefault();
+        if (this.props.currentUser.id) {
+            let bookmarks = this.props.event.bookmarks || {};
+            let userId = this.props.currentUser.id;
+            let bookmark = bookmarks[userId];
+            // debugger
+            if (bookmark) {
+                this.props.deleteBookmark(bookmark.id)
+                    .then(() => this.props.fetchEvent(this.props.event.id));
+            } else {
+                // debugger
+                this.props.createBookmark({ bookmark: { event_id: e.currentTarget.value } })
+                    .then(() => this.props.fetchEvent(this.props.event.id));
+            }
+        } else {
+            this.props.history.push('/signin/login');
+        }
+    }
+
+    bookmarkButton() {
+        let bookmarks = this.props.event.bookmarks || {};
+        let userId = this.props.currentUser.id;
+        if (bookmarks.hasOwnProperty(userId)) {
+            return (
+                <button id="bookmarked" value={this.props.event.id} onClick={this.handleBookmark}>
+                    <i className="fas fa-bookmark"></i>
+                </button>
+            )
+        } else {
+            return (
+                <button id="bookmark" value={this.props.event.id} onClick={this.handleBookmark}>
+                    <i className="far fa-bookmark"></i>
+                </button>
+            )
+        }
+    }
+
 
     render() {
         const { event } = this.props;
@@ -206,7 +245,8 @@ class EventShow extends React.Component {
                     </div>
                 </header>
                 <div className="buttons">
-                    <button id="bookmark"><i className="far fa-bookmark"></i></button>
+                    {/* <button id="bookmark" onClick={this.handleBookmark}><i className="far fa-bookmark"></i></button> */}
+                    {this.bookmarkButton()}
                     {this.editButton()}
                     {this.deleteButton()}
                     {this.registerButton()}

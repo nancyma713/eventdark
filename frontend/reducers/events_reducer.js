@@ -1,5 +1,6 @@
 import { RECEIVE_EVENTS, RECEIVE_EVENT, REMOVE_EVENT } from '../actions/event_actions';
 import { RECEIVE_REGISTRATION, REMOVE_REGISTRATION } from '../actions/registration_actions';
+import { RECEIVE_BOOKMARK, REMOVE_BOOKMARK } from '../actions/bookmark_actions';
 
 const EventsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -17,6 +18,10 @@ const EventsReducer = (state = {}, action) => {
         case RECEIVE_REGISTRATION:
             return state;
         case REMOVE_REGISTRATION:
+            return state;
+        case RECEIVE_BOOKMARK:
+            return state;
+        case REMOVE_BOOKMARK:
             return state;
         default:
             return state;

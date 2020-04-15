@@ -1,9 +1,8 @@
 class Api::BookmarksController < ApplicationController
 
     def create
-        @bookmark = Bookmark.new
+        @bookmark = Bookmark.new(bookmark_params)
         @bookmark.user_id = current_user.id
-        @bookmark.event_id = params[:id]
 
         if @bookmark.save
             @event = @bookmark.event
@@ -14,10 +13,17 @@ class Api::BookmarksController < ApplicationController
     end
 
     def destroy
-        @bookmark = Bookmark.find_by(user_id: current_user.id, event_id: params[:id])
-        @bookmark.destroy
-        @event = @bookmark.event
-        render 'api/events/show'
+        @bookmark = Bookmark.find(params[:id])
+        if @bookmark && @bookmark.destroy
+            render json: { id: @bookmark.id }
+        else
+            render json: ['Bookmark does not exist'], status: 401
+        end
     end
-    
+
+    private
+
+    def bookmark_params
+        params.require(:bookmark).permit(:event_id, :user_id)
+    end
 end
