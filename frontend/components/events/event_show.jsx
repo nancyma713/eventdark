@@ -214,7 +214,7 @@ class EventShow extends React.Component {
 
         let image = window.defaultURL;
 
-        // fix these later
+        // fix these later, if ever
         if (this.props.event.id === 45) {
             image = window.magiciansURL;
         } else if (this.props.event.id === 46) {
