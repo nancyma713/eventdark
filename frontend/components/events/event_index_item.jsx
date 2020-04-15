@@ -4,6 +4,45 @@ import { Link, Redirect } from 'react-router-dom';
 class EventIndexItem extends React.Component {
     constructor(props) {
         super(props);
+
+        this.handleBookmark = this.handleBookmark.bind(this);
+    }
+
+    handleBookmark(e) {
+        e.preventDefault();
+        if (this.props.currentUser.id) {
+            let bookmarks = this.props.event.bookmarks || {};
+            let userId = this.props.currentUser.id;
+            let bookmark = bookmarks[userId];
+            if (bookmark) {
+                this.props.deleteBookmark(bookmark.id)
+                    .then(() => this.props.fetchEvent(this.props.event.id));
+            } else {
+                // debugger
+                this.props.createBookmark({ bookmark: { event_id: e.currentTarget.value } })
+                    .then(() => this.props.fetchEvent(this.props.event.id));
+            }
+        } else {
+            this.props.history.push('/signin/login');
+        }
+    }
+
+    bookmarkButton() {
+        let bookmarks = this.props.event.bookmarks || {};
+        let userId = this.props.currentUser.id;
+        if (bookmarks.hasOwnProperty(userId)) {
+            return (
+                <button id="bookmarked" value={this.props.event.id} onClick={this.handleBookmark}>
+                    <i className="fas fa-bookmark"></i>
+                </button>
+            )
+        } else {
+            return (
+                <button id="bookmark" value={this.props.event.id} onClick={this.handleBookmark}>
+                    <i className="far fa-bookmark"></i>
+                </button>
+            )
+        }
     }
 
     render() {
@@ -46,7 +85,8 @@ class EventIndexItem extends React.Component {
                     <Link to={`events/${this.props.event.id}`}>
                         <img src={image} alt={this.props.event.title} />
                     </Link>
-                    <button><i className="far fa-bookmark"></i></button>
+                    {this.bookmarkButton()}
+                    {/* <button><i className="far fa-bookmark"></i></button> */}
                 </div>
                 <div className="event-info">
                     <p>{startDateString}, {formatTime}</p>

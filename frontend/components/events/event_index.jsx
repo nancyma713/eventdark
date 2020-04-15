@@ -20,7 +20,7 @@ class EventIndex extends React.Component {
     }
 
     render() {
-        const { events } = this.props;
+        const { events, createBookmark, deleteBookmark, fetchEvent, currentUser } = this.props;
 
         const CATEGORYLIST = [
             { name: 'ALL' },
@@ -83,7 +83,7 @@ class EventIndex extends React.Component {
         }
 
         filteredEvents = filteredEvents.map(event => (
-            <EventIndexItem key={event.id} event={event} />
+            <EventIndexItem currentUser={currentUser} fetchEvent={fetchEvent} createBookmark={createBookmark} deleteBookmark={deleteBookmark} key={event.id} event={event} />
         ));
 
         return (
