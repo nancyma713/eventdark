@@ -1,0 +1,16 @@
+.bookmarks-index {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 30%;
+    font-family: 'Barlow', sans-serif;
+}
+
+.bookmarks-index h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.bookmarks-list {
+    padding: 20px 0px;
+}

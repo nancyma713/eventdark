@@ -1,5 +1,9 @@
 class Api::BookmarksController < ApplicationController
 
+    def index
+        @bookmarks = current_user.bookmarks
+    end
+
     def create
         @bookmark = Bookmark.new(bookmark_params)
         @bookmark.user_id = current_user.id

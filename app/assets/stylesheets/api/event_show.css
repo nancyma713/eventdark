@@ -113,13 +113,6 @@
     background-color: whitesmoke;
 }
 
-/* #bookmark:focus {
-    outline-style: none;
-    font-weight: bold;
-    color: black;
-    background-color: rgb(235, 235, 235);
-} */
-
 #register {
     margin-right: 20px;
 }
@@ -128,7 +121,6 @@
     display: flex;
     padding: 30px;
     margin-bottom: 50px;
-    /* justify-content: space-around; */
 }
 
 .event-body-desc {

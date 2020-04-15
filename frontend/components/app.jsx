@@ -9,6 +9,7 @@ import CreateEventContainer from './events/create_event_container';
 import EditEventContainer from './events/edit_event_container';
 import EventShowContainer from './events/event_show_container';
 import UserShowContainer from './users/user_show_container';
+import BookmarkContainer from './bookmarks/bookmark_container';
 import Footer from './footer/footer';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
@@ -29,6 +30,7 @@ const App = () => (
             </Switch>
             <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventContainer} />
             <ProtectedRoute exact path="/users/:userId" component={UserShowContainer} />
+            <ProtectedRoute exact path="/users/:userId/bookmarks/events" component={BookmarkContainer} />
         </main>
         <footer>
             <Footer />

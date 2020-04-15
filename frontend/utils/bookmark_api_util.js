@@ -1,3 +1,17 @@
+export const fetchBookmarks = () => (
+    $.ajax({
+        method: 'GET',
+        url: 'api/bookmarks'
+    })
+);
+
+export const fetchBookmark = (bookmarkId) => (
+    $.ajax({
+        method: "GET",
+        url: `api/bookmarks/${bookmarkId}`
+    })
+)
+
 export const createBookmark = (bookmark) => (
     $.ajax({
         method: "POST",

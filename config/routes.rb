@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show]
     resource :session, only: [:create, :destroy]
     resources :events
-    resources :bookmarks, only: [:create, :destroy]
+    resources :bookmarks, only: [:index, :show, :create, :destroy]
     resources :registrations, only: [:create, :destroy]
     
     post "/email", to: "sessions#email"
