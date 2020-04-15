@@ -25,7 +25,7 @@ class Splash extends React.Component {
                 </div>
                 <div className="index-body">
                     <div className="category-browse">
-                        <h1>Browse by Top Categories</h1>
+                        <h1>Browse by Category</h1>
                         <EventIndexContainer />
                     </div>
                 </div>
