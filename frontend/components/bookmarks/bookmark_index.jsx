@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
 import BookmarkIndexItem from './bookmark_index_item'
 
 class BookmarkIndex extends React.Component {
@@ -12,7 +11,13 @@ class BookmarkIndex extends React.Component {
     }
 
     render() {
-        let eventBookmarks = Object.values(this.props.events).filter(event => {
+        const { events } = this.props;
+
+        if (!events) {
+            return null;
+        }
+
+        let eventBookmarks = Object.values(events).filter(event => {
             let bookmarks = event.bookmarks || {};
             return bookmarks.hasOwnProperty(this.props.currentUser.id)
         })

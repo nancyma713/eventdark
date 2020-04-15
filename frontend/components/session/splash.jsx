@@ -14,12 +14,12 @@ class Splash extends React.Component {
         return (
             <div className="splash-body">
                 <div className="banner-section">
-                    <img id="banner" src={window.bannerURL} alt="Find events near you" />
+                    <img id="banner" src={window.bannerURL} alt="Connect through dark events" />
                 </div>
                 <div className="banner-headers">
                     <p id="darkness-text">When darkness is your comfort zone...</p>
                     <p id="connect">Connect through</p>
-                    <p id="dark-events"> DARK events!</p>
+                    <p id="dark-events">DARK events!</p>
                     <button id="start-browsing-btn" onClick={() => this.scrollToEvents()}>
                         <span>Browse Events</span><i className="fas fa-arrow-right"></i></button>
                 </div>

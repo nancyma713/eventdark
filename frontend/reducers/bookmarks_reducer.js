@@ -6,12 +6,14 @@
 
 //     switch (action.type) {
 //         case RECEIVE_BOOKMARKS:
-//             return action.bookmarks;
+//             return nextState;
 //         case RECEIVE_BOOKMARK:
-//             nextState[action.bookmark.id] = action.bookmark;
+//             // nextState[action.bookmark.id] = action.bookmark;
+//             // return nextState;
 //             return nextState;
 //         case REMOVE_BOOKMARK:
-//             delete nextState[action.bookmarkId];
+//             // delete nextState[action.bookmarkId];
+//             // return nextState;
 //             return nextState;
 //         default:
 //             return state;

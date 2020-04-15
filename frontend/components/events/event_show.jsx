@@ -165,6 +165,11 @@ class EventShow extends React.Component {
 
     render() {
         const { event } = this.props;
+        // debugger
+
+        if (!event) {
+            return null;
+        }
 
         const startDate = new Date(this.props.event.start_date);
         const startDateString = startDate.toDateString();

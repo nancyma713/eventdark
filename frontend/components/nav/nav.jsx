@@ -6,6 +6,13 @@ class Nav extends React.Component {
         super(props);
     }
 
+    scrollToEvents() {
+        window.scrollTo({
+            top: 500,
+            behavior: "smooth"
+        })
+    }
+
     render() {
         if (this.props.currentUser) {
             return (
@@ -73,7 +80,7 @@ class Nav extends React.Component {
                             <i className="fas fa-search"></i> <input id="search-input" type="text" placeholder="Search events" />
                         </div>
                         <div className="navbar-right" id="nav-right">
-                            <span id="browse-events"><Link to="/"><i className="fas fa-search"></i> Browse Events</Link></span>
+                            <span id="browse-events" onClick={() => this.scrollToEvents()}><i className="fas fa-search"></i> Browse Events</span>
                             <span id="help"><i className="far fa-question-circle"></i> Help</span>
                             <span><Link to="/signin">Sign In</Link></span>
                         </div>
