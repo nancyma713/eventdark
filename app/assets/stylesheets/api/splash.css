@@ -134,7 +134,7 @@ li.active {
     top: 100px;
     left: 10%;
     z-index: 2;
-    color: rgb(22, 22, 22);
+    color: black;
     font-size: 48px;
     padding: 20px;
     max-width: 500px;
@@ -151,9 +151,9 @@ li.active {
     padding-bottom: 10px;
 }
 
-#dark-events {
+/* #dark-events {
     color: black;
-}
+} */
 
 #start-browsing-btn {
     margin-top: 5%;
