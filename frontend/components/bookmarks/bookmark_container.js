@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import BookmarkIndex from './bookmark_index';
 import { fetchBookmarks, fetchBookmark, createBookmark, deleteBookmark } from '../../actions/bookmark_actions';
+import { fetchEvents } from '../../actions/event_actions';
 
 const msp = (state) => ({
     currentUser: state.entities.users[state.session.id],
@@ -12,7 +13,8 @@ const mdp = (dispatch) => ({
     fetchBookmarks: () => dispatch(fetchBookmarks()),
     fetchBookmark: bookmarkId => dispatch(fetchBookmark(bookmarkId)),
     createBookmark: bookmark => dispatch(createBookmark(bookmark)),
-    deleteBookmark: bookmarkId => dispatch(deleteBookmark(bookmarkId))
+    deleteBookmark: bookmarkId => dispatch(deleteBookmark(bookmarkId)),
+    fetchEvents: () => dispatch(fetchEvents())
 })
 
 
