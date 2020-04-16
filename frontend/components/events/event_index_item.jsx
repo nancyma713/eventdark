@@ -32,13 +32,13 @@ class EventIndexItem extends React.Component {
         let userId = this.props.currentUser.id;
         if (bookmarks.hasOwnProperty(userId)) {
             return (
-                <button id="bookmarked" value={this.props.event.id} onClick={this.handleBookmark}>
+                <button className="bookmarked" value={this.props.event.id} onClick={this.handleBookmark}>
                     <i className="fas fa-bookmark"></i>
                 </button>
             )
         } else {
             return (
-                <button id="bookmark" value={this.props.event.id} onClick={this.handleBookmark}>
+                <button className="bookmark" value={this.props.event.id} onClick={this.handleBookmark}>
                     <i className="far fa-bookmark"></i>
                 </button>
             )

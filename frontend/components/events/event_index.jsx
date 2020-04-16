@@ -96,7 +96,7 @@ class EventIndex extends React.Component {
                     {filteredEvents.length > 0 ? (
                         filteredEvents
                     ) : (
-                        <p>No events... Maybe you can create one!</p>
+                        <p id="no-events">No events... Maybe you can create one!</p>
                     )}
                 </ul>
             </div>

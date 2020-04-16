@@ -42,8 +42,13 @@
     padding-top: 70px;
 }
 
-.event-details > p {
+#event-owner {
+    padding-bottom: 50%;
     color: gray;
+}
+
+.event-details > p {
+    color: rgb(85, 85, 85);
 }
 
 .buttons {
@@ -74,12 +79,11 @@
     margin: 10px;
     width: fit-content;
     height: fit-content;
-    color: rgb(95, 95, 95);
+    color: rgb(80, 80, 80);
     background-color: white;
     text-decoration: none;
     font-size: 20px;
-    padding: 7px 12px;
-    border: 1px solid lightgrey;
+    padding: 8px 13px;
     border-radius: 50%;
     cursor: pointer;
     font-weight: lighter;
@@ -94,22 +98,20 @@
     text-decoration: none;
     font-size: 20px;
     padding: 8px 13px;
-    border: none;
     border-radius: 50%;
     cursor: pointer;
     font-weight: lighter;
-    box-shadow: 1px 1px 5px #adacaa;
 }
 
 #bookmark:hover {
     outline-style: none;
-    color: rgb(105, 105, 105);
+    color: rgb(70, 70, 70);
     background-color: whitesmoke;
 }
 
 #bookmarked:hover {
     outline-style: none;
-    color: rgb(105, 105, 105);
+    color: rgb(10, 10, 184);
     background-color: whitesmoke;
 }
 

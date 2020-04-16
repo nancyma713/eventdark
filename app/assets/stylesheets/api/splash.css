@@ -20,17 +20,17 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: stretch;
 }
 
-.event-list p {
+.event-list #no-events {
     padding: 20px 0px;
     width: 100%;
     text-align: center;
 }
 
 .event-item {
-    min-width: 280px;
+    width: auto;
     max-width: 280px;
     height: 310px;
     margin: 15px;
@@ -73,22 +73,51 @@
     align-self: center;
 }
 
-.images button {
+.bookmark {
     position: absolute;
     bottom: 0px;
     right: 10px;
     z-index: 10;
     text-decoration: none;
     font-size: 20px;
-    padding: 8px 13px;
+    padding: 7px 12px;
     border: 1px solid lightgrey;
     border-radius: 50%;
     cursor: pointer;
+    background-color: white;
+    color: rgb(80, 80, 80);
 }
 
-.images button:focus {
+.bookmarked {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    z-index: 10;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 7px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+    color: navy;
+}
+
+.bookmark:hover {
     outline-style: none;
+    color: rgb(70, 70, 70);
     background-color: whitesmoke;
+}
+
+.bookmarked:hover {
+    outline-style: none;
+    color: rgb(10, 10, 184);
+    background-color: whitesmoke;
+}
+
+.bookmark:focus {
+    outline-style: none;
+    background-color: rgb(240, 240, 240);
 }
 
 .category-browse {

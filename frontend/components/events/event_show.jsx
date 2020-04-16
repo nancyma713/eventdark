@@ -246,6 +246,7 @@ class EventShow extends React.Component {
                             <p id="start-date">{startDateOnly}</p>
                         </div>
                         <h1>{event.title}</h1>
+                        <p id="event-owner">by {event.ownerFirstName} {event.ownerLastName}</p>
                         <p>{event.category}</p>
                     </div>
                 </header>
