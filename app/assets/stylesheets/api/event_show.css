@@ -1,19 +1,18 @@
 .event-show {
-    margin: 5% 10%;
-    border: 1px solid whitesmoke;
+    padding: 5% 10%;
     box-shadow: 0px, 1px 50px -10px;
     font-family: 'Barlow', sans-serif;
 }
 
 .event-header {
-    border: 1px solid whitesmoke;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(255,255,255,0.9);
+    background-color: white;
 }
 
 .show-image-container {
     flex: 2;
+    background-color: white;
 }
 
 #show-image {
@@ -50,6 +49,7 @@
 .buttons {
     border-top: 1px solid whitesmoke;
     border-bottom: 1px solid whitesmoke;
+    background-color: white;
     display: flex;
     justify-content: space-between;
 }
@@ -121,6 +121,7 @@
     display: flex;
     padding: 30px;
     margin-bottom: 50px;
+    background-color: white;
 }
 
 .event-body-desc {

@@ -59,6 +59,8 @@ class EditEventForm extends React.Component {
     }
 
     render() {
+        let currentDate = '2020-04-15T00:00';
+
         return (
             <div className="event-form-container">
                 <h2>Edit Your Event</h2>
@@ -74,12 +76,14 @@ class EditEventForm extends React.Component {
                         <span className="form-field-error">{this.checkError("Title can't be blank")}</span>
                         <label id="event-start">Starts
                             <input type="datetime-local"
+                                min={currentDate}
                                 value={this.state.start_date}
                                 onChange={this.update('start_date')} />
                         </label>
                         <span className="form-field-error">{this.checkError("Start date can't be blank")}</span>
                         <label id="event-end">Ends
                             <input type="datetime-local"
+                                min={currentDate}
                                 value={this.state.end_date}
                                 onChange={this.update('end_date')} />
                         </label>

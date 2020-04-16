@@ -32,18 +32,6 @@ class SignupForm extends React.Component {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
 
-    // renderErrors() {
-    //     return (
-    //         <ul className="form-errors">
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
-
     checkError(msg) {
         let allErrors = Object.values(this.props.errors);
         if (allErrors.includes(msg)) {
@@ -55,15 +43,6 @@ class SignupForm extends React.Component {
         } 
     }
     
-    // checkEmail() {
-    //     debugger
-    //     if (this.state.email !== this.state.inputEmail) {
-    //         if (!this.props.errors.includes('Email does not match')) {
-    //             this.props.errors.push('Email does not match');
-    //         }
-    //     }
-    // }
-
     render() {
         return (
             <div className='signup-form'>

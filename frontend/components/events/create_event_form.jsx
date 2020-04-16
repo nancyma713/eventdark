@@ -23,18 +23,6 @@ class CreateEventForm extends React.Component {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
 
-    // renderErrors() {
-    //     return (
-    //         <ul className="form-errors">
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
-
     checkError(msg) {
         let allErrors = Object.values(this.props.errors);
         if (allErrors.includes(msg)) {
@@ -55,6 +43,10 @@ class CreateEventForm extends React.Component {
     }
 
     render() {
+        let currentDate = '2020-04-15T00:00';
+        // let today = new Date().toISOString().substr(0, 10);
+        // document.querySelector("#today").value = today;
+
         return (
             <div className="event-form-container">
                 <h2>Create An Event</h2>
@@ -70,12 +62,16 @@ class CreateEventForm extends React.Component {
                         <span className="form-field-error">{this.checkError("Title can't be blank")}</span>
                         <label id="event-start">Starts
                             <input type="datetime-local"
+                            min={currentDate}
+                            id="today"
                             value={this.state.start_date}
                             onChange={this.update('start_date')}/>
                         </label>
                         <span className="form-field-error">{this.checkError("Start date can't be blank")}</span>
                         <label id="event-end">Ends
                             <input type="datetime-local"
+                                min={currentDate}
+                                id="today"
                                 value={this.state.end_date}
                                 onChange={this.update('end_date')} />
                         </label>

@@ -1,11 +1,12 @@
 .main {
     padding-bottom: 5%;
+    background-color: rgb(250, 250, 250);
 }
 
 .index-body {
     font-family: 'Barlow', sans-serif;
     font-size: 26px;
-    background-color: rgb(252, 252, 252);
+    background-color: rgb(250, 250, 250);
     margin: 0px 50px;
 }
 
@@ -19,21 +20,20 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .event-list p {
-    padding: 100px 0px;
+    padding: 20px 0px;
+    width: 100%;
+    text-align: center;
 }
 
 .event-item {
-    flex: 1;
-    min-width: 300px;
-    width: 300px;
-    max-width: 300px;
-    height: 350px;
-    /* padding: 10px; */
-    margin: 20px;
+    min-width: 280px;
+    max-width: 280px;
+    height: 310px;
+    margin: 15px;
     background-color: white;
 }
 
