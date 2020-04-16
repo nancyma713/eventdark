@@ -1,5 +1,6 @@
 import React from 'react';
 import EventIndexItem from './event_index_item';
+import { withRouter } from 'react-router-dom';
 
 class EventIndex extends React.Component {
     constructor(props) {
@@ -20,7 +21,7 @@ class EventIndex extends React.Component {
     }
 
     render() {
-        const { events, createBookmark, deleteBookmark, fetchEvent, currentUser } = this.props;
+        const { events, createBookmark, deleteBookmark, fetchEvent, currentUser, history } = this.props;
 
         const CATEGORYLIST = [
             { name: 'ALL' },
@@ -81,9 +82,9 @@ class EventIndex extends React.Component {
                 filteredEvents = events;
                 break;
         }
-
+        // debugger
         filteredEvents = filteredEvents.map(event => (
-            <EventIndexItem currentUser={currentUser} fetchEvent={fetchEvent} createBookmark={createBookmark} deleteBookmark={deleteBookmark} key={event.id} event={event} />
+            <EventIndexItem currentUser={currentUser} fetchEvent={fetchEvent} createBookmark={createBookmark} deleteBookmark={deleteBookmark} key={event.id} event={event} history={history}/>
         ));
 
         return (
@@ -103,4 +104,4 @@ class EventIndex extends React.Component {
     }
 }
 
-export default EventIndex;
+export default withRouter(EventIndex);

@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { fetchEvents, fetchEvent } from '../../actions/event_actions';
 import EventIndex from './event_index';
 import { createBookmark, deleteBookmark } from '../../actions/bookmark_actions';
+import { withRouter } from 'react-router-dom';
 
 const msp = (state) => ({
     events: Object.values(state.entities.events),
@@ -15,4 +16,4 @@ const mdp = (dispatch) => ({
     deleteBookmark: bookmarkId => dispatch(deleteBookmark(bookmarkId))
 });
 
-export default connect(msp, mdp)(EventIndex);
+export default withRouter(connect(msp, mdp)(EventIndex));
