@@ -82,7 +82,7 @@ class EventIndex extends React.Component {
                 filteredEvents = events;
                 break;
         }
-        // debugger
+
         filteredEvents = filteredEvents.map(event => (
             <EventIndexItem currentUser={currentUser} fetchEvent={fetchEvent} createBookmark={createBookmark} deleteBookmark={deleteBookmark} key={event.id} event={event} history={history}/>
         ));

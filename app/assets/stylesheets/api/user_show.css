@@ -1,7 +1,6 @@
 .user-show-page {
-    margin: 50px;
+    padding: 50px;
     font-family: 'Barlow', sans-serif;
-    /* display: flex; */
 }
 
 .user-show-page #user-icon {

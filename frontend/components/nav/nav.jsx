@@ -36,7 +36,7 @@ class Nav extends React.Component {
                         </div>
                     </div>
                     <div className="profile-dropdown">
-                        <i className="far fa-user" id="user-icon"></i>
+                        <i className="far fa-user" id="nav-user-icon"></i>
                         <ul className="dropdown-content">
                             <li id="user-info">
                                 <Link to={`/users/${this.props.currentUser.id}`}>
@@ -57,6 +57,7 @@ class Nav extends React.Component {
                                 <Link to={`/users/${this.props.currentUser.id}`}>My Registrations</Link>
                             </li>
                             <li><Link to="/events/create">Create Event</Link></li>
+                            <li><Link to="/">Browse Events</Link></li>
                             <li><button onClick={this.props.logout}>Logout</button></li>
                         </ul>
                     </div>

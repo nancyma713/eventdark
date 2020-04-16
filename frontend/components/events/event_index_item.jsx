@@ -8,6 +8,10 @@ class EventIndexItem extends React.Component {
         this.handleBookmark = this.handleBookmark.bind(this);
     }
 
+    // componentDidMount() {
+    //     window.scrollTo(0, 0);
+    // }
+
     handleBookmark(e) {
         e.preventDefault();
         if (this.props.currentUser.id) {
@@ -82,15 +86,14 @@ class EventIndexItem extends React.Component {
         return (
             <li className="event-item">
                 <div className="images">
-                    <Link to={`events/${this.props.event.id}`}>
+                    <Link to={`/events/${this.props.event.id}`}>
                         <img src={image} alt={this.props.event.title} />
                     </Link>
                     {this.bookmarkButton()}
-                    {/* <button><i className="far fa-bookmark"></i></button> */}
                 </div>
                 <div className="event-info">
                     <p>{startDateString}, {formatTime}</p>
-                    <h3><Link to={`events/${this.props.event.id}`}>{title}</Link></h3>
+                    <h3><Link to={`/events/${this.props.event.id}`}>{title}</Link></h3>
                 </div>
             </li>
         )

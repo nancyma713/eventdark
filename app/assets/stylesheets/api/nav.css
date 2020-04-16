@@ -89,7 +89,7 @@
 }
 
 #nav-right a {
-    padding: 20px 10px 25px 10px;
+    padding: 20px 20px 25px 20px;
 }
 
 .navbar-right a:hover {
@@ -100,7 +100,7 @@
 /* when logged in */
 
 .profile-dropdown {
-    padding: 20px 40px 20px 20px;
+    padding: 10px 30px 10px 20px;
     position: relative;
 }
 
@@ -121,7 +121,7 @@
 .dropdown-content {
     position: absolute;
     justify-content: flex-start;
-    width: 200px;
+    width: 250px;
     right: 0;
     left: auto;
     top: 60px;
@@ -131,7 +131,7 @@
 
 .dropdown-content li {
     color: gray;
-    width: 200px;
+    width: 250px;
     height: 50px;
     position: relative;
 }
@@ -145,8 +145,8 @@
     text-decoration: none;
     color: gray;
     padding: 15px;
-    width: 200px;
-    height: 450px;
+    width: 250px;
+    height: 500px;
     position: absolute;
 }
 
@@ -155,12 +155,13 @@
 }
 
 #user-info {
+    height: 70px;
     border-bottom: 1px solid lightgray;
 }
 
 #user-info a {
     display: flex;
-    padding: 10px 15px;
+    padding: 20px 15px;
 }
 
 #user-details {
@@ -175,8 +176,7 @@
     font-family: 'Barlow', sans-serif;
     font-size: 14px;
     padding: 15px;
-    width: 200px;
-    height: 50px;
+    width: 250px;
     border: none;
     background: none;
     cursor: pointer;
@@ -196,7 +196,7 @@
 }
 
 .nav-content {
-    width: 75%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
 }
@@ -225,6 +225,14 @@
     padding-top: 5px;
     padding-right: 5px;
     font-size: medium;
+}
+
+#nav-user-icon {
+    margin-top: 3px;
+    font-size: medium;
+    background-color: whitesmoke;
+    padding: 8px 9px;
+    border-radius: 50%;
 }
 
 #registrations {

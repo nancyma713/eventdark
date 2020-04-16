@@ -1,4 +1,6 @@
 import React from 'react';
+import EventIndexItem from './event_index_item';
+import { withRouter } from 'react-router-dom';
 
 class EventShow extends React.Component {
     constructor(props) {
@@ -18,9 +20,10 @@ class EventShow extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
+        window.scrollTo(0, 0);
         this.props.fetchEvent(this.props.match.params.eventId)
-            .then(() => this.setRegId());
+        .then(() => this.setRegId());
+        this.props.fetchEvents();
     }
 
     handleDelete(e) {
@@ -57,7 +60,6 @@ class EventShow extends React.Component {
     setRegId() {
         let userId = this.props.currentUser.id;
         let registrations = this.props.event.registrations || {};
-        // debugger
         if (registrations.hasOwnProperty(userId)) {
             this.setState({ regId: registrations[userId]["id"]});
             this.setState({ registered: true });
@@ -95,16 +97,14 @@ class EventShow extends React.Component {
                 
     handleRegister(e) {
         e.preventDefault();
-        // debugger
+        
         if (this.props.currentUser.id) {
             if (this.state.registered) {
                 this.deleteRegistration(this.state.regId);
-                // debugger
                 this.setState({ registered: false });
             } else {
                 this.createRegistration({ registration: {event_id: this.props.event.id } })
                 .then(({ event }) => this.setState({ regId: event["id"] } ));
-                // debugger
                 this.setState({ registered: true });
             }
         } else {
@@ -130,12 +130,11 @@ class EventShow extends React.Component {
             let bookmarks = this.props.event.bookmarks || {};
             let userId = this.props.currentUser.id;
             let bookmark = bookmarks[userId];
-            // debugger
+
             if (bookmark) {
                 this.props.deleteBookmark(bookmark.id)
                     .then(() => this.props.fetchEvent(this.props.event.id));
             } else {
-                // debugger
                 this.props.createBookmark({ bookmark: { event_id: e.currentTarget.value } })
                     .then(() => this.props.fetchEvent(this.props.event.id));
             }
@@ -162,10 +161,9 @@ class EventShow extends React.Component {
         }
     }
 
-
     render() {
-        const { event } = this.props;
-        // debugger
+        // window.scrollTo(0, 0);
+        const { event, events, currentUser, createBookmark, deleteBookmark, fetchEvent, history } = this.props;
 
         if (!event) {
             return null;
@@ -234,6 +232,44 @@ class EventShow extends React.Component {
         }
         // fix these later
 
+        let filteredEvents;
+        switch (event.category) {
+            case 'Activities':
+                filteredEvents = events.filter(e => (e.category === 'Activities' || e.category === 'Entertainment') && e.title !== event.title);
+                break;
+            case 'Entertainment':
+                filteredEvents = events.filter(e => (e.category === 'Activities' || e.category === 'Entertainment') && e.title !== event.title);
+                break;
+            case 'Food and Drink':
+                filteredEvents = events.filter(e => (e.category === 'Food and Drink' || e.category === 'Activities') && e.title !== event.title);
+                break;
+            case 'Free':
+                filteredEvents = events.filter(e => (e.category === 'Free' || e.category === 'Other') && e.title !== event.title);
+                break;
+            case 'Music':
+                filteredEvents = events.filter(e => (e.category === 'Music' || e.category === 'Entertainment') && e.title !== event.title);
+                break;
+            case 'Nightlife':
+                filteredEvents = events.filter(e => (e.category === 'Nightlife' || e.category === 'Music') && e.title !== event.title);
+                break;
+            case 'Other':
+                filteredEvents = events.filter(e => (e.category === 'Other' || e.category === 'Free') && e.title !== event.title);
+                break;
+            case 'Sports and Fitness':
+                filteredEvents = events.filter(e => (e.category === 'Sports and Fitness' || e.category === 'Travel and Outdoor') && e.title !== event.title);
+                break;
+            case 'Travel and Outdoor':
+                filteredEvents = events.filter(e => (e.category === 'Travel and Outdoor' && e.category === 'Sports and Fitness') && e.title !== event.title);
+                break;
+            default:
+                filteredEvents = events.filter(e => e.owner_id === event.owner_id && e.title !== event.title);
+                break;
+        }
+
+        filteredEvents = filteredEvents.map(event => (
+            <EventIndexItem currentUser={currentUser} fetchEvent={fetchEvent} createBookmark={createBookmark} deleteBookmark={deleteBookmark} key={event.id} event={event} history={history} />
+        ));
+
         return (
             <div className="event-show">
                 <header className="event-header">
@@ -267,6 +303,16 @@ class EventShow extends React.Component {
                         <p>{startDateString}, {formatStartTime} -</p>
                         <p>{endDateString}, {formatEndTime}</p>
                     </div>
+                </div>
+                <div className="similar-events">
+                    <h5>Similar Events</h5>
+                    <ul className='event-list'>
+                        {filteredEvents.length > 0 ? (
+                            filteredEvents
+                        ) : (
+                                <p id="no-events">No events... Maybe you can create one!</p>
+                            )}
+                    </ul>
                 </div>
             </div>
         )

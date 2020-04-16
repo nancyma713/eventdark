@@ -20,6 +20,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     justify-content: stretch;
 }
 
@@ -30,8 +31,9 @@
 }
 
 .event-item {
-    width: auto;
+    width: 280px;
     max-width: 280px;
+    flex-grow: 1;
     height: 310px;
     margin: 15px;
     background-color: white;
