@@ -21,7 +21,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: stretch;
+    /* justify-content: stretch; */
 }
 
 .event-list #no-events {
@@ -30,9 +30,9 @@
     text-align: center;
 }
 
-.event-item-container {
+/* .event-item-container {
     margin-right: auto;
-}
+} */
 
 .event-item {
     width: 280px;

@@ -19,7 +19,7 @@ class UserShow extends React.Component {
 
         let eventRegistrationItems = eventRegistrations.map(event => {
             return (
-                <div key={event.id}>
+                <div key={`regs-${event.id}`}>
                     <UserRegistrationItem event={event} userId={this.props.currentUser.id} />
                 </div>
             );
@@ -27,7 +27,7 @@ class UserShow extends React.Component {
 
         let hostedEventItems = this.props.currentUser.hostedEvents.map(event => {
             return (
-                <div key={event.id}>
+                <div key={`hosted-${event.id}`}>
                     <UserRegistrationItem event={event} userId={this.props.currentUser.id} />
                 </div>
             );

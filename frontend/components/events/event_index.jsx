@@ -84,7 +84,7 @@ class EventIndex extends React.Component {
         }
 
         filteredEvents = filteredEvents.map(event => (
-            <EventIndexItem currentUser={currentUser} fetchEvent={fetchEvent} createBookmark={createBookmark} deleteBookmark={deleteBookmark} key={event.id} event={event} history={history}/>
+            <EventIndexItem currentUser={currentUser} fetchEvent={fetchEvent} createBookmark={createBookmark} deleteBookmark={deleteBookmark} key={`filtered-${event.id}`} event={event} history={history}/>
         ));
 
         return (

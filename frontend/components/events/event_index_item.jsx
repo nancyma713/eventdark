@@ -18,12 +18,11 @@ class EventIndexItem extends React.Component {
                 this.props.deleteBookmark(bookmark.id)
                     .then(() => this.props.fetchEvent(this.props.event.id));
             } else {
-                // debugger
                 this.props.createBookmark({ bookmark: { event_id: e.currentTarget.value } })
                     .then(() => this.props.fetchEvent(this.props.event.id));
             }
         } else {
-            this.props.history.push('/signin/login');
+            this.props.history.push('/signin');
         }
     }
 
@@ -53,25 +52,25 @@ class EventIndexItem extends React.Component {
 
         let image = window.defaultURL;
 
-        // fix these later
-        if (this.props.event.id === 45) {
+        // fix images
+        if (this.props.event.id === 23) {
             image = window.magiciansURL;
-        } else if (this.props.event.id === 46) {
+        } else if (this.props.event.id === 24) {
             image = window.excisionURL;
-        } else if (this.props.event.id === 47) {
+        } else if (this.props.event.id === 25) {
             image = window.hauntedhouseURL;
-        } else if (this.props.event.id === 48) {
+        } else if (this.props.event.id === 26) {
             image = window.dinnerdateURL;
-        } else if (this.props.event.id === 49) {
+        } else if (this.props.event.id === 27) {
             image = window.fireworksURL;
-        } else if (this.props.event.id === 50) {
+        } else if (this.props.event.id === 28) {
             image = window.newyearURL;
-        } else if (this.props.event.id === 51) {
+        } else if (this.props.event.id === 29) {
             image = window.harrypotterURL;
-        } else if (this.props.event.id === 52) {
+        } else if (this.props.event.id === 30) {
             image = window.candlelitURL;
         }
-        //fix these later
+        // fix images
 
         let title = this.props.event.title;
         if (title.length > 60) {

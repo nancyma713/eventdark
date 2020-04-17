@@ -1,6 +1,5 @@
 import React from 'react';
 import EventIndexItem from './event_index_item';
-import { withRouter } from 'react-router-dom';
 
 class EventShow extends React.Component {
     constructor(props) {
@@ -20,13 +19,9 @@ class EventShow extends React.Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0, 0);
         this.props.fetchEvent(this.props.match.params.eventId)
-        .then(() => this.setRegId());
+            .then(() => this.setRegId());
         this.props.fetchEvents();
-    }
-
-    componentDidUpdate() {
         window.scrollTo(0, 0);
     }
 
@@ -112,7 +107,7 @@ class EventShow extends React.Component {
                 this.setState({ registered: true });
             }
         } else {
-            this.props.history.push('/signin/login');
+            this.props.history.push('/signin');
         }
     }
 
@@ -149,7 +144,7 @@ class EventShow extends React.Component {
                     .then(() => this.props.fetchEvent(this.props.event.id));
             }
         } else {
-            this.props.history.push('/signin/login');
+            this.props.history.push('/signin');
         }
     }
 
@@ -221,25 +216,25 @@ class EventShow extends React.Component {
 
         let image = window.defaultURL;
 
-        // fix these later, if ever
-        if (this.props.event.id === 45) {
+        // fix images
+        if (this.props.event.id === 23) {
             image = window.magiciansURL;
-        } else if (this.props.event.id === 46) {
+        } else if (this.props.event.id === 24) {
             image = window.excisionURL;
-        } else if (this.props.event.id === 47) {
+        } else if (this.props.event.id === 25) {
             image = window.hauntedhouseURL;
-        } else if (this.props.event.id === 48) {
+        } else if (this.props.event.id === 26) {
             image = window.dinnerdateURL;
-        } else if (this.props.event.id === 49) {
+        } else if (this.props.event.id === 27) {
             image = window.fireworksURL;
-        } else if (this.props.event.id === 50) {
+        } else if (this.props.event.id === 28) {
             image = window.newyearURL;
-        } else if (this.props.event.id === 51) {
+        } else if (this.props.event.id === 29) {
             image = window.harrypotterURL;
-        } else if (this.props.event.id === 52) {
+        } else if (this.props.event.id === 30) {
             image = window.candlelitURL;
         }
-        // fix these later
+        // fix images
 
         let filteredEvents;
         switch (event.category) {
@@ -276,7 +271,7 @@ class EventShow extends React.Component {
         }
 
         filteredEvents = filteredEvents.map(event => (
-            <EventIndexItem currentUser={currentUser} fetchEvent={fetchEvent} createBookmark={createBookmark} deleteBookmark={deleteBookmark} key={event.id} event={event} history={history} />
+            <EventIndexItem currentUser={currentUser} fetchEvent={fetchEvent} createBookmark={createBookmark} deleteBookmark={deleteBookmark} key={`suggested-${event.id}`} event={event} history={history} />
         ));
 
         return (
@@ -296,7 +291,6 @@ class EventShow extends React.Component {
                     </div>
                 </header>
                 <div className="buttons">
-                    {/* <button id="bookmark" onClick={this.handleBookmark}><i className="far fa-bookmark"></i></button> */}
                     <div>
                         {this.bookmarkButton()}
                     </div>
