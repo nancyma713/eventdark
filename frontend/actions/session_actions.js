@@ -30,18 +30,10 @@ export const clearErrors = () => ({
     type: CLEAR_ERRORS
 });
 
-// export const signin = (email) => dispatch => (
-//     APIUtil.signin(email)
-//         .then(email => dispatch(receiveEmail(email)), e => dispatch(receiveErrors(e.responseJSON)))
-// );
-
-export const signin = (email) => dispatch => {
-    // debugger
-    return (
+export const signin = (email) => dispatch => (
         APIUtil.signin(email)
         .then(email => dispatch(receiveEmail(email)), e => dispatch(receiveErrors(e.responseJSON)))
-    )
-    };
+);
 
 export const signup = (user) => dispatch => (
     APIUtil.signup(user)

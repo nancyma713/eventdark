@@ -3,7 +3,6 @@ import EventShow from './event_show';
 import { fetchEvents, fetchEvent, deleteEvent } from '../../actions/event_actions';
 import { createRegistration, deleteRegistration } from '../../actions/registration_actions';
 import { createBookmark, deleteBookmark } from '../../actions/bookmark_actions';
-import { withRouter } from 'react-router-dom';
 
 const msp = (state, ownProps) => ({
     events: Object.values(state.entities.events),

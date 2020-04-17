@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { createEvent, clearEventErrors } from '../../actions/event_actions';
-import { createRegistration } from '../../actions/registration_actions';
 import CreateEventForm from './create_event_form';
 
 
@@ -19,7 +18,6 @@ const msp = (state) => ({
 
 const mdp = (dispatch) => ({
     createEvent: event => dispatch(createEvent(event)),
-    // createRegistration: registration => dispatch(createRegistration(registration)),
     clearEventErrors: () => dispatch(clearEventErrors())
 });
 

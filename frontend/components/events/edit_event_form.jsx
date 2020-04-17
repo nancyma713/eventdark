@@ -48,7 +48,7 @@ class EditEventForm extends React.Component {
     }
 
     render() {
-        let currentDate = '2020-04-15T00:00';
+        let currentDate = '2020-04-17T00:00';
 
         return (
             <div className="event-form-container">

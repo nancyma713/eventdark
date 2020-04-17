@@ -15,17 +15,6 @@ const removeRegistration = ({ registrationId, event }) => ({
     event
 });
 
-// const receiveRegistration = (user) => ({
-//     type: RECEIVE_REGISTRATION,
-//     user
-// });
-
-// const removeRegistration = ({ registrationId, user }) => ({
-//     type: REMOVE_REGISTRATION,
-//     registrationId,
-//     user
-// });
-
 const receiveRegistrationErrors = (errors) => ({
     type: RECEIVE_REGISTRATION_ERRORS,
     errors
