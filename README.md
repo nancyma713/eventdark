@@ -84,7 +84,7 @@ user will be shown the signin page.
 ## Categories
 Users can browse events on the splash page from a variety of categories:
 
-![](app/assets/images/category.gif)
+![](app/assets/images/categories.gif)
 
 ```javascript
 let filteredEvents;
