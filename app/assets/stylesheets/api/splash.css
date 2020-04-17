@@ -16,7 +16,7 @@
 }
 
 .event-list {
-    padding: 10px;
+    padding: 10px 10px 10px 15px;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -30,10 +30,13 @@
     text-align: center;
 }
 
+.event-item-container {
+    margin-right: auto;
+}
+
 .event-item {
     width: 280px;
     max-width: 280px;
-    flex-grow: 1;
     height: 310px;
     margin: 15px;
     background-color: white;
@@ -129,7 +132,7 @@
 .category-list {
     display: flex;
     list-style: none;
-    margin: 10px 40px;
+    margin: 10px 20px;
     flex-wrap: wrap;
 }
 

@@ -14,6 +14,10 @@ class SigninForm extends React.Component {
         this.handleDemo = this.handleDemo.bind(this);
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     componentWillUnmount() {
         this.props.clearErrors();
     }

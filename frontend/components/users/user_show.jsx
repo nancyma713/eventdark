@@ -7,13 +7,14 @@ class UserShow extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.fetchEvents();
     }
 
     render() {
         let eventRegistrations = Object.values(this.props.events).filter(event => {
             let registrations = event.registrations || {};
-            return registrations.hasOwnProperty(this.props.currentUser.id)
+            return registrations.hasOwnProperty(this.props.currentUser.id);
         })
 
         let eventRegistrationItems = eventRegistrations.map(event => {
@@ -21,7 +22,15 @@ class UserShow extends React.Component {
                 <div key={event.id}>
                     <UserRegistrationItem event={event} userId={this.props.currentUser.id} />
                 </div>
-            )
+            );
+        })
+
+        let hostedEventItems = this.props.currentUser.hostedEvents.map(event => {
+            return (
+                <div key={event.id}>
+                    <UserRegistrationItem event={event} userId={this.props.currentUser.id} />
+                </div>
+            );
         })
 
         return (
@@ -38,6 +47,10 @@ class UserShow extends React.Component {
                     <div className="user-regs">
                         <h3 className="user-show-headers">Registrations</h3>
                         {eventRegistrationItems}
+                    </div>
+                    <div className="user-owned-events">
+                        <h3 className="user-show-headers">My Hosted Events</h3>
+                        {hostedEventItems}
                     </div>
                 </div>
 

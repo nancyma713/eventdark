@@ -7,6 +7,7 @@ class BookmarkIndex extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.fetchEvents();
         this.props.fetchBookmarks();
     }

@@ -2,6 +2,10 @@ import React from 'react';
 import EventIndexContainer from '../events/event_index_container';
 
 class Splash extends React.Component {
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
     
     scrollToEvents() {
         window.scrollTo({

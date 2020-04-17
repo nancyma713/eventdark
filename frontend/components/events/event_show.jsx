@@ -26,6 +26,10 @@ class EventShow extends React.Component {
         this.props.fetchEvents();
     }
 
+    componentDidUpdate() {
+        window.scrollTo(0, 0);
+    }
+
     handleDelete(e) {
         e.preventDefault();
         this.props.deleteEvent(e.currentTarget.value)
@@ -37,7 +41,7 @@ class EventShow extends React.Component {
         let ownerId = this.props.event.owner_id;
         if (userId === ownerId) {
             return (
-                <button value={this.props.event.id} onClick={this.handleDelete}>DELETE</button>
+                <button id="owner-button" value={this.props.event.id} onClick={this.handleDelete}>DELETE</button>
             )
         }
     }
@@ -52,7 +56,7 @@ class EventShow extends React.Component {
         let ownerId = this.props.event.owner_id;
         if (userId === ownerId) {
             return (
-                <button value={this.props.event.id} onClick={this.handleEdit}>EDIT</button>
+                <button id="owner-button" value={this.props.event.id} onClick={this.handleEdit}>EDIT</button>
             )
         }
     }
@@ -113,6 +117,12 @@ class EventShow extends React.Component {
     }
 
     registerButton() {
+        let userId = this.props.currentUser.id;
+        let ownerId = this.props.event.owner_id;
+        if (userId === ownerId) {
+            return;
+        }
+
         if (!this.state.registered) {
             return (
                 <button onClick={this.handleRegister} id="register">REGISTER</button>
@@ -162,7 +172,6 @@ class EventShow extends React.Component {
     }
 
     render() {
-        // window.scrollTo(0, 0);
         const { event, events, currentUser, createBookmark, deleteBookmark, fetchEvent, history } = this.props;
 
         if (!event) {
@@ -288,10 +297,14 @@ class EventShow extends React.Component {
                 </header>
                 <div className="buttons">
                     {/* <button id="bookmark" onClick={this.handleBookmark}><i className="far fa-bookmark"></i></button> */}
-                    {this.bookmarkButton()}
-                    {this.editButton()}
-                    {this.deleteButton()}
-                    {this.registerButton()}
+                    <div>
+                        {this.bookmarkButton()}
+                    </div>
+                    <div>
+                        {this.editButton()}
+                        {this.deleteButton()}
+                        {this.registerButton()}
+                    </div>
                 </div>
                 <div className="event-body">
                     <div className="event-body-desc">

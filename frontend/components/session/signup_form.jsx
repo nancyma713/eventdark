@@ -17,6 +17,10 @@ class SignupForm extends React.Component {
         // this.checkEmail = this.checkEmail.bind(this);
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     componentWillUnmount() {
         this.props.clearErrors();
     }

@@ -40,14 +40,13 @@
     font-weight: 500;
 }
 
-.user-regs {
+.user-regs, .user-owned-events {
     padding: 20px;
 }
 
 .reg-details {
     display: flex;
     width: 80%;
-    /* height: 50%; */
     padding: 20px;
     margin: 20px 0px;
 }

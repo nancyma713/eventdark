@@ -73,6 +73,10 @@
     cursor: pointer;
 }
 
+#owner-button {
+    width: 150px;
+}
+
 .buttons button:hover {
     background-color: rgb(12, 12, 194);
 }

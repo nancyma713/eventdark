@@ -10,6 +10,7 @@ class EditEventForm extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.fetchEvent(this.props.match.params.eventId)
     }
 
@@ -26,18 +27,6 @@ class EditEventForm extends React.Component {
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
-
-    // renderErrors() {
-    //     return (
-    //         <ul className="form-errors">
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
 
     checkError(msg) {
         let allErrors = Object.values(this.props.errors);

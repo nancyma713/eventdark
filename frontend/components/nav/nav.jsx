@@ -56,6 +56,9 @@ class Nav extends React.Component {
                             <li id="registrations">
                                 <Link to={`/users/${this.props.currentUser.id}`}>My Registrations</Link>
                             </li>
+                            <li id="hosted-events">
+                                <Link to={`/users/${this.props.currentUser.id}`}>My Hosted Events</Link>
+                            </li>
                             <li><Link to="/events/create">Create Event</Link></li>
                             <li><Link to="/">Browse Events</Link></li>
                             <li><button onClick={this.props.logout}>Logout</button></li>

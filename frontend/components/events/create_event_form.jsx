@@ -7,6 +7,11 @@ class CreateEventForm extends React.Component {
         this.state = this.props.event;
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        // this.createRegistration = this.props.createRegistration.bind(this);
+    }
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
     }
 
     componentWillUnmount() {
