@@ -2,7 +2,7 @@
 
 ![alt text](app/assets/images/eventdark.png "eventdark")
 
-[Eventdark](https://eventdarkapp.herokuapp.com/)
+### [Eventdark Live](https://eventdarkapp.herokuapp.com/)
 
 Eventdark is an Eventbrite clone, curated for those whose comfort zones are in 
 the dark. Users are able to browse events and filter by category, and when
