@@ -187,7 +187,6 @@ class EventShow extends React.Component {
 
         let image = window.defaultURL;
 
-        // fix images
         if (this.props.event.id === 23) {
             image = window.magiciansURL;
         } else if (this.props.event.id === 24) {
@@ -205,7 +204,6 @@ class EventShow extends React.Component {
         } else if (this.props.event.id === 30) {
             image = window.candlelitURL;
         }
-        // fix images
 
         let filteredEvents;
         switch (event.category) {

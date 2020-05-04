@@ -14,7 +14,6 @@ class SignupForm extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.checkError = this.checkError.bind(this);
-        // this.checkEmail = this.checkEmail.bind(this);
     }
 
     componentDidMount() {
