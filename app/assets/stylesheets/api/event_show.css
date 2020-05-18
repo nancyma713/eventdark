@@ -1,4 +1,16 @@
+.event-show-container {
+    width: 100%;
+}
+
+.background-container {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+}
+
 .event-show {
+    position: relative;
     padding: 3% 10%;
     box-shadow: 0px, 1px 50px -10px;
     font-family: 'Barlow', sans-serif;
@@ -7,13 +19,24 @@
 .event-header {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(247, 245, 245, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     max-height: 400px;
 }
 
 .show-image-container {
     flex: 2;
     background-color: white;
+}
+
+#show-background {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(25px);
+    -webkit-filter: blur(25px);
+    transform: scale(1.1);
 }
 
 #show-image {

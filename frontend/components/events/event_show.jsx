@@ -244,53 +244,62 @@ class EventShow extends React.Component {
         ));
 
         return (
-            <div className="event-show">
-                <header className="event-header">
-                    <div className="show-image-container">
-                        <img id="show-image" src={image} alt={event.title} />
-                    </div>
-                    <div className="event-details">
-                        <div className="start-date-header">
-                            <p>{startMonth}</p>
-                            <p id="start-date">{startDateOnly}</p>
+            <div className="event-show-container">
+                <div className="background-container">
+                    <img id="show-background" src={image} alt={event.title} />
+                </div>
+
+                <div className="event-show">
+                    <header className="event-header">
+                        <div className="show-image-container">
+                            <img id="show-image" src={image} alt={event.title} />
                         </div>
-                        <h1>{event.title}</h1>
-                        <p id="event-owner">by {event.ownerFirstName} {event.ownerLastName}</p>
-                        <p>{event.category}</p>
+                        <div className="event-details">
+                            <div className="start-date-header">
+                                <p>{startMonth}</p>
+                                <p id="start-date">{startDateOnly}</p>
+                            </div>
+                            <h1>{event.title}</h1>
+                            <p id="event-owner">by {event.ownerFirstName} {event.ownerLastName}</p>
+                            <p>{event.category}</p>
+                        </div>
+                    </header>
+                    <div className="buttons">
+                        <div>
+                            {this.bookmarkButton()}
+                        </div>
+                        <div>
+                            {this.editButton()}
+                            {this.deleteButton()}
+                            {this.registerButton()}
+                        </div>
                     </div>
-                </header>
-                <div className="buttons">
-                    <div>
-                        {this.bookmarkButton()}
+                    <div className="event-body">
+                        <div className="event-body-desc">
+                            <h5>About this Event</h5>
+                            <p>{event.description}</p>
+                        </div>
+                        <div className="event-body-date">
+                            <h6>Date and Time</h6>
+                            <p>{startDateString}, {formatStartTime} -</p>
+                            <p>{endDateString}, {formatEndTime}</p>
+                        </div>
                     </div>
-                    <div>
-                        {this.editButton()}
-                        {this.deleteButton()}
-                        {this.registerButton()}
+                    <div className="similar-events">
+                        <h5>Similar Events</h5>
+                        <ul className='event-list'>
+                            {filteredEvents.length > 0 ? (
+                                filteredEvents
+                            ) : (
+                                    <p id="no-events">No events... Maybe you can create one!</p>
+                                )}
+                        </ul>
                     </div>
                 </div>
-                <div className="event-body">
-                    <div className="event-body-desc">
-                        <h5>About this Event</h5>
-                        <p>{event.description}</p>
-                    </div>
-                    <div className="event-body-date">
-                        <h6>Date and Time</h6>
-                        <p>{startDateString}, {formatStartTime} -</p>
-                        <p>{endDateString}, {formatEndTime}</p>
-                    </div>
-                </div>
-                <div className="similar-events">
-                    <h5>Similar Events</h5>
-                    <ul className='event-list'>
-                        {filteredEvents.length > 0 ? (
-                            filteredEvents
-                        ) : (
-                                <p id="no-events">No events... Maybe you can create one!</p>
-                            )}
-                    </ul>
-                </div>
+
             </div>
+
+            
         )
     }
 }
