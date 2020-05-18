@@ -46,11 +46,19 @@ class UserShow extends React.Component {
                 <div className="user-show-events">
                     <div className="user-regs">
                         <h3 className="user-show-headers">Registrations</h3>
-                        {eventRegistrationItems}
+                        {eventRegistrationItems.length > 0 ? (
+                            eventRegistrationItems
+                        ) : (
+                                <p id="no-events">No registered events. Feel free to browse!</p>
+                            )}
                     </div>
                     <div className="user-owned-events">
                         <h3 className="user-show-headers">My Hosted Events</h3>
-                        {hostedEventItems}
+                        {hostedEventItems.length > 0 ? (
+                            hostedEventItems
+                        ) : (
+                                <p id="no-events">You aren't hosting any events yet... Maybe you can create one!</p>
+                            )}
                     </div>
                 </div>
 

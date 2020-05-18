@@ -38,7 +38,11 @@ class BookmarkIndex extends React.Component {
                     <h1>Bookmarks</h1>
                 </div>
                 <ul className="bookmarks-list">
-                    {eventBookmarkItems}
+                    {eventBookmarkItems.length > 0 ? (
+                        eventBookmarkItems
+                    ) : (
+                            <p id="no-events">No bookmarked events... Find something you may be interested in!</p>
+                    )}
                 </ul>
             </div>
         );
