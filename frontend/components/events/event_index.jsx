@@ -7,7 +7,7 @@ class EventIndex extends React.Component {
         super(props);
         this.state = {
             index: 0
-        }
+        };
 
         this.selectCategory = this.selectCategory.bind(this);
     }

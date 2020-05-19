@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class EventIndexItem extends React.Component {
     constructor(props) {
@@ -92,7 +92,6 @@ class EventIndexItem extends React.Component {
             </div>
         )
     }
-
 }
 
 export default EventIndexItem;

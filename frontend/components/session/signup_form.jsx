@@ -59,13 +59,6 @@ class SignupForm extends React.Component {
                             onChange={this.update('email')}
                         />
                     </label>
-                    {/* <label>Confirm email
-                        <input type="text"
-                            value={this.state.inputEmail}
-                            onChange={this.update('inputEmail')}
-                        />
-                    </label>
-                    {this.checkError('Email does not match')} */}
                     <br />
                     <div className="name-signup">
                         <label className="fname-inputs">First Name

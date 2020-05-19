@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
 
 class EditEventForm extends React.Component {
     constructor(props) {

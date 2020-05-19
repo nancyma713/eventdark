@@ -3,7 +3,7 @@ import BookmarkIndexItem from './bookmark_index_item'
 
 class BookmarkIndex extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
 
     componentDidMount() {
