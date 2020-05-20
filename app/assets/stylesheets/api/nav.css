@@ -71,6 +71,21 @@
 
 #help {
     padding: 20px 20px 25px 20px;
+    position: relative;
+}
+
+#help-dropdown {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    padding: 20px;
+    width: 125px;
+    right: -50px;
+    left: auto;
+    top: 63px;
+    list-style: none;
+    box-shadow: 0px 1px 8px #adacaa;
+    color: grey;
 }
 
 #browse-events:hover {
@@ -80,6 +95,12 @@
 
 #help:hover {
     background-color: whitesmoke;
+}
+
+#help:hover #help-dropdown {
+    display: block;
+    z-index: 999;
+    background-color: white;
 }
 
 .navbar-right a {

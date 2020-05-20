@@ -67,7 +67,8 @@ class LoginForm extends React.Component {
                     </label>
                     {this.renderErrors()}
                     <button>Log In</button>
-                    <p id="forgot-pw">Forgot password</p>
+                    {/* <p id="forgot-pw">Forgot password</p> */}
+                    <Link to="signup" className="login-instead">Sign Up Instead</Link>
                 </form>
             </div>
         );

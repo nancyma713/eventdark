@@ -78,7 +78,9 @@ class Nav extends React.Component {
                         </div>
                         <div className="navbar-right" id="nav-right">
                             <span id="browse-events"><Link to="/"><i className="fas fa-search"></i> Browse Events</Link></span>
-                            <span id="help"><i className="far fa-question-circle"></i> Help</span>
+                            <span id="help"><i className="far fa-question-circle"></i> Help
+                            <li id="help-dropdown">Help is on the way! :)</li>
+                            </span>
                             <span><Link to="/signin">Sign In</Link></span>
                         </div>
                     </div>
