@@ -46,7 +46,8 @@ class CreateEventForm extends React.Component {
     }
 
     render() {
-        let currentDate = '2020-04-17T00:00';
+        let currentDate = new Date().toISOString();
+        currentDate = currentDate.slice(0, 16);
 
         return (
             <div className="event-form-container">

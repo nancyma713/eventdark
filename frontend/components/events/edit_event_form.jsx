@@ -47,7 +47,12 @@ class EditEventForm extends React.Component {
     }
 
     render() {
-        let currentDate = '2020-04-17T00:00';
+        let currentDate = new Date().toISOString();
+        currentDate = currentDate.slice(0, 16);
+        let startDate = this.state.start_date;
+        startDate = startDate.slice(0, this.state.start_date.length - 2);
+        let endDate = this.state.end_date;
+        endDate = endDate.slice(0, this.state.end_date.length - 2);
 
         return (
             <div className="event-form-container">
@@ -65,14 +70,14 @@ class EditEventForm extends React.Component {
                         <label id="event-start">Starts
                             <input type="datetime-local"
                                 min={currentDate}
-                                value={this.state.start_date}
+                                value={startDate}
                                 onChange={this.update('start_date')} />
                         </label>
                         <span className="form-field-error">{this.checkError("Start date can't be blank")}</span>
                         <label id="event-end">Ends
                             <input type="datetime-local"
                                 min={currentDate}
-                                value={this.state.end_date}
+                                value={endDate}
                                 onChange={this.update('end_date')} />
                         </label>
                         <span className="form-field-error">{this.checkError("End date can't be blank")}</span>

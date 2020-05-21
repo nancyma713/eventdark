@@ -25,7 +25,9 @@ class UserShow extends React.Component {
             );
         })
 
-        let hostedEventItems = this.props.currentUser.hostedEvents.map(event => {
+        let hostedEvents = this.props.currentUser.hostedEvents || {};
+
+        let hostedEventItems = hostedEvents.map(event => {
             return (
                 <div key={`hosted-${event.id}`}>
                     <UserRegistrationItem event={event} userId={this.props.currentUser.id} />
