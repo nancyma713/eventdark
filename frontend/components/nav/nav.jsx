@@ -4,6 +4,29 @@ import { Link } from 'react-router-dom';
 class Nav extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            searchInput: ""
+        };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    scrollToEvents() {
+        window.scrollTo({
+            top: 500,
+            behavior: "smooth"
+        })
+    }
+
+    update(field) {
+        return e => this.setState({ [field]: e.currentTarget.value });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.fetchSearchEvents(this.state.searchInput)
+            .then(() => this.scrollToEvents())
+            .then(this.setState({ searchInput: "" }));
     }
 
     render() {
@@ -16,7 +39,10 @@ class Nav extends React.Component {
                     <div className="nav-content">
                         <div className="searchbar-container">
                             <div className="searchbar" id="logged-in-search">
-                                <i className="fas fa-search"></i> <input id="search-input" type="text" placeholder="Search events" />
+                                <i className="fas fa-search"></i> 
+                                <form onSubmit={this.handleSubmit}>
+                                    <input id="search-input" type="text" placeholder="Search events" value={this.state.searchInput} onChange={this.update("searchInput")}/>
+                                </form>
                             </div>
                         </div>
                         <div className="nav-links">
@@ -74,7 +100,10 @@ class Nav extends React.Component {
                     </div>
                     <div className="nav-content">
                         <div className="searchbar">
-                            <i className="fas fa-search"></i> <input id="search-input" type="text" placeholder="Search events" />
+                            <i className="fas fa-search"></i>
+                            <form onSubmit={this.handleSubmit}>
+                                <input id="search-input" type="text" placeholder="Search events" value={this.state.searchInput} onChange={this.update("searchInput")} />
+                            </form>
                         </div>
                         <div className="navbar-right" id="nav-right">
                             <span id="browse-events"><Link to="/"><i className="fas fa-search"></i> Browse Events</Link></span>

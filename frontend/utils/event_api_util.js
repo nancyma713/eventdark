@@ -34,3 +34,11 @@ export const deleteEvent = (eventId) => (
         url: `api/events/${eventId}`
     })
 );
+
+export const searchEvents = (searchTerm) => (
+    $.ajax({
+        method: 'GET',
+        url: `api/search_events`,
+        data: { searchTerm }
+    })
+);

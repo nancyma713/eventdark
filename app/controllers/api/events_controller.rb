@@ -10,6 +10,12 @@ class Api::EventsController < ApplicationController
         render :show
     end
 
+    def search
+        @all_events = Event.all
+        @events = @all_events.select { |event| event.title.downcase.include?(params[:searchTerm].downcase) || event.description.downcase.include?(params[:searchTerm].downcase)}
+        render :index
+    end
+
     def create
         @event = Event.new(event_params)
         if @event.save

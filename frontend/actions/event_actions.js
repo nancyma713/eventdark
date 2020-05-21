@@ -54,3 +54,8 @@ export const deleteEvent = (eventId) => dispatch => (
     EventApiUtil.deleteEvent(eventId)
         .then((eventId) => dispatch(removeEvent(eventId)), e => dispatch(receiveEventErrors(e.responseJSON)))
 );
+
+export const fetchSearchEvents = (searchTerm) => dispatch => (
+    EventApiUtil.searchEvents(searchTerm)
+        .then((events) => dispatch(receiveEvents(events)), e => dispatch(receiveEventErrors(e.responseJSON)))
+);

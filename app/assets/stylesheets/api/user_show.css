@@ -49,6 +49,7 @@
     width: 750px;
     padding: 20px;
     margin: 20px 0px;
+    background-color: rgb(253, 253, 253);
 }
 
 .reg-details:hover {

@@ -7,7 +7,8 @@ Rails.application.routes.draw do
     resources :events
     resources :bookmarks, only: [:index, :show, :create, :destroy]
     resources :registrations, only: [:create, :destroy]
-    
+
+    match 'search_events', to: 'events#search', via: [:get]
     post "/email", to: "sessions#email"
   end
 
