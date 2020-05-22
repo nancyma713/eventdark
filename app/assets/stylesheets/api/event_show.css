@@ -42,7 +42,7 @@
 @media screen and (max-width: 1050px) {
 
     .background-container {
-        height: 65%;
+        height: 55%;
     }
 
     #show-background {
@@ -54,7 +54,7 @@
 @media screen and (max-width: 850px) {
 
     .background-container {
-        height: 55%;
+        height: 45%;
     }
 
     #show-background {
