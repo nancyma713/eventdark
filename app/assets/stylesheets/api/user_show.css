@@ -52,7 +52,7 @@
     background-color: rgb(253, 253, 253);
 }
 
-@media (max-width: 675px) {
+@media (max-width: 800px) {
     .reg-details {
         width: 450px;
     }
