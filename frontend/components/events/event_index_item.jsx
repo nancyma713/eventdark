@@ -86,7 +86,7 @@ class EventIndexItem extends React.Component {
                     </div>
                     <div className="event-info">
                         <p>{startDateString}, {formatTime}</p>
-                        <h3><Link to={`/events/${this.props.event.id}`}>{title}</Link></h3>
+                        <h3><Link to={`/events/${this.props.event.id}`} onClick={window.scrollTo(0, 0)}>{title}</Link></h3>
                     </div>
                 </li>
             </div>

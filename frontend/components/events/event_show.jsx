@@ -64,7 +64,6 @@ class EventShow extends React.Component {
     }
 
     handleRegister() {
-        // e.preventDefault();
         if (this.props.currentUser.id) {
             let registrations = this.props.event.registrations || {};
             let userId = this.props.currentUser.id;
