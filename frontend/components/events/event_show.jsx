@@ -4,7 +4,12 @@ import EventIndexItem from './event_index_item';
 class EventShow extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            modal: false
+        }
 
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
         this.handleRegister = this.handleRegister.bind(this);
@@ -17,6 +22,14 @@ class EventShow extends React.Component {
         this.props.fetchEvent(this.props.match.params.eventId);
         this.props.fetchEvents();
         window.scrollTo(0, 0);
+    }
+
+    openModal() {
+        this.setState({ modal: true });
+    }
+
+    closeModal() {
+        this.setState({ modal: false });
     }
 
     handleDelete(e) {
@@ -50,8 +63,8 @@ class EventShow extends React.Component {
         }
     }
 
-    handleRegister(e) {
-        e.preventDefault();
+    handleRegister() {
+        // e.preventDefault();
         if (this.props.currentUser.id) {
             let registrations = this.props.event.registrations || {};
             let userId = this.props.currentUser.id;
@@ -59,9 +72,11 @@ class EventShow extends React.Component {
 
             if (registration) {
                 this.deleteRegistration(registration.id)
-                    .then(() => this.props.fetchEvent(this.props.event.id));;
+                    .then(() => this.setState({ modal: false}))
+                    .then(() => this.props.fetchEvent(this.props.event.id));
             } else {
-                this.createRegistration({ registration: { event_id: e.currentTarget.value } })
+                this.createRegistration({ registration: { event_id: this.props.event.id } })
+                    .then(() => this.setState({ modal: false }))
                     .then(() => this.props.fetchEvent(this.props.event.id));
             }
         } else {
@@ -79,11 +94,11 @@ class EventShow extends React.Component {
 
         if (registrations.hasOwnProperty(userId)) {
             return (
-                <button value={this.props.event.id} onClick={this.handleRegister} id="register">UNREGISTER</button>
+                <button value={this.props.event.id} onClick={this.openModal} id="register">UNREGISTER</button>
             )
         } else {
             return (
-                <button value={this.props.event.id} onClick={this.handleRegister} id="register">REGISTER</button>
+                <button value={this.props.event.id} onClick={this.openModal} id="register">REGISTER</button>
             )
         }
     }
@@ -231,6 +246,15 @@ class EventShow extends React.Component {
             <EventIndexItem currentUser={currentUser} fetchEvent={fetchEvent} createBookmark={createBookmark} deleteBookmark={deleteBookmark} key={`suggested-${event.id}`} event={event} history={history} />
         ));
 
+        let text = "";
+        let registrations = this.props.event.registrations || {};
+        let userId = this.props.currentUser.id;
+        if (registrations.hasOwnProperty(userId)) {
+            text = "unregister from";
+        } else {
+            text = "register for";
+        }
+
         return (
             <div className="event-show-container">
                 <div className="background-container">
@@ -284,6 +308,16 @@ class EventShow extends React.Component {
                         </ul>
                     </div>
                 </div>
+
+                {this.state.modal ? <div className="modal-background">
+                    <div id="reg-modal">
+                        <i onClick={this.closeModal} className="fas fa-times"></i>
+                        <p>Are you sure you want to <span id="reg-bold">{text}</span> this event?</p>
+                        <br/>
+                        <button onClick={() => this.handleRegister()}>Yes</button>
+                        <button onClick={() => this.closeModal()}>No</button>
+                    </div>
+                </div> : null}
             </div>
         )
     }
