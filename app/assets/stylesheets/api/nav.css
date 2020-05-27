@@ -260,7 +260,7 @@
     border-bottom: 1px solid lightgray;
 }
 
-@media (max-width: 835px) {
+@media (max-width: 968px) {
     .nav-links {
         display: none;
     }
