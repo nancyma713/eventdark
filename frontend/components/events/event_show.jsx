@@ -5,11 +5,14 @@ class EventShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            modal: false
+            modal: false,
+            deleteModal: false
         }
 
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
+        this.openDeleteModal = this.openDeleteModal.bind(this);
+        this.closeDeleteModal = this.closeDeleteModal.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
         this.handleRegister = this.handleRegister.bind(this);
@@ -32,9 +35,17 @@ class EventShow extends React.Component {
         this.setState({ modal: false });
     }
 
-    handleDelete(e) {
-        e.preventDefault();
-        this.props.deleteEvent(e.currentTarget.value)
+    openDeleteModal() {
+        this.setState({ deleteModal: true });
+    }
+
+    closeDeleteModal() {
+        this.setState({ deleteModal: false });
+    }
+
+    handleDelete() {
+        this.props.deleteEvent(this.props.event.id)
+            .then(() => this.setState({ deleteModal: false }))
             .then(() => this.props.history.push('/'));
     }
 
@@ -43,7 +54,7 @@ class EventShow extends React.Component {
         let ownerId = this.props.event.owner_id;
         if (userId === ownerId) {
             return (
-                <button id="owner-button" value={this.props.event.id} onClick={this.handleDelete}>DELETE</button>
+                <button id="owner-button" value={this.props.event.id} onClick={this.openDeleteModal}>DELETE</button>
             )
         }
     }
@@ -317,6 +328,17 @@ class EventShow extends React.Component {
                         <button onClick={() => this.closeModal()}>No</button>
                     </div>
                 </div> : null}
+
+                {this.state.deleteModal ? <div className="modal-background">
+                    <div id="reg-modal">
+                        <i onClick={this.closeDeleteModal} className="fas fa-times"></i>
+                        <p>Are you sure you want to <span id="reg-bold">delete</span> this event?</p>
+                        <br />
+                        <button onClick={() => this.handleDelete()}>Yes</button>
+                        <button onClick={() => this.closeDeleteModal()}>No</button>
+                    </div>
+                </div> : null}
+
             </div>
         )
     }
