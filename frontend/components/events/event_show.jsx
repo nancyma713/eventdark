@@ -46,7 +46,8 @@ class EventShow extends React.Component {
     handleDelete() {
         this.props.deleteEvent(this.props.event.id)
             .then(() => this.setState({ deleteModal: false }))
-            .then(() => this.props.history.push('/'));
+            .then(() => this.props.history.push('/'))
+            .then(() => window.location.reload());
     }
 
     deleteButton() {
