@@ -47,6 +47,24 @@ class UserRegistrationItem extends React.Component {
 
         let image = window.defaultURL;
 
+        if (this.props.event.id === 23) {
+            image = window.magiciansURL;
+        } else if (this.props.event.id === 24) {
+            image = window.excisionURL;
+        } else if (this.props.event.id === 25) {
+            image = window.hauntedhouseURL;
+        } else if (this.props.event.id === 26) {
+            image = window.dinnerdateURL;
+        } else if (this.props.event.id === 27) {
+            image = window.fireworksURL;
+        } else if (this.props.event.id === 28) {
+            image = window.newyearURL;
+        } else if (this.props.event.id === 29) {
+            image = window.harrypotterURL;
+        } else if (this.props.event.id === 30) {
+            image = window.candlelitURL;
+        }
+
         let title = event.title;
         if (title.length > 50) {
             title = title.slice(0, 50) + '...';
