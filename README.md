@@ -14,6 +14,7 @@ logged in, can register for or bookmark events they are interested in.
 * CRUD: Creating, reading, updating, and deleting events
 * Event registrations and event bookmarking
 * Ability to browse by category
+* Ability to search for events by title or description
 
 ## Technologies Used
 
@@ -126,5 +127,4 @@ when the category tab is clicked on.
 
 ## Future Implementations
 
-* Ability to search for events using a searchbar
 * Addition of location and utilization of Google Maps API to display map
